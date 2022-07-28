@@ -1,0 +1,13 @@
+/* mixin */
+$mq-breakpoints: (
+'screen01': 834px,
+//pc
+'screen02': 375px,
+//通常コンテンツ幅以下 2カラムへ
+);
+
+@mixin mq($breakpoint: screen1) {
+  @media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
