@@ -1,0 +1,11 @@
+@use "../Object/Component/header--bg" as bg;
+
+.l-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 217px;
+  .header--bg {
+    width: 100%;
+  }
+}

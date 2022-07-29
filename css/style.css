@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* Foundation/base */
+html {
+  cursor: default; /* 1 */
+}
+
+body {
+  font-size: 0.625rem;
+  font-size: 62.5%;
+  font-family: "M PLUS Rounded 1c", "Roboto", sans-serif;
+}
+
+/* mixin */ /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} /* font-weight */
+/* light */
+/* Heavy */
+/* medium */
+/* Bold */
+.c-header--bg {
+  background-color: #fff7ef;
+}
+
+.l-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 217px;
+}
+.l-header .header--bg {
+  width: 100%;
+}
+
+.c-logo {
+  width: 375px;
+  height: 84px;
+}
+
+.c-search--text-box {
+  width: 396px;
+  height: 46px;
+  background-color: #ffffff;
+}
+
+.c-search--icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 24px;
+  color: #808080;
+}
+
+.c-search--placeholder {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.c-txt__btn {
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+  color: #808080;
+}
+
+.c-btn--bg {
+  background-color: #f2ede9;
+  border-radius: 10%;
+  border-width: thick;
+}
+
+/* HEADER
+----------------------------- */
+/* ロゴ */
+/* 検索ブロック */
+/* 背景 */
+.p-btn .c-btn--text {
+  font-size: 1rem;
+}
+.p-btn .c-btn--bg {
+  width: 545px;
+  height: 46px;
+}
+
+.p-search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.p-search box {
+  position: relative;
+  width: 100%;
+}
+.p-search icon {
+  position: absolute;
+}
+
+/* use */
+/*# sourceMappingURL=style.css.map */
