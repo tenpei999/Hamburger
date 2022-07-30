@@ -1,6 +1,21 @@
-/* use */
+/* Foundation */
 @use "Foundation";
-@use "Layout";
-@use "Object/Component";
-@use "Object/project";
-// @use "utility";
+
+/* Layout 
+------------------------------*/
+@forward "Layout/header"; //ヘッダー
+
+/* Component
+------------------------------*/
+@forward "object/Component/ttl"; //タイトル
+@forward "object/Component/txt"; //テキスト
+@forward "object/Component/bg"; //バックラウンド
+@forward "object/Component/list"; //リスト
+@forward "object/Component/icon"; //アイコン
+@forward "object/Component/placeholder"; //検索例
+@forward "object/Component/under-bar"; //下線
+@forward "object/Component/vertical-bar"; //右線
+
+/* Project
+------------------------------*/
+@forward "object/project/nav"; //ナビゲーションメニュー

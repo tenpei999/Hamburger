@@ -1,0 +1,39 @@
+.c-bg {
+  &-color {
+    &--bisque {
+      background-color:  #fff7ef;
+    }
+    &--white {
+      background-color:  #ffffff;
+    }
+    &--blanchedalmond {
+      background-color: #F2EDE9;
+    }
+    &--white-opacity {
+      color: #ffffff;
+      opacity: 0.8;
+    }
+    &--black-opacity {
+      background-color: #000000;
+      opacity: 0.8;
+    }
+  }
+  &-img {
+    &__mv {
+      background-image:  url(../../../img/bg-mv.svg) center center;
+    }
+    &__takeout {
+      background-image: url(../../../img/takeout.svg) center center;
+    }
+    &__eat-in {
+      background-image: url(../../../img/eat-in.svg) center center;
+    }
+    &__grain {
+      background-image: url(../../../img/bg-grain.svg) center center;
+      background-repeat: repeat;
+    } 
+    &__map {
+      background-image: url(../../../img/bg-map.svg) center center;
+    }
+  }
+} 

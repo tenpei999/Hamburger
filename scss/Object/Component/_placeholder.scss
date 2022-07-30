@@ -1,6 +1,6 @@
 @use "../../Foundation/variable" as v;
 
-.c-search--placeholder {
-  font-family: 'Roboto';
+.c-placeholder {
+  font-family: 'Roboto', sans-serif;
   font-weight: v.$bold;
 }

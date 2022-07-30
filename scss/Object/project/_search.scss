@@ -1,15 +1,17 @@
-@use "../Component/search--text-box" as box;
-@use "../Component/search--icon" as icon;
+@use "../Component/text-box" as box;
+@use "../Component/icon" as icon;
 
 .p-search {
   position: relative;
   display: flex;
   justify-content: center;
-  & box{
+  text-box {
     position: relative;
     width: 100%;
   }
-  & icon {
+  icon {
     position: absolute;
+    top: 12px;
+    left: 12px;
   } 
 }

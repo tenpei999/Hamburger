@@ -1,0 +1,25 @@
+@use "../../Foundation/variable" as v;
+
+.c-ttl {
+  &--roboto-Gemini-Gray {
+    color: #707070;
+    font-family: 'Roboto', sans-serif;
+  }
+  &--m-black {
+    font-family:  'M PLUS Rounded 1c', sans-serif;
+    color: #3c2a10;
+    font-weight: v.$Mbold;
+  }
+  &--m-white {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #ffffff;
+  }
+  &--roboto-black {
+    color: 707070;
+    font-family: 'Roboto', sans-serif;
+  }
+  &---roboto-white {
+    font-family: 'Roboto', sans-serif;
+    color: #eaeaea;
+  } 
+}

@@ -1,9 +1,9 @@
 /* mixin */
 $mq-breakpoints: (
-'screen01': 834px,
-//pc
+'screen01': 820px,
+//タブレット
 'screen02': 375px,
-//通常コンテンツ幅以下 2カラムへ
+//スマホ
 );
 
 @mixin mq($breakpoint: screen1) {
