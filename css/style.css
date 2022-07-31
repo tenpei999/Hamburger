@@ -151,6 +151,10 @@ input, button, textarea, select {
   width: 100%;
 }
 
+.l-search {
+  display: flex;
+  justify-content: center;
+}
 .l-search p-search {
   width: 100%;
 }
