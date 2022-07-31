@@ -155,12 +155,6 @@ input, button, textarea, select {
   display: flex;
   justify-content: center;
 }
-.l-search p-search {
-  width: 100%;
-}
-.l-search p-btn {
-  width: 100%;
-}
 
 .c-ttl--roboto-Gemini-Gray {
   color: #707070;
@@ -297,9 +291,10 @@ input, button, textarea, select {
 }
 
 .c-text-box {
-  width: 396px;
-  height: 46px;
   background-color: #ffffff;
+  border-radius: 10%;
+  border-color: #707070;
+  border-width: 1px;
 }
 
 .p-search {
@@ -307,11 +302,13 @@ input, button, textarea, select {
   display: flex;
   justify-content: center;
 }
-.p-search text-box {
+.p-search .c-text-box {
   position: relative;
-  width: 100%;
+  width: 230px;
+  height: 46px;
+  border-radius: 10%;
 }
-.p-search icon {
+.p-search .c-icon__search {
   position: absolute;
   top: 12px;
   left: 12px;
