@@ -1,6 +1,12 @@
+@use "../../Foundation/mixin" as mixin;
+
 .p-nav {
   display: flex;
   justify-content: flex-end;
+  margin: 0 10px;
+  @include mixin.mq (screen03) {
+    display: none;
+  }
   .c-ttl--roboto-Gemini-Gray {
     font-size: 20px;
   }

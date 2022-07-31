@@ -4,6 +4,8 @@
 /* Layout 
 ------------------------------*/
 @forward "Layout/header"; //ヘッダー
+@forward "Layout/search"; //検索ブロック
+
 
 /* Component
 ------------------------------*/
@@ -19,3 +21,7 @@
 /* Project
 ------------------------------*/
 @forward "object/project/nav"; //ナビゲーションメニュー
+@forward "object/project/site-ttl"; //ロゴ
+@forward "object/project/search"; //検索窓
+@forward "object/project/btn"; //検索ボタン
+

@@ -151,6 +151,13 @@ input, button, textarea, select {
   width: 100%;
 }
 
+.l-search p-search {
+  width: 100%;
+}
+.l-search p-btn {
+  width: 100%;
+}
+
 .c-ttl--roboto-Gemini-Gray {
   color: #707070;
   font-family: "Roboto", sans-serif;
@@ -265,9 +272,53 @@ input, button, textarea, select {
 .p-nav {
   display: flex;
   justify-content: flex-end;
+  margin: 0 10px;
+}
+@media screen and (min-width: 1200px) {
+  .p-nav {
+    display: none;
+  }
 }
 .p-nav .c-ttl--roboto-Gemini-Gray {
   font-size: 20px;
+}
+
+.p-site-ttl {
+  display: flex;
+  justify-content: center;
+}
+.p-site-ttl .c-ttl--roboto-Gemini-Gray {
+  display: inline-block;
+  width: 200px;
+}
+
+.c-text-box {
+  width: 396px;
+  height: 46px;
+  background-color: #ffffff;
+}
+
+.p-search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.p-search text-box {
+  position: relative;
+  width: 100%;
+}
+.p-search icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.p-btn .c-btn--text {
+  font-size: 1rem;
+}
+.p-btn .c-btn--bg {
+  width: 545px;
+  height: 46px;
 }
 
 /* Foundation */

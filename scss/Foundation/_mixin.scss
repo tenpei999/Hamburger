@@ -1,13 +1,15 @@
 /* mixin */
 $mq-breakpoints: (
-'screen01': 820px,
-//タブレット
-'screen02': 375px,
+'screen01': 375px,
 //スマホ
+'screen02': 820px,
+//タブレット
+'screen03': 1200px,
+//pc
 );
 
-@mixin mq($breakpoint: screen1) {
-  @media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+@mixin mq($breakpoint: screen01) {
+  @media screen and (min-width: #{map-get($mq-breakpoints, $breakpoint)}) {
     @content;
   }
 }
