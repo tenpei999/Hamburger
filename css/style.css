@@ -306,7 +306,6 @@ input, button, textarea, select {
   position: relative;
   width: 230px;
   height: 46px;
-  border-radius: 10%;
 }
 .p-search .c-icon__search {
   position: absolute;
