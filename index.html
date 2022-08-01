@@ -16,28 +16,31 @@
   <script src="js/main.js"></script>
 </head>
 <body>
- <header class="l-header c-bg-color--bisque">
-  <div class="p-nav">
-    <nav>
-      <a href="#" class="c-ttl--roboto-Gemini-Gray">
-        Menu
-      </a>
-    </nav>
-  </div>
-  <h1 class="p-site-ttl">
-    <div class="c-ttl--roboto-Gemini-Gray">
-      <img src="img/pc_logo.svg" alt="ロゴ">
-    </div>
-  </h1>
-  <div class="l-search">
-    <form action="#" method="get" class="p-search">
-      <div>
-        <input type="search" class="c-text-box">
-        <i class="fa-solid fa-magnifying-glass c-icon__search"></i>
+  <div class="l-global-wrapper">
+    <header class="l-header">
+      <div class="p-header c-background-color--bisque">
+          <div class="p-header__wrapper">
+          <nav class="p-global-menu">
+            <a href="#">
+              menu
+            </a>
+          </nav>
+          <h1 class="c-site-title">
+            <a href="index.html">
+              Hamburger
+            </a>
+          </h1>
+        </div>
+        <!-- l-header-wrapper -->
+        <form class="p-search">
+          <input type="text" name="検索窓">
+          <input type="button" name="検索ボタン" value="検索">
+        </form>
       </div>
-      <input type="submit" value="検索" class="c-btn">
-    </form>
+      <!-- p-header -->
+    </header>
+
   </div>
- </header>
+  <!-- l-global-wrapper -->
 </body>
 </html>

@@ -1,8 +1,6 @@
 .l-header {
-  min-height: 217px;
   display: flex;
   flex-direction: column;
-  c-bg-color--bisque {
-    width: 100%;
-  }
+  position: fixed;
+  width: 100%;
 }
