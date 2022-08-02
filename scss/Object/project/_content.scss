@@ -1,0 +1,10 @@
+.p-content {
+  &__take-out {
+    .section-title {
+      margin: 10px auto auto 10px;
+    }   
+    &.c-background-image {
+      background-image: url(../../../img/takeout.svg);
+    }
+  }
+}

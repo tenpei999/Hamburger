@@ -8,7 +8,6 @@
 @forward "Layout/search"; //検索ブロック
 @forward "Layout/main"; //メイン
 
-
 /* Component
 ------------------------------*/
 @forward "object/Component/txt"; //テキスト
@@ -25,4 +24,5 @@
 @forward "object/project/nav"; //ナビゲーションメニュー
 @forward "object/project/search"; //検索ブロック
 @forward "object/project/main-visual"; //メインビジュアル
+@forward "object/project/content"; // メニュー
 
