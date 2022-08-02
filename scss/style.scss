@@ -5,12 +5,15 @@
 ------------------------------*/
 @forward "Layout/header"; //ヘッダー
 @forward "Layout/search"; //検索ブロック
+@forward "Layout/main"; //メイン
+@forward "Layout/main-visual"; //メイン
 
 
 /* Component
 ------------------------------*/
-@forward "object/Component/site-title"; //タイトル
 @forward "object/Component/txt"; //テキスト
+@forward "object/Component/title"; //タイトル
+@forward "object/Component/global-menu"; //ハンバーガーメニュー
 @forward "object/Component/background"; //バックラウンド
 @forward "object/Component/list"; //リスト
 @forward "object/Component/under-bar"; //下線
@@ -20,6 +23,5 @@
 ------------------------------*/
 @forward "object/project/header"; //header
 @forward "object/project/nav"; //ナビゲーションメニュー
-@forward "object/project/search"; //検索窓
-@forward "object/project/btn"; //検索ボタン
+@forward "object/project/search"; //検索ブロック
 

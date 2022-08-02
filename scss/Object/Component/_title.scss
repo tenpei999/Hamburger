@@ -1,9 +1,12 @@
 @use "../../Foundation/variable" as v;
 
-.c-ttl {
-  &--roboto-Gemini-Gray {
-    color: #707070;
-    font-family: 'Roboto', sans-serif;
+.c-title {
+  &__site {
+    a {
+      color: #707070;
+      font-family: 'Roboto', sans-serif;
+      font-size: 40px;      
+    }
   }
   &--m-black {
     font-family:  'M PLUS Rounded 1c', sans-serif;

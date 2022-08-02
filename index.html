@@ -19,26 +19,31 @@
   <div class="l-global-wrapper">
     <header class="l-header">
       <div class="p-header c-background-color--bisque">
-          <div class="p-header__wrapper">
-          <nav class="p-global-menu">
-            <a href="#">
-              menu
-            </a>
-          </nav>
-          <h1 class="c-site-title">
-            <a href="index.html">
-              Hamburger
-            </a>
+          <div class="l-header__wrapper">
+            <nav class="c-global-menu">
+                Menu
+            </nav>
+          <h1 class="c-title__site">           
+            <a href="index.html">Hamburger</a>           
           </h1>
         </div>
-        <!-- l-header-wrapper -->
         <form class="p-search">
-          <input type="text" name="検索窓">
-          <input type="button" name="検索ボタン" value="検索">
+          <div class="p-search__text-box">
+          <input type="text" name="検索窓" class="p-search__text-box__inner">
+              <i class="fa-solid fa-magnifying-glass text-box__icon"></i>
+          </div>
+          <input type="submit" name="検索ボタン" value="検索" class="p-search__btn">
         </form>
+        <!-- p-header-wrapper -->
       </div>
       <!-- p-header -->
     </header>
+
+    <main>
+      <div class="main-visual">
+        
+      </div>
+    </main>
 
   </div>
   <!-- l-global-wrapper -->

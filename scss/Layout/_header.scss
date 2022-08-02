@@ -3,4 +3,16 @@
   flex-direction: column;
   position: fixed;
   width: 100%;
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 10px 0px 10px;
+    >.c-global-menu {
+      position: absolute;
+    }
+    .c-title__site {
+      margin: 40px auto 38px auto;
+    }
+  }
 }

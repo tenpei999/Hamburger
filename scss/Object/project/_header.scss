@@ -2,15 +2,4 @@
   .c-background-color--bisque {
     width: 100%;
   }
-  &__wrapper {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    >nav {
-      position: absolute;
-    }
-    .c-site-title {
-      margin: auto;
-    }
-  }
 }
