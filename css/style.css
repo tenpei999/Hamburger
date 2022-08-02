@@ -191,6 +191,10 @@ input, button, textarea, select {
   height: 1000px;
   position: relative;
 }
+.l-main__content-wrapper {
+  display: flex;
+  margin-bottom: 29px;
+}
 
 .c-txt--black {
   font-family: "M PLUS Rounded 1c", sans-serif;
