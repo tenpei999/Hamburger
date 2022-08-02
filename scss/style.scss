@@ -3,10 +3,10 @@
 
 /* Layout 
 ------------------------------*/
+@forward "Layout/global-wrapper"; //全体レイアウト
 @forward "Layout/header"; //ヘッダー
 @forward "Layout/search"; //検索ブロック
 @forward "Layout/main"; //メイン
-@forward "Layout/main-visual"; //メイン
 
 
 /* Component
@@ -24,4 +24,5 @@
 @forward "object/project/header"; //header
 @forward "object/project/nav"; //ナビゲーションメニュー
 @forward "object/project/search"; //検索ブロック
+@forward "object/project/main-visual"; //メインビジュアル
 
