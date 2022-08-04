@@ -381,7 +381,7 @@ input, button, textarea, select {
 }
 .p-contents__item {
   height: 10rem;
-  overflow: hidden;
+  overflow: scroll;
 }
 .p-contents__item .c-background-color--white-opacity {
   width: 100%;
