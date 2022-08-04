@@ -13,10 +13,14 @@
     font-size: 3.5rem;
     padding-top: 10px;
     padding-left: 10px;
+    padding-bottom: 0.5rem;
     margin-bottom: 20rem;
+    .c-text--roboto-white {
+      position: relative;
+    }
   }
   &__item {
-    height: 10rem;
+    height: 8rem;
     overflow: scroll;
     .c-background-color--white-opacity {
       width: 100%;

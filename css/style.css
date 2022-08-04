@@ -243,14 +243,14 @@ input, button, textarea, select {
 }
 .c-background-color--white-opacity {
   background-color: #ffffff;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .c-background-color--white-opacity:hover {
   background-color: #ffffff;
 }
 .c-background-color--black-opacity {
   background-color: #000000;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .c-background-image {
   background: transparent center center/cover;
@@ -301,11 +301,6 @@ input, button, textarea, select {
 }
 .c-list--item__aside li:last-child {
   margin-bottom: 0;
-}
-
-.c-under-bar.scss {
-  background-color: #ffffff;
-  height: 1px;
 }
 
 .c-vertical-bar {
@@ -377,10 +372,14 @@ input, button, textarea, select {
   font-size: 3.5rem;
   padding-top: 10px;
   padding-left: 10px;
+  padding-bottom: 0.5rem;
   margin-bottom: 20rem;
 }
+.p-contents__section-title .c-text--roboto-white {
+  position: relative;
+}
 .p-contents__item {
-  height: 10rem;
+  height: 8rem;
   overflow: scroll;
 }
 .p-contents__item .c-background-color--white-opacity {
@@ -394,10 +393,22 @@ input, button, textarea, select {
   padding-bottom: 9px;
 }
 
+.u-under-bar::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  bottom: -20px;
+  width: 50px;
+  height: 5px;
+  background-color: white;
+}
+
 /* Foundation */
 /* Layout 
 ------------------------------*/
 /* Component
+------------------------------*/
+/* Project
 ------------------------------*/
 /* Project
 ------------------------------*/

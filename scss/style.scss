@@ -18,7 +18,6 @@
 @forward "object/Component/text-box--has-icon"; //検索窓
 @forward "object/Component/btn"; //ボタン
 @forward "object/Component/list"; //リスト
-@forward "object/Component/under-bar"; //下線
 @forward "object/Component/vertical-bar"; //右線
 
 
@@ -30,3 +29,6 @@
 @forward "object/project/main-visual"; //メインビジュアル
 @forward "object/project/contents"; // メニュー
 
+/* Project
+------------------------------*/
+@forward "object/Utility/under-bar"; //下線
