@@ -1,15 +1,6 @@
 // @use "../Foundation/mixin" as m;
 
 .l-main {
-  padding-top: 214px;
+  padding-top: 204px;
   height: 1000px;
-  position: relative;
-  &__content-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 29px;
-    &__inner {
-      margin: 20px;
-    }
-  }
 }

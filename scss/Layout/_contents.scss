@@ -1,0 +1,12 @@
+.l-contents {
+  &--wrapper {
+    margin-bottom: 29px;
+    display: flex;
+    flex-direction: column;
+  }
+  margin: 20px;
+  &__item {
+    margin: 0 10px 10px 10px;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+  }  
+}

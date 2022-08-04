@@ -1,0 +1,32 @@
+.p-contents {
+  &__take-out  {
+    &.c-background-image {
+    background-image: url(../../../img/takeout.svg);
+  }
+}
+  &__eat-in  {
+    &.c-background-image {
+    background-image: url(../../../img/eat-in.svg);
+  }
+}
+  &__section-title {
+    font-size: 3.5rem;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20rem;
+  }
+  &__item {
+    height: 10rem;
+    overflow: hidden;
+    .c-background-color--white-opacity {
+      width: 100%;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  &__contents-title {
+    font-size: 24px;
+    padding-bottom: 9px;
+  } 
+}

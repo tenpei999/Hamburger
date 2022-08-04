@@ -9,6 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'vap4wrz',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css"/>
   <link rel="stylesheet" href="css/style.css">
@@ -17,61 +27,94 @@
 </head>
 <body>
   <div class="l-global-wrapper">
-    <div class="container">
-      <header class="l-header">
-        <div class="p-header c-background-color--bisque">
-            <div class="l-header__wrapper">
-              <nav class="c-global-menu">
-                  Menu
-              </nav>
-            <h1 class="c-title__site">
-              <a href="index.html">Hamburger</a>           
-            </h1>
-          </div>
-          <form class="p-search">
-            <div class="p-search__text-box">
-            <input type="text" name="検索窓" class="p-search__text-box__inner">
-                <i class="fa-solid fa-magnifying-glass text-box__icon"></i>
-            </div>
-            <input type="submit" name="検索ボタン" value="検索" class="p-search__btn">
-          </form>
-          <!-- p-header-wrapper -->
+    <div class="l-container">
+      <header class="l-header p-header c-background-color--bisque">
+        <div class="l-header__wrapper">
+          <nav class="c-global-menu">
+              Menu
+          </nav>
+          <h1 class="p-header__site-title">
+            <a href="index.html" class="c-title-block--roboto">Hamburger</a>           
+          </h1>
         </div>
-        <!-- p-header -->
+        <form class="p-search">
+          <div class="c-text-box--has-icon">
+          <input type="text" name="検索窓" class="c-text-box--has-icon__inner">
+              <i class="fa-solid fa-magnifying-glass c-text-box--has-icon__icon"></i>
+          </div>
+          <input type="submit" name="検索ボタン" value="検索" class="c-btn--submit">
+        </form>
+        <!-- p-header-wrapper -->
       </header>
   
       <main class="l-main">
+
         <div class="c-background-image p-main-visual">
-          <div class="c-title__section">
+          <div class="c-text--M-white">
             ダミーサイト
           </div>
         </div>
+        <!-- main-visual-->
 
-        <div class="l-main__content-wrapper">
-          <div class="l-main__content-wrapper__inner p-content__take-out c-background-image">
-            <h2 class="c-title__section">
+        <div class="l-contents--wrapper">
+
+          <div class="l-contents p-contents__take-out c-background-image">
+            <h2 class="c-text--roboto-white p-contents__section-title">
               Take out
-            </h2>
-            <div class="l-main__content-wrapper__inne__parent p-content__conbi">
-              <div class="l-main__content-wrapper__inne__child p-content__item c-background-image">
-                <h3 class="content-title">
-                  Take Out
-                </h3>
-                  <p>
-                    当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
-                  </p>
-              </div>
-              <div class="l-main__content-wrapper__inne__child p-content__item">
-                <h3 class="content-title">
-                  Take Out
-                </h3>
-                  <p>
-                    当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
-                  </p>
-              </div>
+            </h2>         
+            <div class="l-contents__item p-contents__item c-background-color--white-opacity">
+              <h3 class="p-contents__contents-title c-text--M-text-black">
+                Take Out
+              </h3>
+              <p>
+                当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
+              </p>
             </div>
+           <!-- contents-item take out -->
+            <div class="l-contents__item p-contents__item c-background-color--white-opacity">
+              <h3 class="p-contents__contents-title c-text--M-text-black">
+                Take Out
+              </h3>
+              <p>
+                当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
+              </p>
+            </div>
+            <!--  contents-item take out -->
           </div>
-          <div class="l-main__content-wrapper__inner p-contents">
+          <!-- contents take out -->
+
+          <div class="l-contents p-contents__eat-in c-background-image">
+            <h2 class="c-text--roboto-white p-contents__section-title">
+              Eat In
+            </h2>         
+            <div class="l-contents__item p-contents__item c-background-color--white-opacity">
+              <h3 class="p-contents__contents-title c-text--M-text-black">
+                Eat In
+              </h3>
+              <p>
+                店内でお食事いただけるメニューです。
+                店内でお食事いただけるメニューです。
+                店内でお食事いただけるメニューです。
+                店内でお食事いただけるメニューです。
+              </p>
+            </div>
+           <!-- contents-item eat in -->
+            <div class="l-contents__item p-contents__item c-background-color--white-opacity">
+              <h3 class="p-contents__contents-title c-text--M-text-black">
+                Eat In
+              </h3>
+              <p>
+                店内でお食事いただけるメニューです。
+                店内でお食事いただけるメニューです。
+                店内でお食事いただけるメニューです。
+                店内でお食事いただけるメニューです。
+              </p>
+            </div>
+            <!--  contents-item eat in -->
+          </div>
+          <!-- contents eat in -->
+          
+          <!-- <div class="l-main__content-wrapper__inner p-contents">
             <h2 class="c-section-title">
               Eat In
             </h2>
@@ -99,7 +142,7 @@
                   </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- l-main__content-wrapper -->
       </main>

@@ -10,8 +10,11 @@
       background-color: #F2EDE9;
     }
     &--white-opacity {
-      color: #ffffff;
+      background-color: #ffffff;
       opacity: 0.8;
+    }
+    &--white-opacity:hover {
+      background-color: #ffffff;
     }
     &--black-opacity {
       background-color: #000000;
@@ -19,8 +22,6 @@
     }
   }
   &-image {
-    &__main-visual {
-      background: center center / cover;
-    }
+    background: transparent center center / cover;
   }
 } 

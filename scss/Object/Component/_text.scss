@@ -1,0 +1,51 @@
+@use "../../Foundation/variable" as v;
+
+.c-text {
+  &--roboto-white {
+    font-family: v.$roboto;
+    color: v.$white;  
+  }
+  &--M-white {
+    font-family: v.$M;
+    color: v.$white;
+  }
+  &--M-text-black {
+    font-family: v.$M;
+    color: v.$text-black;
+  }
+    &__btn {
+      font-weight: v.$Lbold;
+      justify-content: center;
+      align-items: center;
+      color: v.$gray;
+    }
+}
+
+
+// @use "../../Foundation/variable" as v;
+
+// .c-text {
+//   &--roboto {
+//     font-family: 'Roboto', sans-serif;
+//     &__logo {
+//       a {
+//         color: #707070;
+//         font-size: 40px;      
+//       }
+//     }
+//     &--black {
+//       font-family: 'M PLUS Rounded 1c', sans-serif;
+//       color: #3c2a10;
+//     }
+//     &--white {
+//       color: #ffffff;
+//       font-family: 'M PLUS Rounded 1c', sans-serif;
+//     }
+//     &__btn {
+//       font-weight: v.$Lbold;
+//       justify-content: center;
+//       align-items: center;
+//       color: #808080;
+//     }
+//   }
+// }
