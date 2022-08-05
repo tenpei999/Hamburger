@@ -201,10 +201,10 @@ input, button, textarea, select {
 
 .l-about {
   width: 100%;
-  height: 100%;
+  height: 700px;
 }
 .l-about__inner {
-  margin: 0 20px;
+  margin: 0 38px;
 }
 
 .c-text--roboto-white {
@@ -402,13 +402,13 @@ input, button, textarea, select {
 .p-about {
   position: relative;
   background-image: url(../../../img/bg-map.svg);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.1);
   background-position: center center;
   background-size: 100%;
 }
 .p-about.p-about::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.38);
+  background-color: rgba(0, 0, 0, 0.32);
   position: absolute;
   height: 50%;
   top: 0;
@@ -429,11 +429,14 @@ input, button, textarea, select {
 .p-about__section-title .u-under-bar::before {
   height: 3px;
   bottom: -10px;
+  width: 70px;
 }
 
 .c-text--M-white {
   position: absolute;
   top: 80px;
+  left: 38px;
+  right: 38px;
   font-size: 14px;
   height: 700px;
   line-height: 2rem;
