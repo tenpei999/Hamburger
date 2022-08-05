@@ -401,15 +401,16 @@ input, button, textarea, select {
 
 .p-about {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 50%), url(../../../img/bg-map.svg);
+  background-image: url(../../../img/bg-map.svg);
+  background-color: rgba(0, 0, 0, 0.05);
   background-position: center center;
   background-size: 100%;
-  z-index: 1;
 }
 .p-about.p-about::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.38);
   position: absolute;
+  height: 50%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -423,6 +424,7 @@ input, button, textarea, select {
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   position: relative;
+  z-index: 20;
 }
 .p-about__section-title .u-under-bar::before {
   height: 3px;
@@ -430,9 +432,14 @@ input, button, textarea, select {
 }
 
 .c-text--M-white {
+  position: absolute;
+  top: 80px;
   font-size: 14px;
+  height: 700px;
   line-height: 2rem;
-  background-color: transparent;
+  font-weight: bold;
+  z-index: 20;
+  background: transparent;
 }
 
 .u-under-bar::before {
