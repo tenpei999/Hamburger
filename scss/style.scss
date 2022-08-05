@@ -8,7 +8,7 @@
 @forward "Layout/search"; //検索ブロック
 @forward "Layout/main"; //メイン
 @forward "Layout/contents"; //メインコンテンツ
-
+@forward "Layout/about"; //アバウト
 /* Component
 ------------------------------*/
 @forward "object/Component/text"; //テキスト
@@ -19,6 +19,7 @@
 @forward "object/Component/btn"; //ボタン
 @forward "object/Component/list"; //リスト
 @forward "object/Component/vertical-bar"; //右線
+@forward "object/Component/linear-gradient"; //
 
 
 /* Project
@@ -28,6 +29,7 @@
 @forward "object/project/search"; //検索ブロック
 @forward "object/project/main-visual"; //メインビジュアル
 @forward "object/project/contents"; // メニュー
+@forward "object/project/about"; // アバウト
 
 /* Project
 ------------------------------*/
