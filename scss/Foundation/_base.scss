@@ -12,8 +12,15 @@ body {
   display: block;
   width: 100vw;
   max-width: 1900px;
+  overflow-x: hidden;
+  &.is-open {
+    position: fixed;
+  }
 }
 a {
   text-decoration: none;
   color: #000000;
+}
+li {
+  list-style: none;
 }

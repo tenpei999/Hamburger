@@ -9,8 +9,10 @@
     display: flex;
     justify-content: flex-end;
     margin: 10px 10px 0px 10px;
-    >.c-global-menu {
-      position: absolute;
+    >.p-gmenu {
+      &--btn {
+        position: absolute;
+      }
     }
   }
 }

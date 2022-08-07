@@ -3,25 +3,11 @@
 .p-about {
   position: relative;
   background-image: url(../../../img/bg-map.svg);
-  background-color: rgba(0,0,0,0.10);
-  background-position: center center;
-  background-size: 100%;
-  &.p-about::before {
-  content: '';
-  background-color: rgba(0,0,0, 0.32);
-  position: absolute;
-   height: 50%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-}
-
+  background-size: cover;
   &__section-title {
     font-size: 1.8rem;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     position: relative;
@@ -32,16 +18,19 @@
       width: 70px;
     }
   }
-}
-.c-text--M-white {
-  position: absolute;
-  top: 80px;
-  left: 38px;
-  right: 38px;
-  font-size: 14px;
-  height: 700px;
-  line-height: 2rem;
-  font-weight: bold;
-  z-index: 20;
-  background: transparent;
+  &__inner {
+    margin-bottom: 29px;
+    >.c-text--M-white {
+      position: absolute;
+      top: 80px;
+      left: 38px;
+      right: 38px;
+      font-size: 14px;
+      height: 700px;
+      line-height: 2rem;
+      font-weight: bold;
+      z-index: 20;
+      overflow: scroll;
+    }
+  }
 }

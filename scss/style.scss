@@ -9,28 +9,28 @@
 @forward "Layout/main"; //メイン
 @forward "Layout/contents"; //メインコンテンツ
 @forward "Layout/about"; //アバウト
+@forward "Layout/footer"; //フッター
 /* Component
 ------------------------------*/
 @forward "object/Component/text"; //テキスト
 @forward "object/Component/title-block"; //タイトル
-@forward "object/Component/global-menu"; //ハンバーガーメニュー
 @forward "object/Component/background"; //バックラウンド
 @forward "object/Component/text-box--has-icon"; //検索窓
 @forward "object/Component/btn"; //ボタン
 @forward "object/Component/list"; //リスト
-@forward "object/Component/vertical-bar"; //右線
-@forward "object/Component/linear-gradient"; //
-
 
 /* Project
 ------------------------------*/
 @forward "object/project/header"; //header
-@forward "object/project/nav"; //ナビゲーションメニュー
+@forward "object/project/hamburger"; //メニュー
+@forward "object/project/gmenu"; //ナビゲーションメニュー
 @forward "object/project/search"; //検索ブロック
 @forward "object/project/main-visual"; //メインビジュアル
 @forward "object/project/contents"; // メニュー
 @forward "object/project/about"; // アバウト
+@forward "object/project/footer"; // フッター
 
-/* Project
+/*Utility
 ------------------------------*/
 @forward "object/Utility/under-bar"; //下線
+@forward "object/Utility/vertical-bar"; //右線
