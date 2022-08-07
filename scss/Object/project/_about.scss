@@ -4,6 +4,9 @@
   position: relative;
   background-image: url(../../../img/bg-map.svg);
   background-size: cover;
+  .c-background-image--shadow {
+    height: 50%;
+  }
   &__section-title {
     font-size: 1.8rem;
     padding-top: 10px;

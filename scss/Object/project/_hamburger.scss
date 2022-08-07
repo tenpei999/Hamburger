@@ -3,7 +3,6 @@
 
 .p-hamburger {
   width: 59px;
-  height: 59px;
   position: relative;
   @include m.mq (screen03) {
     display: none;

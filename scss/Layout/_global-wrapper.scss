@@ -2,7 +2,12 @@
 
 .l-global-wrapper {
   z-index: 200;
+  transition: 200ms;
+  width: 100%;
   @include m.mq (screen01) {
-    max-width: 375px;
+    min-width: 375px;
+  }
+  @include m.mq (screen01) {
+    max-width: 874px;
   }
 }

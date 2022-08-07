@@ -1,14 +1,29 @@
 @use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
 
 .p-search {
   display: flex;
   justify-content: center;
   margin: 0 auto 40px auto;
   .c-text-box--has-icon {
-    width: 230px;
+    min-width: 230px;
     height: 46px;
+    @include m.mq (screen011) {
+      width: 300px;
+    }
+    @include m.mq (screen02) {
+      width: 400px;
+      transition: 200ms;
+    }
   }
   .c-btn--submit {
-    width: 78px;
+    min-width: 78px;
+    @include m.mq (screen011) {
+      width: 115px;
+    }
+    @include m.mq (screen02) {
+      width: 136px;
+      transition: 200ms;
+    }
   }
 }
