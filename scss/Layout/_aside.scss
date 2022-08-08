@@ -1,0 +1,9 @@
+@use "../Foundation/mixin" as m;
+
+.l-aside {
+  display: none;
+  @include m.mq (screen03) {
+    display: block;
+    width: 365px;
+  }
+}

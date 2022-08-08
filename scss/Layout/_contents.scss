@@ -4,8 +4,9 @@
   &--wrapper {
     display: flex;
     min-width: 375px;
-    width: 100vw;
     flex-direction: column;
+    margin: 10px;
+    transition: 200ms;
     @include m.mq (screen02) {
       flex-direction: row;
     }
@@ -13,8 +14,11 @@
   @include m.mq (screen02) {
     width: 50%;
   }
-  margin: 20px;
+  margin: 10px auto;
   width: calc(100% - 40px);
+  @include m.mq (screen02) {
+    margin: 10px;
+  }
 
   &__item {
     margin: 0 10px 10px 10px;

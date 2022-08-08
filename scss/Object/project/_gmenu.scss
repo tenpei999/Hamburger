@@ -1,50 +1,40 @@
 @use "../../Foundation/variable" as v;
 @use "../../Foundation/mixin" as m;
-$gmenu-open: ".p-gmenu--btn > .list";
 
 .p-gmenu {
   &--btn {
-    display: block;
-    width: 59px;
-    font-family: 'Roboto', sans-serif;
-    color: #707070;
-    font-size: 20px;
-    font-weight: 510; //要調整
     border: none;
     background: transparent;
+    display: block;
+    & .c-menu-icon {
+      width: 59px;
+      @include m.mq (screen011) {
+        font-size: 34px;
+        left: 20px;
+      }
+    }
     @include m.mq (screen03) {
       display: none;
     }
     > .list {
       transition: all 300ms 0s ease;
       width: 100vw;
-      height: 100vh;
+      height: 102vh;
       margin-left: 10%;
       top: -20px;
       position: fixed;
-      background: #fff7ef;
+      background: #F2EDE9;
       display: flex;
       flex-direction: column;
       z-index: 120;
-      overflow-y: auto;
+      overflow-y: scroll;
+      box-sizing: border-box;
       left: 100%;
-      @include m.mq (screen03) {
-        width: inherit;
-        height: inherit;
-        padding: inherit;
-        position: static;
-        background: inherit;
-        flex-direction: row;
-        transition: inherit;
+      @include m.mq (screen02) {
+        margin-left: 55%;
       }
       > li {
         margin-bottom: 50px;
-        &:last-child {
-          margin-bottom: 0;
-        }
-        @include m.mq (screen03) {
-          margin-bottom: 0;
-        }
       }
     }
     > .list {
@@ -59,22 +49,11 @@ $gmenu-open: ".p-gmenu--btn > .list";
           margin-right: 20px;
           font-size: 1.2rem;
         } 
-        a {
-          @include m.mq (screen03) {
-            font-weight: normal;
-            white-space: nowrap;
-          }
-        }
       }
     }
     &.is-open {
       > .list {
         left: 0;
-      }
-      .c-arrow--top-l {
-        &::before {
-          display: none;
-        }
       }
     }
   }

@@ -1,6 +1,12 @@
+@use "../Foundation/mixin" as m;
+
 .l-about {
   width: 100%;
   height: 745px;
+  transition: 0;
+  @include m.mq (screen02) {
+    height: 415px;
+  } 
   &__inner {
     width: 100%;
     height: 100%;

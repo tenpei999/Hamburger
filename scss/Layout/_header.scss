@@ -1,14 +1,23 @@
+@use "../Foundation/mixin" as m;
+
 .l-header {
   display: flex;
   flex-direction: column;
   position: fixed;
   width: 100%;
   z-index: 100;
+  display: block;
+  @include m.mq (screen03) {
+    width: calc(100% - 365px);
+  }
   &__wrapper {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    margin: 10px 10px 0px 10px;
+    margin: 10px 20px 0px 20px;
+    @include m.mq (screen011) {
+      margin: 10px 60px 0px 60px;     
+    }
     >.p-gmenu {
       &--btn {
         position: absolute;

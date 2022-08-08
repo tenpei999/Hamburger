@@ -14,6 +14,9 @@
     @include m.mq (screen02) {
       font-size: 0;
     }
+    @include m.mq (screen03) {
+      font-size: 36px;
+    } 
   }
   &.c-background-image {
     height: 285px;
@@ -28,7 +31,14 @@
       background-repeat: no-repeat;
     }
     @include m.mq (screen02) {
-      background: url(../../../img/mv-tav.svg);
+      background: url(../../../img/mv-tav.svg) center center;
+      width: 100%;
+    }
+    @include m.mq (screen03) {
+      background: url(../../../img/mv-pc.svg) center center;
+      height: 530px;
+      transition: 200ms;
+      width: 100%;
     }
   }
 }

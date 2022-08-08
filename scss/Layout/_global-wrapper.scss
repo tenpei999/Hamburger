@@ -1,13 +1,14 @@
 @use "../Foundation/mixin" as m;
 
 .l-global-wrapper {
+  display: flex;
   z-index: 200;
-  transition: 200ms;
-  width: 100%;
+  width: 100vw;
+  flex-direction: column;
   @include m.mq (screen01) {
     min-width: 375px;
   }
-  @include m.mq (screen01) {
-    max-width: 874px;
+  @include m.mq (screen03) {
+    flex-direction: row;
   }
 }

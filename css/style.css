@@ -159,18 +159,19 @@ input, button, textarea, select {
 /* Bold */
 /* Heavy */
 .l-global-wrapper {
+  display: flex;
   z-index: 200;
-  transition: 200ms;
-  width: 100%;
+  width: 100vw;
+  flex-direction: column;
 }
 @media screen and (min-width: 375px) {
   .l-global-wrapper {
     min-width: 375px;
   }
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 1200px) {
   .l-global-wrapper {
-    max-width: 874px;
+    flex-direction: row;
   }
 }
 
@@ -180,12 +181,23 @@ input, button, textarea, select {
   position: fixed;
   width: 100%;
   z-index: 100;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .l-header {
+    width: calc(100% - 365px);
+  }
 }
 .l-header__wrapper {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin: 10px 10px 0px 10px;
+  margin: 10px 20px 0px 20px;
+}
+@media screen and (min-width: 600px) {
+  .l-header__wrapper {
+    margin: 10px 60px 0px 60px;
+  }
 }
 .l-header__wrapper > .p-gmenu--btn {
   position: absolute;
@@ -201,14 +213,15 @@ input, button, textarea, select {
 }
 
 .l-contents {
-  margin: 20px;
+  margin: 10px auto;
   width: calc(100% - 40px);
 }
 .l-contents--wrapper {
   display: flex;
   min-width: 375px;
-  width: 100vw;
   flex-direction: column;
+  margin: 10px;
+  transition: 200ms;
 }
 @media screen and (min-width: 820px) {
   .l-contents--wrapper {
@@ -220,6 +233,11 @@ input, button, textarea, select {
     width: 50%;
   }
 }
+@media screen and (min-width: 820px) {
+  .l-contents {
+    margin: 10px;
+  }
+}
 .l-contents__item {
   margin: 0 10px 10px 10px;
   padding: 0.5rem 1rem 0.5rem 0.5rem;
@@ -228,6 +246,12 @@ input, button, textarea, select {
 .l-about {
   width: 100%;
   height: 745px;
+  transition: 0;
+}
+@media screen and (min-width: 820px) {
+  .l-about {
+    height: 415px;
+  }
 }
 .l-about__inner {
   width: 100%;
@@ -239,6 +263,25 @@ input, button, textarea, select {
   width: 100%;
   height: 150px;
   padding-top: 40px;
+}
+
+.l-container {
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .l-container {
+    width: calc(100% - 365px);
+  }
+}
+
+.l-aside {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .l-aside {
+    display: block;
+    width: 365px;
+  }
 }
 
 .c-text--roboto-white {
@@ -302,16 +345,6 @@ input, button, textarea, select {
   left: 0;
   z-index: 10;
 }
-@media screen and (min-width: 820px) {
-  .c-background-image--shadow {
-    height: 50%;
-  }
-}
-@media screen and (min-width: 1900px) {
-  .c-background-image--shadow {
-    height: 100%;
-  }
-}
 
 .c-text-box--has-icon {
   padding-right: 12px;
@@ -351,6 +384,7 @@ input, button, textarea, select {
 .c-list p {
   font-family: m-plus-1m, sans-serif;
   font-weight: bold;
+  color: #707070;
   margin-bottom: 2rem;
   text-align: left;
 }
@@ -371,6 +405,14 @@ input, button, textarea, select {
 }
 .c-list--item li:last-child {
   margin-bottom: 0;
+}
+
+.c-menu-icon {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 510;
+  font-family: "Roboto", sans-serif;
+  color: #707070;
 }
 
 .p-header .c-background-color--bisque {
@@ -421,14 +463,18 @@ input, button, textarea, select {
 }
 
 .p-gmenu--btn {
-  display: block;
-  width: 59px;
-  font-family: "Roboto", sans-serif;
-  color: #707070;
-  font-size: 20px;
-  font-weight: 510;
   border: none;
   background: transparent;
+  display: block;
+}
+.p-gmenu--btn .c-menu-icon {
+  width: 59px;
+}
+@media screen and (min-width: 600px) {
+  .p-gmenu--btn .c-menu-icon {
+    font-size: 34px;
+    left: 20px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .p-gmenu--btn {
@@ -438,38 +484,25 @@ input, button, textarea, select {
 .p-gmenu--btn > .list {
   transition: all 300ms 0s ease;
   width: 100vw;
-  height: 100vh;
+  height: 102vh;
   margin-left: 10%;
   top: -20px;
   position: fixed;
-  background: #fff7ef;
+  background: #F2EDE9;
   display: flex;
   flex-direction: column;
   z-index: 120;
-  overflow-y: auto;
+  overflow-y: scroll;
+  box-sizing: border-box;
   left: 100%;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 820px) {
   .p-gmenu--btn > .list {
-    width: inherit;
-    height: inherit;
-    padding: inherit;
-    position: static;
-    background: inherit;
-    flex-direction: row;
-    transition: inherit;
+    margin-left: 55%;
   }
 }
 .p-gmenu--btn > .list > li {
   margin-bottom: 50px;
-}
-.p-gmenu--btn > .list > li:last-child {
-  margin-bottom: 0;
-}
-@media screen and (min-width: 1200px) {
-  .p-gmenu--btn > .list > li {
-    margin-bottom: 0;
-  }
 }
 @media screen and (min-width: 1200px) {
   .p-gmenu--btn > .list {
@@ -487,17 +520,8 @@ input, button, textarea, select {
     font-size: 1.2rem;
   }
 }
-@media screen and (min-width: 1200px) {
-  .p-gmenu--btn > .list li a {
-    font-weight: normal;
-    white-space: nowrap;
-  }
-}
 .p-gmenu--btn.is-open > .list {
   left: 0;
-}
-.p-gmenu--btn.is-open .c-arrow--top-l::before {
-  display: none;
 }
 .p-gmenu--fead.is-open {
   display: block;
@@ -567,6 +591,11 @@ input, button, textarea, select {
     font-size: 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .p-main-visual .c-text--M-white {
+    font-size: 36px;
+  }
+}
 .p-main-visual.c-background-image {
   height: 285px;
   background: url(../../../img/main-visual.svg);
@@ -586,7 +615,16 @@ input, button, textarea, select {
 }
 @media screen and (min-width: 820px) {
   .p-main-visual.c-background-image {
-    background: url(../../../img/mv-tav.svg);
+    background: url(../../../img/mv-tav.svg) center center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p-main-visual.c-background-image {
+    background: url(../../../img/mv-pc.svg) center center;
+    height: 530px;
+    transition: 200ms;
+    width: 100%;
   }
 }
 
@@ -624,6 +662,14 @@ input, button, textarea, select {
   background-image: url(../../../img/bg-map.svg);
   background-size: cover;
 }
+.p-about .c-background-image--shadow {
+  height: 50%;
+}
+@media screen and (min-width: 820px) {
+  .p-about .c-background-image--shadow {
+    height: 100%;
+  }
+}
 .p-about__section-title {
   font-size: 1.8rem;
   padding-top: 10px;
@@ -653,6 +699,11 @@ input, button, textarea, select {
   z-index: 20;
   overflow: scroll;
 }
+@media screen and (min-width: 820px) {
+  .p-about__inner > .c-text--M-white {
+    height: 500px;
+  }
+}
 
 .p-footer {
   text-align: center;
@@ -678,6 +729,49 @@ input, button, textarea, select {
 }
 .p-footer .c-copyright {
   padding-top: 2rem;
+}
+
+.p-aside {
+  background: #F2EDE9;
+  position: relative;
+}
+.p-aside > p {
+  font-family: "Roboto", sans-serif;
+  color: #707070;
+  font-size: 36px;
+  padding-top: 20px;
+  padding-left: 45px;
+  font-weight: 510;
+  border: none;
+  background: transparent;
+  display: inline-block;
+  text-align: left;
+}
+.p-aside > .list {
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+  overflow-y: auto;
+}
+.p-aside > .list > li {
+  margin-bottom: 50px;
+}
+.p-aside > .list > li:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .p-aside > .list {
+    display: flex;
+  }
+}
+.p-aside > .list li {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 1200px) {
+  .p-aside > .list li a {
+    font-weight: normal;
+    white-space: nowrap;
+  }
 }
 
 .u-under-bar::before {

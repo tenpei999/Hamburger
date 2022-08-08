@@ -10,6 +10,8 @@
 @forward "Layout/contents"; //メインコンテンツ
 @forward "Layout/about"; //アバウト
 @forward "Layout/footer"; //フッター
+@forward "Layout/container"; //コンテナー
+@forward "Layout/aside"; //サイドバー
 /* Component
 ------------------------------*/
 @forward "object/Component/text"; //テキスト
@@ -18,6 +20,7 @@
 @forward "object/Component/text-box--has-icon"; //検索窓
 @forward "object/Component/btn"; //ボタン
 @forward "object/Component/list"; //リスト
+@forward "object/Component/menu-icon"; //メニューアイコン
 
 /* Project
 ------------------------------*/
@@ -29,6 +32,7 @@
 @forward "object/project/contents"; // メニュー
 @forward "object/project/about"; // アバウト
 @forward "object/project/footer"; // フッター
+@forward "object/project/aside"; // サイドバー
 
 /*Utility
 ------------------------------*/

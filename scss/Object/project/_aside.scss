@@ -1,0 +1,46 @@
+@use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
+
+.p-aside {
+  background: #F2EDE9;
+  position: relative;
+  > p {
+    font-family: 'Roboto', sans-serif;
+    color: #707070;
+    font-size: 36px;
+    padding-top: 20px;
+    padding-left: 45px;
+    font-weight: 510; //要調整
+    border: none;
+    background: transparent;
+    display: inline-block;
+    text-align: left;
+  }
+  > .list {
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+    overflow-y: auto;
+    > li {
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  > .list {
+    @include m.mq (screen03) {
+      display: flex;
+ 
+    }
+    li {
+      font-size: 1.6rem;
+      a {
+        @include m.mq (screen03) {
+          font-weight: normal;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
