@@ -3,12 +3,11 @@
 .l-header {
   display: flex;
   flex-direction: column;
-  position: fixed;
   width: 100%;
-  z-index: 100;
-  display: block;
   @include m.mq (screen03) {
-    width: calc(100% - 365px);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   &__wrapper {
     position: relative;
@@ -17,6 +16,9 @@
     margin: 10px 20px 0px 20px;
     @include m.mq (screen011) {
       margin: 10px 60px 0px 60px;     
+    }
+    @include m.mq (screen03) {
+      margin: 0;     
     }
     >.p-gmenu {
       &--btn {

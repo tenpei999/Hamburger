@@ -2,12 +2,10 @@
 
 .l-global-wrapper {
   display: flex;
-  z-index: 200;
   width: 100vw;
   flex-direction: column;
-  @include m.mq (screen01) {
-    min-width: 375px;
-  }
+  min-width: 375px;
+  max-width: 1900px;
   @include m.mq (screen03) {
     flex-direction: row;
   }

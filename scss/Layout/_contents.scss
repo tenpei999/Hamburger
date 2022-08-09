@@ -3,12 +3,17 @@
 .l-contents {
   &--wrapper {
     display: flex;
-    min-width: 375px;
     flex-direction: column;
     margin: 10px;
     transition: 200ms;
     @include m.mq (screen02) {
       flex-direction: row;
+    }
+    @include m.mq (screen021) {
+      margin: 2.5% 1.5% 3% 1.5%;
+    }
+    @include m.mq (screen03) {
+      margin: 5% 3% 6% 3%;
     }
   }
   @include m.mq (screen02) {
@@ -19,7 +24,12 @@
   @include m.mq (screen02) {
     margin: 10px;
   }
-
+  @include m.mq (screen021) {
+    margin: 3%;
+  }
+  @include m.mq (screen03) {
+    margin: 3.8%;
+  }
   &__item {
     margin: 0 10px 10px 10px;
     padding: 0.5rem 1rem 0.5rem 0.5rem;

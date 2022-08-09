@@ -1,4 +1,5 @@
 @use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
 
 .p-header {
   .c-background-color--bisque {
@@ -6,6 +7,9 @@
   }
  &__site-title {
    margin: 40px auto 38px auto;
+   @include m.mq (screen03) {
+     margin: 3rem auto 3rem 65px;
+   }
    .c-title-block--roboto {
      color: v.$logo-gray;
    }

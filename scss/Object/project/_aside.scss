@@ -7,8 +7,8 @@
   > p {
     font-family: 'Roboto', sans-serif;
     color: #707070;
-    font-size: 36px;
-    padding-top: 20px;
+    font-size: 2rem;
+    padding-top: 3.4rem;
     padding-left: 45px;
     font-weight: 510; //要調整
     border: none;
@@ -18,7 +18,6 @@
   }
   > .list {
     flex-direction: column;
-    height: 100vh;
     display: flex;
     overflow-y: auto;
     > li {
@@ -31,10 +30,9 @@
   > .list {
     @include m.mq (screen03) {
       display: flex;
- 
     }
     li {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       a {
         @include m.mq (screen03) {
           font-weight: normal;

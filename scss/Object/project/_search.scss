@@ -5,6 +5,10 @@
   display: flex;
   justify-content: center;
   margin: 0 auto 40px auto;
+  @include m.mq (screen03) {
+    width: 30%;
+    margin: auto 60px auto auto;
+  }
   .c-text-box--has-icon {
     min-width: 230px;
     height: 46px;
@@ -13,6 +17,10 @@
     }
     @include m.mq (screen02) {
       width: 400px;
+      transition: 200ms;
+    }
+    @include m.mq (screen03) {
+      height: 1.5rem;
       transition: 200ms;
     }
   }
