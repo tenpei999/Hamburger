@@ -4,7 +4,16 @@
 .p-search {
   display: flex;
   justify-content: center;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 45px auto;
+  width: 337px;
+  @include m.mq (screen011) {
+    width: 450px;
+    margin: 0 auto 45px auto;
+  }
+  @include m.mq (screen02) {
+    width: 535px;
+    margin: 0 auto 45px auto;
+  }
   @include m.mq (screen03) {
     width: 30%;
     margin: auto 60px auto auto;
@@ -12,6 +21,13 @@
   .c-text-box--has-icon {
     min-width: 230px;
     height: 46px;
+    width: 100%;
+    input {
+      font-size: 200%;
+      @include m.mq (screen03) {
+        font-size: 160%;
+      }
+    }
     @include m.mq (screen011) {
       width: 300px;
     }
@@ -22,6 +38,11 @@
     @include m.mq (screen03) {
       height: 1.5rem;
       transition: 200ms;
+    }
+    &__inner {
+      @include m.mq (screen03) {
+        border-radius: 5px;
+      }
     }
   }
   .c-btn--submit {

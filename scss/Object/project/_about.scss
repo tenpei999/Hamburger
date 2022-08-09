@@ -5,7 +5,6 @@ $widthTb: 820px;
 $widthPc: 1220px;
 
 .p-about {
-
   position: relative;
   background-size: cover;
   background-image: url(../../../img/bg-map.svg);
@@ -13,7 +12,7 @@ $widthPc: 1220px;
     background-image: linear-gradient(rgba(0,0,0, 0.55) 50%,rgba(0,0,0, 0.35) 50%), url(../../../img/bg-map.svg);
    }
   @media (min-width: $widthMq) and (max-width: $widthTb) {
-    background-color: rgba(0,0,0, 0.7)
+    background-image: linear-gradient(rgba(0,0,0, 0.55) 100%,rgba(0,0,0, 0.35) 0%), url(../../../img/bg-map.svg);
    }
   @media screen and (min-width: $widthTb) {
     background-image: linear-gradient(90deg, rgba(0,0,0, 0.55) 60%,rgba(0,0,0, 0.35) 40%), url(../../../img/bg-map.svg);
@@ -28,27 +27,19 @@ $widthPc: 1220px;
     position: relative;
     z-index: 20;
     .u-under-bar::before {
+      position: absolute;
       height: 3px;
       bottom: -10px;
       width: 70px;
     }
   }
   &__inner {
-    margin-bottom: 29px;
     >.c-text--M-white {
-      position: absolute;
-      top: 80px;
-      left: 38px;
-      right: 38px;
+      padding: 80px 38px 60px 38px;
       font-size: 14px;
-      height: 700px;
       line-height: 2rem;
       font-weight: bold;
       z-index: 20;
-      overflow: scroll;
-      @include m.mq (screen02) {
-        height: 500px;
-      }
     }
   }
 }

@@ -12,6 +12,11 @@
         font-size: 34px;
         left: 20px;
       }
+      @include m.mq (screen02) {
+        font-size: 34px;
+        left: 20px;
+        padding-top: 3px;
+      }
     }
     @include m.mq (screen03) {
       display: none;
@@ -67,6 +72,7 @@
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 110;
       @include m.mq (screen03) {
         display: none;
       }

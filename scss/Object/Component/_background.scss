@@ -21,21 +21,5 @@
   }
   &-image {
     background: transparent center center / cover;
-    // &--shadow {
-    //   position: relative;
-    //   background-color: rgba(0,0,0,0.10);
-    //   background-position: center center;
-    //   background-size: 100%;
-    //   &::before {
-    //     content: '';
-    //     background-color: rgba(0,0,0, 0.32);
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     z-index: 10;
-    //   }
-    // }
   }
 } 
