@@ -20,12 +20,15 @@ $widthPc: 1220px;
 
   &__section-title {
     font-size: 1.8rem;
-    padding-top: 10px;
-    padding-left: 30px;
+    padding-top: 2.2rem;
+    padding-left: 2.2rem;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     position: relative;
     z-index: 20;
+    @include m.mq (screen02) {
+      padding-left: 3rem;
+    }
     .u-under-bar::before {
       position: absolute;
       height: 3px;
@@ -35,11 +38,14 @@ $widthPc: 1220px;
   }
   &__inner {
     >.c-text--M-white {
-      padding: 80px 38px 60px 38px;
+      padding: 0.5rem 2rem 60px 2rem;
       font-size: 14px;
       line-height: 2rem;
       font-weight: bold;
       z-index: 20;
+      @include m.mq (screen02) {
+        padding: 0.5rem 2rem 60px 2rem;
+      }
     }
   }
 }
