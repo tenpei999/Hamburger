@@ -34,5 +34,22 @@
       transition: 200ms;
       width: 100%;
     }
+    &--shadow {
+      height: 285px;
+      background-image: url(../../../img/mb-shadow.svg);
+      background-color: rgba(0, 0, 0, 0.8);
+      .c-text--M-white {
+        font-family: v.$roboto;
+        font-size: 1.3rem;
+        font-weight: v.$Lbold;
+        position: absolute;
+        top: 38%;
+        left: 25px;
+        p {
+          font-size: 1.2rem;
+          font-weight: normal;
+        }
+      }
+    }
   }
 }

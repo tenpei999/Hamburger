@@ -17,7 +17,7 @@
     font-size: 3.5rem;
     padding-top: 10px;
     padding-left: 10px;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.45rem;
     margin-bottom: 20rem;
     position: relative;
     font-weight: v.$MMbold;
@@ -33,5 +33,7 @@
   &__contents-title {
     font-size: 24px;
     padding-bottom: 9px;
-  } 
+  }
+  &_pages {
+  }
 }

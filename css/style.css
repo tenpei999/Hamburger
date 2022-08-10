@@ -258,6 +258,9 @@ input, button, textarea, select {
   margin: 0 1.2rem 1.2rem 1.2rem;
   padding: 1rem 1.25rem 1rem 1.25rem;
 }
+.l-contents_pages {
+  padding: 1rem 1.2rem 1rem 1.2rem;
+}
 
 .l-about {
   width: 100%;
@@ -330,13 +333,16 @@ input, button, textarea, select {
 }
 .c-background-color--white-opacity {
   background-color: #ffffff;
-  opacity: 0.9;
+  opacity: 0.7;
 }
-.c-background-color--white-opacity:hover {
-  background-color: #ffffff;
+.c-background-color--base-white {
+  background-color: #FFFDFA;
 }
 .c-background-image {
   background: transparent center center/cover;
+}
+.c-background-image--shadow {
+  background: transparent left center/cover;
 }
 
 .c-text-box--has-icon {
@@ -428,6 +434,53 @@ input, button, textarea, select {
   font-weight: 510;
   font-family: "Roboto", sans-serif;
   color: #707070;
+}
+
+.c-contents_pages {
+  color: #3c2a10;
+}
+.c-contents_pages__title {
+  font-size: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1.2rem;
+}
+.c-contents_pages__text {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.c-card {
+  display: flex;
+  font-family: m-plus-1m, sans-serif;
+}
+.c-card__img {
+  background-size: cover;
+  box-sizing: border-box;
+}
+.c-card__contents-area {
+  background-color: #3C2B1C;
+  padding: 1rem;
+}
+.c-card__text-area {
+  color: #ffffff;
+}
+.c-card__title {
+  font-weight: 600;
+}
+.c-card__sub-title {
+  font-weight: 600;
+}
+.c-card__text {
+  line-height: 1.5rem;
+  font-weight: 10;
+  flex-wrap: wrap;
+  padding-right: 3rem;
+}
+.c-card__btn {
+  background-color: #ffffff;
+  border-radius: 2rem;
 }
 
 .p-header .c-background-color--bisque {
@@ -684,6 +737,23 @@ input, button, textarea, select {
     width: 100%;
   }
 }
+.p-main-visual.c-background-image--shadow {
+  height: 285px;
+  background-image: url(../../../img/mb-shadow.svg);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.p-main-visual.c-background-image--shadow .c-text--M-white {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  position: absolute;
+  top: 38%;
+  left: 25px;
+}
+.p-main-visual.c-background-image--shadow .c-text--M-white p {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
 
 .p-contents__take-out.c-background-image {
   background-image: url(../../../img/takeout.svg);
@@ -695,7 +765,7 @@ input, button, textarea, select {
   font-size: 3.5rem;
   padding-top: 10px;
   padding-left: 10px;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.45rem;
   margin-bottom: 20rem;
   position: relative;
   font-weight: 550;
@@ -710,7 +780,6 @@ input, button, textarea, select {
   font-size: 24px;
   padding-bottom: 9px;
 }
-
 .p-about {
   position: relative;
   background-size: cover;
@@ -830,6 +899,30 @@ input, button, textarea, select {
     font-weight: normal;
     white-space: nowrap;
   }
+}
+
+.p-card {
+  flex-direction: column;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.p-card .c-card__title {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+.p-card .c-card__sub-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.p-card .c-card__btn-area {
+  text-align: center;
+}
+.p-card .c-card__btn-area .c-card__btn {
+  margin: 3rem auto;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
 }
 
 .u-under-bar::before {

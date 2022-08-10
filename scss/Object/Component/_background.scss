@@ -1,3 +1,4 @@
+@use "../../Foundation/variable" as v;
 @use "../../Foundation/mixin" as m;
 
 .c-background {
@@ -13,13 +14,16 @@
     }
     &--white-opacity {
       background-color: #ffffff;
-      opacity: 0.9;
+      opacity: 0.7;
     }
-    &--white-opacity:hover {
-      background-color: #ffffff;
+    &--base-white {
+      background-color: v.$base-white;
     }
   }
   &-image {
     background: transparent center center / cover;
+    &--shadow {
+      background: transparent left center / cover;
+    }
   }
-} 
+}
