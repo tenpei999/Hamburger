@@ -35,6 +35,22 @@
     padding-bottom: 9px;
   }
   &_pages {
-    
+    .c-contents_pages {
+      &__title {
+        font-size: 2.1rem;
+        padding-top: 1rem;
+        padding-bottom: 1.2rem;
+        font-weight: v.$Mbold;
+      }
+      &__text {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        padding-right: 1rem;
+        padding-bottom: 1.5rem;
+      }
+    }
+    .c-pagenation {
+      
+    }
   }
 }

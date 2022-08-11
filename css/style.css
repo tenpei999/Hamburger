@@ -266,17 +266,6 @@ input, button, textarea, select {
     padding: 1rem 2.8rem;
   }
 }
-.l-contents_pages .c-contents_pages__title {
-  font-size: 1.8rem;
-  padding-top: 1rem;
-  padding-bottom: 1.2rem;
-}
-.l-contents_pages .c-contents_pages__text {
-  font-size: 1.1rem;
-  line-height: 1.5rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-}
 
 .l-about {
   width: 100%;
@@ -460,8 +449,9 @@ input, button, textarea, select {
   display: flex;
   font-family: m-plus-1m, sans-serif;
 }
-.c-card__img {
-  background-size: cover;
+.c-card img {
+  -o-object-fit: cover;
+     object-fit: cover;
   box-sizing: border-box;
 }
 .c-card__contents-area {
@@ -472,16 +462,14 @@ input, button, textarea, select {
   color: #ffffff;
 }
 .c-card__title {
-  font-weight: 600;
+  font-weight: 550;
 }
 .c-card__sub-title {
   font-weight: 600;
 }
 .c-card__text {
   line-height: 1.5rem;
-  font-weight: 10;
   flex-wrap: wrap;
-  padding-right: 3rem;
 }
 .c-card__btn {
   background-color: #ffffff;
@@ -890,6 +878,19 @@ input, button, textarea, select {
   font-size: 24px;
   padding-bottom: 9px;
 }
+.p-contents_pages .c-contents_pages__title {
+  font-size: 2.1rem;
+  padding-top: 1rem;
+  padding-bottom: 1.2rem;
+  font-weight: 500;
+}
+.p-contents_pages .c-contents_pages__text {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+}
+
 .p-about {
   position: relative;
   background-size: cover;
@@ -1016,15 +1017,65 @@ input, button, textarea, select {
   font-size: 1rem;
   margin-top: 1rem;
 }
+@media screen and (min-width: 820px) {
+  .p-card {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 820px) {
+  .p-card img {
+    width: 50%;
+  }
+}
+.p-card .c-card__contents-area {
+  padding: 1rem;
+}
+@media screen and (min-width: 820px) {
+  .p-card .c-card__contents-area {
+    width: 50%;
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .p-card .c-card__contents-area {
+    padding: 2.5rem;
+  }
+}
 .p-card .c-card__title {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 820px) {
+  .p-card .c-card__title {
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .p-card .c-card__title {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
 }
 .p-card .c-card__sub-title {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 1rem;
+}
+@media screen and (min-width: 1220px) {
+  .p-card .c-card__sub-title {
+    font-size: 1.4rem;
+  }
+}
+.p-card .c-card__text {
+  padding-right: 3rem;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 1220px) {
+  .p-card .c-card__text {
+    padding-right: 1rem;
+  }
 }
 .p-card .c-card__btn-area {
   text-align: center;
@@ -1033,6 +1084,17 @@ input, button, textarea, select {
   margin: 3rem auto;
   padding: 1rem 3rem;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 820px) {
+  .p-card .c-card__btn-area .c-card__btn {
+    margin: 2.5rem auto 0.5rem auto;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .p-card .c-card__btn-area .c-card__btn {
+    font-size: 1rem;
+    margin: 2.5rem auto 0 auto;
+  }
 }
 
 .u-under-bar::before {

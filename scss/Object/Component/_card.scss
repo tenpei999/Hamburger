@@ -3,8 +3,8 @@
 .c-card {
   display: flex;
   font-family: v.$M;
-  &__img {
-    background-size: cover;
+  img {
+    object-fit: cover;
     box-sizing: border-box;
   }
   &__contents-area {
@@ -17,16 +17,14 @@
   // &__btn-area {
   // }
   &__title {
-    font-weight: v.$bold;
+    font-weight: v.$MMbold;
   }
   &__sub-title {
     font-weight: v.$bold;
   }
   &__text {
     line-height: 1.5rem;
-    font-weight: v.$thin;
     flex-wrap: wrap;
-    padding-right: 3rem;
   }
   &__btn {
     background-color: v.$white;
