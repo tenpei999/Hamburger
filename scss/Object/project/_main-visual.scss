@@ -38,16 +38,38 @@
       height: 285px;
       background-image: url(../../../img/mb-shadow.svg);
       background-color: rgba(0, 0, 0, 0.8);
+      @include m.mq (screen03) {
+        height: 220px;
+      }
       .c-text--M-white {
+        display: flex;
+        flex-direction: column;
         font-family: v.$roboto;
         font-size: 1.3rem;
         font-weight: v.$Lbold;
         position: absolute;
         top: 38%;
         left: 25px;
+        @include m.mq (screen02) {
+          font-size: 1.7rem;
+          left: 6rem;
+          flex-direction: row;
+        }
+        @include m.mq (screen03) {
+          font-size: 1.4rem;
+          left: 4rem;
+        }
         p {
           font-size: 1.2rem;
+          text-align: center;
           font-weight: normal;
+          @include m.mq (screen02) {
+            padding-top: 1.7rem;
+            padding-left: 1rem;
+          }
+          @include m.mq (screen03) {
+            padding-top: 1.4rem;
+          }
         }
       }
     }
