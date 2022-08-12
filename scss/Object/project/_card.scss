@@ -55,15 +55,15 @@
     &__btn-area {
       text-align: center;
       & .c-card__btn {
-        margin: 3rem auto;
         padding: 1rem 3rem;
         font-size: 1.2rem;
+        margin: 13% auto;
         @include m.mq (screen02) {
-          margin: 2.5rem auto 0.5rem auto;
+          margin: 13% auto 7% auto;
         }
         @include m.mq (screen03) {
           font-size: 1rem;
-          margin: 2.5rem auto 0 auto;
+          margin: 15% auto 5% auto;
         }
       }
     }

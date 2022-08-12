@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Foundation/base */
 html {
   cursor: default; /* 1 */
@@ -477,24 +478,8 @@ input, button, textarea, select {
 }
 
 .c-pagination {
-  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
-  padding: 3rem 5.3% 1rem 5.3%;
-}
-@media screen and (min-width: 820px) {
-  .c-pagination {
-    padding: 5rem 10% 0 10%;
-  }
-}
-.c-pagination li:first-child {
-  display: none;
-}
-@media screen and (min-width: 820px) {
-  .c-pagination li:first-child {
-    display: block;
-    padding-top: 5px;
-  }
 }
 .c-pagination--prev a, .c-pagination--next a, .c-pagination--no a {
   display: flex;
@@ -515,7 +500,7 @@ input, button, textarea, select {
 }
 @media screen and (min-width: 820px) {
   .c-pagination--prev a img, .c-pagination--next a img, .c-pagination--no a img {
-    padding-top: 1rem;
+    padding-top: 0.7rem;
   }
 }
 .c-pagination--next a {
@@ -538,9 +523,9 @@ input, button, textarea, select {
     display: inline-block;
     border: 1px solid #dedede;
     text-decoration: none;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
   }
 }
@@ -1081,19 +1066,62 @@ input, button, textarea, select {
   text-align: center;
 }
 .p-card .c-card__btn-area .c-card__btn {
-  margin: 3rem auto;
   padding: 1rem 3rem;
   font-size: 1.2rem;
+  margin: 13% auto;
 }
 @media screen and (min-width: 820px) {
   .p-card .c-card__btn-area .c-card__btn {
-    margin: 2.5rem auto 0.5rem auto;
+    margin: 13% auto 7% auto;
   }
 }
 @media screen and (min-width: 1220px) {
   .p-card .c-card__btn-area .c-card__btn {
     font-size: 1rem;
-    margin: 2.5rem auto 0 auto;
+    margin: 15% auto 5% auto;
+  }
+}
+
+.p-pagination .c-pagination {
+  font-size: 1.2rem;
+  padding: 3rem 1.8rem 1rem 1.8rem;
+}
+@media screen and (min-width: 820px) {
+  .p-pagination .c-pagination {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .p-pagination .c-pagination {
+    font-size: 1rem;
+  }
+}
+.p-pagination .c-pagination li {
+  padding-right: 1rem;
+}
+.p-pagination .c-pagination li:first-of-type {
+  display: none;
+}
+@media screen and (min-width: 820px) {
+  .p-pagination .c-pagination li:first-of-type {
+    display: block;
+    font-size: 1rem;
+    padding-top: 0.2rem;
+  }
+}
+.p-pagination .c-pagination li:nth-of-type(2), .p-pagination .c-pagination li:nth-of-type(1２) {
+  display: none;
+}
+.p-pagination .c-pagination .faicon {
+  font-weight: 600;
+  opacity: 0.5;
+  font-size: 2rem;
+}
+@media screen and (min-width: 820px) {
+  .p-pagination .c-pagination .faicon {
+    display: block;
   }
 }
 
