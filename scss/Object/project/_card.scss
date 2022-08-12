@@ -4,7 +4,7 @@
 .p-card {
   flex-direction: column;
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   @include m.mq (screen02) {
     flex-direction: row;
   }
@@ -15,41 +15,49 @@
   }
   .c-card {
     &__contents-area {
+      display: block;
       padding: 1rem;
       @include m.mq (screen02) {
         width: 50%;
         padding: 2rem;
       }
       @include m.mq (screen03) {
-        padding: 2.5rem;
+        padding: 2.3rem 2.3rem 0 2.3rem;
+        aspect-ratio: 4 / 3;
+        height: 58%;
       }
     }
     &__title {
       padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
+      padding-bottom: 1rem;
       font-size: 2rem;
       @include m.mq (screen02) {
+        font-size: 1rem;
         padding-top: 0;
         padding-bottom: 0.5rem;
       }
       @include m.mq (screen03) {
         padding-top: 0;
-        padding-bottom: 2rem;
+        padding-bottom: 4.5%;
+        font-size: 1.5rem;
       }
     }
     &__sub-title {
       padding-top: 1rem;
       padding-bottom: 1rem;
-      font-size: 1rem;
-      @include m.mq (screen03) {
-        font-size: 1.4rem;
+      font-size: 1.1rem;
+      @include m.mq (screen02) {
+        font-size: 0.9rem;
+        padding-bottom: 4.5%;
       }
     }
     &__text {
       padding-right: 3rem;
       font-size: 0.9rem;
-      @include m.mq (screen03) {
-        padding-right: 1rem;
+      @include m.mq (screen02) {
+        font-size: 0.7rem;
+        padding-right: 2rem;
+        line-height: 1.3rem;
       }
     }
     &__btn-area {
@@ -59,11 +67,15 @@
         font-size: 1.2rem;
         margin: 13% auto;
         @include m.mq (screen02) {
-          margin: 13% auto 7% auto;
+          font-size: 1rem;
+          padding: 0.5rem 3rem;
+          margin: 11% auto 5% auto;
         }
         @include m.mq (screen03) {
-          font-size: 1rem;
-          margin: 15% auto 5% auto;
+          font-size: 0.8rem;
+          margin: 11% auto 0 auto;
+          padding: 0.8rem 3.7rem;
+          height: 42%;
         }
       }
     }

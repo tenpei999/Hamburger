@@ -35,7 +35,10 @@
   &_pages {
     padding: 1rem 1.2rem 1rem 1.2rem;
     @include m.mq (screen02) {
-      padding: 1rem 2.8rem;
+      padding: 1rem 2.5rem;
+    }
+    @include m.mq (screen03) {
+      padding: 1rem 3.8rem;
     }
   }  
 }

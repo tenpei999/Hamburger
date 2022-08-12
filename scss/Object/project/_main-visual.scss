@@ -38,6 +38,9 @@
       height: 285px;
       background-image: url(../../../img/mb-shadow.svg);
       background-color: rgba(0, 0, 0, 0.8);
+      @include m.mq (screen02) {
+        height: 300px;
+      }
       @include m.mq (screen03) {
         height: 220px;
       }
@@ -51,20 +54,20 @@
         top: 38%;
         left: 25px;
         @include m.mq (screen02) {
-          font-size: 1.7rem;
+          font-size: 2rem;
           left: 6rem;
           flex-direction: row;
         }
         @include m.mq (screen03) {
           font-size: 1.4rem;
-          left: 4rem;
+          left: 3.5rem;
         }
         p {
           font-size: 1.2rem;
           text-align: center;
           font-weight: normal;
           @include m.mq (screen02) {
-            padding-top: 1.7rem;
+            padding-top: 2.5rem;
             padding-left: 1rem;
           }
           @include m.mq (screen03) {

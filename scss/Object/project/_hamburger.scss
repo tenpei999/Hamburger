@@ -10,24 +10,25 @@
   &.is-open {
     &::before {
       content: "";
-      width: 20px;
-      height: 2px;
+      width: 50px;
+      height: 7px;
       background: #707070;
       position: absolute;
       left: calc(50% - math.div(20px, 2));
-      display: block;
+      display: inline-block;
       transform: rotate(45deg);
       top: 28px;
       z-index: 210;
+
     }
     &::after {
       content: "";
-      width: 20px;
-      height: 2px;
+      width: 50px;
+      height: 7px;
       background: #707070;
       left: calc(50% - math.div(20px, 2));
       position: absolute;
-      display: block;
+      display: inline-block;
       transform: rotate(-45deg);
       top: 28px;
       z-index: 210;

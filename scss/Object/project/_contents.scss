@@ -41,12 +41,18 @@
         padding-top: 1rem;
         padding-bottom: 1.2rem;
         font-weight: v.$Mbold;
+        @include m.mq (screen02) {
+          font-size: 2.4rem;
+        }
       }
       &__text {
         font-size: 1.1rem;
         line-height: 1.5rem;
         padding-right: 1rem;
         padding-bottom: 1.5rem;
+        @include m.mq (screen03) {
+          font-size: 1rem;
+        }
       }
     }
   }

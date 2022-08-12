@@ -7,9 +7,9 @@
   > p {
     font-family: 'Roboto', sans-serif;
     color: #707070;
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding-top: 3.4rem;
-    padding-left: 45px;
+    padding-left: 28px;
     font-weight: 510; //要調整
     border: none;
     background: transparent;
@@ -25,6 +25,12 @@
       &:last-child {
         margin-bottom: 0;
       }
+      .c-list--item {
+        padding-left: 10px;
+        // li {
+        //   padding-left: 20px;
+        // }
+      }
     }
   }
   > .list {
@@ -32,7 +38,7 @@
       display: flex;
     }
     li {
-      font-size: 1.2rem;
+      font-size: 0.8rem;
       a {
         @include m.mq (screen03) {
           font-weight: normal;

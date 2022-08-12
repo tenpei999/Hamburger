@@ -42,6 +42,10 @@
         margin-bottom: 50px;
       }
     }
+    > .list::before {
+      width: 375px;
+      height: 100px;
+    }
     > .list {
       @include m.mq (screen03) {
         height: 60px;
