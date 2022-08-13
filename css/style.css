@@ -628,52 +628,6 @@ input, button, textarea, select {
     display: none;
   }
 }
-.p-gmenu--btn > .list {
-  transition: all 300ms 0s ease;
-  width: 100vw;
-  height: 102vh;
-  margin-left: 10%;
-  top: -20px;
-  position: fixed;
-  background: #F2EDE9;
-  display: flex;
-  flex-direction: column;
-  z-index: 120;
-  overflow-y: scroll;
-  box-sizing: border-box;
-  left: 100%;
-}
-@media screen and (min-width: 820px) {
-  .p-gmenu--btn > .list {
-    margin-left: 55%;
-  }
-}
-.p-gmenu--btn > .list > li {
-  margin-bottom: 50px;
-}
-.p-gmenu--btn > .list::before {
-  width: 375px;
-  height: 100px;
-}
-@media screen and (min-width: 1220px) {
-  .p-gmenu--btn > .list {
-    height: 60px;
-    display: flex;
-    align-items: center;
-  }
-}
-.p-gmenu--btn > .list li {
-  font-size: 1.6rem;
-}
-@media screen and (min-width: 1220px) {
-  .p-gmenu--btn > .list li {
-    margin-right: 20px;
-    font-size: 1.2rem;
-  }
-}
-.p-gmenu--btn.is-open > .list {
-  left: 0;
-}
 .p-gmenu--fead.is-open {
   display: block;
   width: 100vw;
@@ -691,6 +645,65 @@ input, button, textarea, select {
   }
 }
 
+.p-aside .c-list {
+  height: 102vh;
+}
+@media screen and (min-width: 820px) {
+  .p-aside .c-list {
+    margin-left: 55%;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .p-aside .c-list {
+    display: flex;
+    align-items: center;
+  }
+  .p-aside .c-list li {
+    transition: all 300ms 0s ease;
+    width: 100vw;
+    margin-left: 10%;
+    top: -20px;
+    position: fixed;
+    background: #F2EDE9;
+    display: flex;
+    flex-direction: column;
+    z-index: 120;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    left: 100%;
+    margin-bottom: 50px;
+    font-size: 0.8rem;
+  }
+  .p-aside .c-list li.is-open > .list {
+    left: 0;
+  }
+}
+@media screen and (min-width: 1220px) and (min-width: 1220px) {
+  .p-aside .c-list li {
+    margin-right: 20px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1220px) and (min-width: 1220px) and (min-width: 1220px) {
+  .p-aside .c-list li a {
+    font-weight: normal;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .p-aside .c-list li .c-list--item {
+    padding-left: 10px;
+  }
+}
+.p-aside .c-list.list--item li {
+  margin-bottom: 50px;
+}
+.p-aside .c-list.list--item li .c-list--item {
+  padding-left: 10px;
+}
+.p-aside .c-list.list::before {
+  height: 100px;
+}
 .p-search {
   display: flex;
   justify-content: center;
@@ -1014,35 +1027,6 @@ input, button, textarea, select {
   display: inline-block;
   text-align: left;
 }
-.p-aside > .list {
-  flex-direction: column;
-  display: flex;
-  overflow-y: auto;
-}
-.p-aside > .list > li {
-  margin-bottom: 50px;
-}
-.p-aside > .list > li:last-child {
-  margin-bottom: 0;
-}
-.p-aside > .list > li .c-list--item {
-  padding-left: 10px;
-}
-@media screen and (min-width: 1220px) {
-  .p-aside > .list {
-    display: flex;
-  }
-}
-.p-aside > .list li {
-  font-size: 0.8rem;
-}
-@media screen and (min-width: 1220px) {
-  .p-aside > .list li a {
-    font-weight: normal;
-    white-space: nowrap;
-  }
-}
-
 .p-card {
   flex-direction: column;
   font-size: 1rem;

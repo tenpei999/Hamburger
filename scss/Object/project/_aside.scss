@@ -17,32 +17,29 @@
     text-align: left;
   }
   > .list {
-    flex-direction: column;
-    display: flex;
-    overflow-y: auto;
+    // flex-direction: column;
+    // display: flex;
+    // overflow-y: auto;
     > li {
-      margin-bottom: 50px;
-      &:last-child {
-        margin-bottom: 0;
-      }
+      // margin-bottom: 50px;
+      // &:last-child {
+      //   margin-bottom: 0;
+      // }
       .c-list--item {
-        padding-left: 10px;
-        // li {
-        //   padding-left: 20px;
-        // }
+        // padding-left: 10px;
       }
     }
   }
   > .list {
     @include m.mq (screen03) {
-      display: flex;
+      // display: flex;
     }
     li {
-      font-size: 0.8rem;
+      // font-size: 0.8rem;
       a {
         @include m.mq (screen03) {
-          font-weight: normal;
-          white-space: nowrap;
+          // font-weight: normal;
+          // white-space: nowrap;
         }
       }
     }
