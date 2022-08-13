@@ -1078,7 +1078,7 @@ input, button, textarea, select {
 .p-card .c-card__title {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 @media screen and (min-width: 820px) {
   .p-card .c-card__title {
