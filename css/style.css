@@ -370,6 +370,7 @@ input, button, textarea, select {
   .c-text-box--has-icon__inner {
     border-radius: 5px;
     padding-left: 30px;
+    border: 0.8px solid #707070;
   }
 }
 .c-text-box--has-icon__icon {
@@ -383,7 +384,7 @@ input, button, textarea, select {
   .c-text-box--has-icon__icon {
     top: 6px;
     left: 10px;
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
@@ -398,8 +399,9 @@ input, button, textarea, select {
 }
 @media screen and (min-width: 1220px) {
   .c-btn--submit {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     border-radius: 5px;
+    border: 0.8px solid #707070;
   }
 }
 
@@ -709,8 +711,8 @@ input, button, textarea, select {
 }
 @media screen and (min-width: 1220px) {
   .p-search {
-    width: 30%;
-    margin: auto 60px auto auto;
+    width: 0;
+    margin: auto 170px auto auto;
   }
 }
 .p-search .c-text-box--has-icon {
@@ -723,7 +725,7 @@ input, button, textarea, select {
 }
 @media screen and (min-width: 1220px) {
   .p-search .c-text-box--has-icon input {
-    font-size: 160%;
+    font-size: 140%;
   }
 }
 @media screen and (min-width: 600px) {
@@ -739,7 +741,8 @@ input, button, textarea, select {
 }
 @media screen and (min-width: 1220px) {
   .p-search .c-text-box--has-icon {
-    height: 2rem;
+    width: 252.1px;
+    height: 1.7rem;
     transition: 200ms;
   }
 }
@@ -760,6 +763,13 @@ input, button, textarea, select {
   .p-search .c-btn--submit {
     width: 136px;
     transition: 200ms;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .p-search .c-btn--submit {
+    width: 88px;
+    transition: 200ms;
+    height: 1.7rem;
   }
 }
 

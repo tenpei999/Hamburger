@@ -15,8 +15,8 @@
     margin: 0 auto 45px auto;
   }
   @include m.mq (screen03) {
-    width: 30%;
-    margin: auto 60px auto auto;
+    width: 0;
+    margin: auto 170px auto auto;
   }
   .c-text-box--has-icon {
     min-width: 230px;
@@ -25,7 +25,7 @@
     input {
       font-size: 200%;
       @include m.mq (screen03) {
-        font-size: 160%;
+        font-size: 140%;
       }
     }
     @include m.mq (screen011) {
@@ -36,7 +36,8 @@
       transition: 200ms;
     }
     @include m.mq (screen03) {
-      height: 2rem;
+      width: 252.1px;
+      height: 1.7rem;
       transition: 200ms;
     }
     &__inner {
@@ -53,6 +54,11 @@
     @include m.mq (screen02) {
       width: 136px;
       transition: 200ms;
+    }
+    @include m.mq (screen03) {
+      width: 88px;
+      transition: 200ms;
+      height: 1.7rem;
     }
   }
 }

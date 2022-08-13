@@ -11,8 +11,9 @@
     color: #808080;
     text-align: center;
     @include m.mq (screen03) {
-      font-size: 0.9rem;
+      font-size: 0.5rem;
       border-radius: 5px;
+      border: 0.8px solid #707070;
     }
   } 
 } 
