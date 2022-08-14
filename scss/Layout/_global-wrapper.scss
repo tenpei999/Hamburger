@@ -1,12 +1,14 @@
 @use "../Foundation/mixin" as m;
 
-.l-global-wrapper {
-  display: flex;
-  width: 100vw;
-  flex-direction: column;
-  min-width: 375px;
-  max-width: 1900px;
-  @include m.mq (screen03) {
-    flex-direction: row;
-  }
-}
+// .l-global-wrapper {
+//   display: flex;
+//   width: 100vw;
+//   min-width: 375px;
+//   max-width: 1900px;
+// }
+
+// .l-global-wrapper {
+//  display: grid;
+//  grid-template-columns: 1fr 19%;
+//  grid-template-rows: 1fr 150px;
+// }

@@ -3,6 +3,7 @@
 
 /* Layout 
 ------------------------------*/
+@forward "Layout/global-container"; //グリッド
 @forward "Layout/global-wrapper"; //全体レイアウト
 @forward "Layout/header"; //ヘッダー
 @forward "Layout/main"; //メイン
