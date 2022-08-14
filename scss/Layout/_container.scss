@@ -1,9 +1,8 @@
 @use "../Foundation/mixin" as m;
 
 .l-container {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  width: 100%; 
   @include m.mq (screen03) {
-    grid-column-end: 2;
+    width: calc(100% - 223.44px);
   }
 }
