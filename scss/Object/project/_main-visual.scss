@@ -14,7 +14,7 @@
   }
   &.c-background-image {
     height: 285px;
-    background: url(../../../img/main-visual.svg);   
+    background: url(../../../img/main-visual.svg); 
     @include m.mq (screen01) {
       min-width: 375px;
       background-size: cover;
@@ -75,6 +75,30 @@
           }
         }
       }
+    }
+    &.single {
+      height: 285px;
+    background: url(../../../img/main-visual2.png); 
+    @include m.mq (screen01) {
+      min-width: 375px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    @include m.mq (screen011) {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    @include m.mq (screen02) {
+      background: url(../../../img/mv-tav2.png) center center;
+      width: 100%;
+    }
+    @include m.mq (screen03) {
+      background: url(../../../img/mv-pc2.png) center center;
+      height: 350px;
+      transition: 200ms;
+      width: 100%;
+    }
+
     }
   }
 }

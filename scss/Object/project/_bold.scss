@@ -1,0 +1,10 @@
+@use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
+
+.p-bold {
+  width: 100%;
+  height: 14rem;
+  p {
+    font-weight: v.$bold;
+  }
+}

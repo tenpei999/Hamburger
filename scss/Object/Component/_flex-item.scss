@@ -1,0 +1,8 @@
+.c-flex-item {
+  &__img {
+    img {
+      aspect-ratio: 1 / 0.6;
+      object-fit: cover;
+    }
+  }
+}

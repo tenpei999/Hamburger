@@ -2,6 +2,7 @@
 @use "../../Foundation/mixin" as m;
 
 .c-btn {
+  display: block;
   &--submit {
     border-radius: 10px;
     border: 1px solid #707070;

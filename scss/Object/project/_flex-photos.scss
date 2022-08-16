@@ -1,0 +1,30 @@
+.p-flex-photos {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  &__first {
+    padding-bottom: 1rem;
+  }
+  .c-flex-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    &:nth-child(3) {
+      flex-direction: row-reverse;
+    }
+    &__img {
+      width: 55%;
+      padding-top: 1rem;
+    }
+    span {
+      width: 1rem;
+    }
+    &__text {
+      width: 13.5rem;
+      height: 10rem;
+      overflow: hidden;
+      padding: 1rem 0;
+      line-height: 1.5;
+    }
+  }
+}

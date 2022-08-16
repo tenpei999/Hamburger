@@ -25,5 +25,9 @@
     &--shadow {
       background: transparent left center / cover;
     }
+    &.single,
+     .page {
+      background: transparent center center / cover;
+    }
   }
 }
