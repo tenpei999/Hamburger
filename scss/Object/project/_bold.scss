@@ -4,6 +4,9 @@
 .p-bold {
   width: 100%;
   height: 14rem;
+  @include m.mq (screen03) {
+    height: 22rem;
+  }
   p {
     font-weight: v.$bold;
   }

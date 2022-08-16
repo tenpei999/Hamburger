@@ -78,27 +78,75 @@
     }
     &.single {
       height: 285px;
-    background: url(../../../img/main-visual2.png); 
-    @include m.mq (screen01) {
-      min-width: 375px;
+      background: url(../../../img/main-visual2.png) center; 
       background-size: cover;
       background-repeat: no-repeat;
+      @include m.mq (screen01) {
+        min-width: 375px;
+      }
+      @include m.mq (screen011) {
+  
+      }
+      @include m.mq (screen02) {
+      height: 33rem;
+      }
+      @include m.mq (screen03) {
+        background: url(../../../img/mv-pc2.png);
+        height: 350px;
+        transition: 200ms;
+        width: 100%;
+      }
+      .c-text--M-white {
+        font-size: 36px;
+        font-weight: v.$bold;
+        position: absolute;
+        top: 43.6%;
+        left: 25px;
+        @include m.mq (screen02) {
+          font-size: 60px;
+          left: 80px;
+        }
+        @include m.mq (screen03) {
+          font-size: 40px;
+          left: 70px;
+        }
+      }
     }
-    @include m.mq (screen011) {
+    &.page {
+      height: 285px;
+      background: url(../../../img/main-visual3.png) center; 
       background-size: cover;
       background-repeat: no-repeat;
-    }
-    @include m.mq (screen02) {
-      background: url(../../../img/mv-tav2.png) center center;
-      width: 100%;
-    }
-    @include m.mq (screen03) {
-      background: url(../../../img/mv-pc2.png) center center;
-      height: 350px;
-      transition: 200ms;
-      width: 100%;
-    }
-
+      @include m.mq (screen01) {
+        min-width: 375px;
+      }
+      @include m.mq (screen011) {
+  
+      }
+      @include m.mq (screen02) {
+      height: 33rem;
+      }
+      @include m.mq (screen03) {
+        background: url(../../../img/mv-pc3.png);
+        height: 350px;
+        transition: 200ms;
+        width: 100%;
+      }
+      .c-text--M-white {
+        font-size: 36px;
+        font-weight: v.$bold;
+        position: absolute;
+        top: 43.6%;
+        left: 25px;
+        @include m.mq (screen02) {
+          font-size: 60px;
+          left: 80px;
+        }
+        @include m.mq (screen03) {
+          font-size: 40px;
+          left: 70px;
+        }
+      }
     }
   }
 }

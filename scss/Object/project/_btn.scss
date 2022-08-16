@@ -11,5 +11,10 @@
     border-width: 1px;
     background-color: #F2EDE9;
     background: linear-gradient(to bottom, #F2EDE9, #d7d0cc, );
+    @include m.mq (screen02) {
+      width: 52.3%;
+      margin: auto auto 5rem 0;
+      padding: 3rem 5rem;
+    }
   }
 }

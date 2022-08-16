@@ -48,21 +48,25 @@
         font-size: 2.1rem;
         font-weight: v.$MMbold;
         padding-bottom: 1.5rem;
+        &.h3, &.h4, &.h5, &.h6  {
+          padding-bottom: 0.5rem;
+          @include m.mq (screen02) {
+            padding-bottom: 2rem;
+          }
+        }
         &.h3 {
           font-size: 1.8rem;
-          padding-bottom: 0.5rem;
+          @include m.mq (screen02) {
+            padding-bottom: 1.5rem;
+          }
         }
-        &.h4 {
+        &.h4, &.h5, &.h6 {
           font-size: 1.5rem;
-          padding-bottom: 0.5rem;
-        }
-        &.h5 {
-          font-size: 1.5rem;
-          padding-bottom: 0.5rem;
+          @include m.mq (screen02) {
+            font-size: 1.25rem;
+          }
         }
         &.h6 {
-          font-size: 1.5rem;
-          padding-bottom: 0.5rem;
           + .c-contents_pages__text {
             padding-bottom: 1rem;
           }

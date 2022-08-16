@@ -13,6 +13,7 @@
 @forward "Layout/container"; //コンテナー
 @forward "Layout/aside"; //サイドバー
 @forward "Layout/card"; //カード
+@forward "Layout/grid-photo"; //カード
 
 
 /* Component
@@ -29,7 +30,7 @@
 @forward "object/Component/pagination"; //ページネーション
 @forward "object/Component/blockquote"; //引用部
 @forward "object/Component/flex-item"; //フレックスアイテム
-@forward "object/Component/wrap-photo"; //写真
+@forward "object/Component/grid-photo"; //写真
 @forward "object/Component/block-verse"; //詩
 @forward "object/Component/sauce"; //ソースコード
 @forward "object/Component/table"; // 表
@@ -48,11 +49,11 @@
 @forward "object/project/aside"; // サイドバー
 @forward "object/project/card"; // カード
 @forward "object/project/pagination"; // ページネーション
+@forward "object/project/blockquote"; // 引用部
 @forward "object/project/flex-photos"; // 写真掲載エリア
-@forward "object/project/wrap-photo"; // 写真掲載エリア
+@forward "object/project/grid-photo"; // 写真掲載エリア
 @forward "object/project/btn"; // ボタン
 @forward "object/project/bold"; // 太字 
-
 
 /*Utility
 ------------------------------*/
