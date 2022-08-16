@@ -4,7 +4,6 @@
 /* Layout 
 ------------------------------*/
 @forward "Layout/global-container"; //グリッド
-@forward "Layout/global-wrapper"; //全体レイアウト
 @forward "Layout/header"; //ヘッダー
 @forward "Layout/main"; //メイン
 @forward "Layout/contents"; //メインコンテンツ
@@ -12,15 +11,14 @@
 @forward "Layout/footer"; //フッター
 @forward "Layout/container"; //コンテナー
 @forward "Layout/aside"; //サイドバー
-@forward "Layout/card"; //カード
-@forward "Layout/grid-photo"; //カード
+@forward "Layout/grid-photo"; //グリッドレイアウト
 
 
 /* Component
 ------------------------------*/
 @forward "object/Component/text"; //テキスト
 @forward "object/Component/title-block"; //タイトル
-@forward "object/Component/background"; //バックラウンド
+@forward "object/Component/background"; //バックグラウンド
 @forward "object/Component/text-box--has-icon"; //検索窓
 @forward "object/Component/btn"; //ボタン
 @forward "object/Component/list"; //リスト
