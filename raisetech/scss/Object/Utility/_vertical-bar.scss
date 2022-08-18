@@ -1,0 +1,8 @@
+.u-vertical-bar::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1rem;
+  top: 0.5rem;
+  border-right: solid 1px #ffffff;
+}

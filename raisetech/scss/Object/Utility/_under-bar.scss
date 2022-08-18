@@ -1,0 +1,9 @@
+.u-under-bar::before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  bottom: -1rem;
+  width: 50px;
+  height: 5px;
+  background-color: #ffff;
+}

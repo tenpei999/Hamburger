@@ -1,0 +1,29 @@
+@use "../Foundation/mixin" as m;
+
+.l-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include m.mq (screen03) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 20px 0px 20px;
+    @include m.mq (screen011) {
+      margin: 10px 60px 0px 60px;     
+    }
+    @include m.mq (screen03) {
+      margin: 0;     
+    }
+    >.p-gmenu {
+      &--btn {
+        position: absolute;
+      }
+    }
+  }
+}

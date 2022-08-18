@@ -1,0 +1,62 @@
+@use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
+
+.c-pagination {
+  display: flex;
+  justify-content: space-between;
+  &--prev, &--next, &--no {
+    a {
+      display: flex;
+      flex-direction: row;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      p {
+        padding-left: 1rem;
+        font-weight: v.$thin;
+        color: v.$logo-gray;
+        @include m.mq (screen02) {
+          display: none;
+        }
+      }
+      img {
+        @include m.mq (screen02) {
+          height: 2rem;
+          padding-top: 0.5rem;
+        }
+      }
+    }
+  }
+  &--next {
+    a {
+      flex-direction: row-reverse;
+    }
+    p {
+      padding-right: 1rem;
+    }
+  }
+  &--no {
+    display: none;
+    @include m.mq (screen02) {
+      display: block;
+      a {
+          font-weight: v.$thin;
+          color: v.$logo-gray;
+          background-color: v.$white;
+          display: inline-block;
+          border: 1px solid #707070;
+          text-decoration: none;
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+      }
+    }
+    &.this{
+      a {
+        background-color: v.$this-page-black;
+        color: v.$white;
+      }
+    }
+  }
+}
