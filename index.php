@@ -52,7 +52,7 @@
 
         <div class="c-background-image p-main-visual">
           <h1 class="c-text--M-white">
-            ダミーサイト
+            ダfeミーサイト
           </h1>
         </div>
         <!-- main-visual-->
@@ -70,7 +70,7 @@
                 Take Out
               </h3>
               <p class="c-hidden-text">
-                当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
+                b当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
               </p>
             </div>
             <!-- contents-item take out -->
@@ -204,7 +204,7 @@
                 <a href="#">アップル</a>
               </li>
               <li>
-                <a href="#">紅茶f (Ice/Hot)</a>
+                <a href="#">紅茶 (Ice/Hot)</a>
               </li>
               <li>
                 <a href="#">コーヒー (Ice/Hot)</a>
@@ -217,7 +217,7 @@
     <footer class="l-footer c-text--M-white c-background-image p-footer">
       <div class="p-footer__link">
         <a href="#" class="c-text--M-white u-vertical-bar">ショップ情報</a>
-        <a href="#" class="c-text--M-white">jヒストリー</a>
+        <a href="#" class="c-text--M-white">ヒストリー</a>
       </div>
       <div class="c-copyright">
         Copy right: RaiseTech

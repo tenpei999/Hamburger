@@ -1,3 +1,15 @@
+/*
+Theme Name: Hamburger
+Description: WordPress副業コース最終課題
+Version: 1.0.0
+Theme URI: http://hamburger.local/
+Author: Tenpei
+Author URI: https://github.com/tenpei999/hallou_git.git
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: Hamburger
+*/
+
 /* Foundation/base */
 html {
   cursor: default; /* 1 */

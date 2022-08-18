@@ -1,8 +1,0 @@
-@use "../Foundation/mixin" as m;
-
-.l-main {
-  margin-top: -10px;
-  @include m.mq (screen02) {
-    margin-top: 0;
-  }
-}

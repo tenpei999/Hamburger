@@ -1,9 +1,0 @@
-@use "../Foundation/mixin" as m;
-
-.l-container {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  @include m.mq (screen03) {
-    grid-column-end: 2;
-  }
-}
