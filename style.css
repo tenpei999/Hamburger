@@ -12,7 +12,6 @@ Text Domain: Hamburger
 
 /* Foundation/base */
 html {
-  margin-top: -32px;
   cursor: default; /* 1 */
 }
 
