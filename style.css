@@ -10,6 +10,11 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: Hamburger
 */
 
+#wpadminbar {
+  min-width: 375px !important;
+
+}
+
 /* Foundation/base */
 html {
   cursor: default; /* 1 */
