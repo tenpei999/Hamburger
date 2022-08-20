@@ -15,7 +15,8 @@ function add_files() {
   //メインのcssファイル
   wp_enqueue_style('main-style', get_stylesheet_uri());
   // main.js
-  wp_enqueue_script('main-script', 'main.js', '', '1.0', true );
+  wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
+  wp_enqueue_script('main-script', './js/main.js', ['jquery'], '1.0', true );
 }
 add_action('wp_enqueue_scripts', 'add_files');
 
@@ -41,7 +42,17 @@ function theme_setup() {
 }
 add_action('after_setup_theme', 'theme_setup');
 
-function add_register_nav_menu() {
-  register_nav_menu( 'menu', 'メニュー');
+// ウィジェット作成
+function wpbeg_widgets_init() {
+    register_sidebar (
+        array(
+            'name'          => 'カテゴリーウィジェット',
+            'id'            => 'category_widget',
+            'description'   => 'カテゴリー用ウィジェットです',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'after_title'   => "</h2>\n",
+        )
+    );
 }
-add_action( 'after_setup_theme', 'add_register_nav_menu' );
+add_action( 'widgets_init', 'wpbeg_widgets_init' );

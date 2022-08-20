@@ -257,9 +257,9 @@
     </div>
     <!-- container -->
     
-    <aside class="l-aside p-aside">
-      <div class="l-aside--inner"> 
-        <div class="p-aside__menu-title">
+    <aside class="l-sidebar p-sidebar">
+      <div class="l-sidebar--inner"> 
+        <div class="p-sidebar__menu-title">
         <p>Menu</p>
         </div>
         <ul class="list c-list">
