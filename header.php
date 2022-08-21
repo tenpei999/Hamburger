@@ -21,6 +21,8 @@
   <div class="l-global-container">
     <div class="l-container">
       <header class="l-header p-header c-background-color--bisque">
+      <?php get_template_part( 'slide-menu' ); //スライドメニュー ?>
+
         <div class="l-header__wrapper">
           <button class="p-hamburger p-gmenu--btn js-hamburger">
            <p class="c-menu-icon">Menu</p>
@@ -36,4 +38,12 @@
 
         <!-- p-header-wrapper -->
       <span class="p-gmenu--fead"></span>
+
       </header>
+
+                 <!-- <?php wp_nav_menu(); ?> -->
+           <!-- <?php 
+            wp_nav_menu( array( 
+              'theme_location' => 'header-menu' 
+               ) ); 
+              ?> -->

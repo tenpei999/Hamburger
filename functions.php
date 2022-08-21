@@ -16,9 +16,17 @@ function add_files() {
   wp_enqueue_style('main-style', get_stylesheet_uri());
   // main.js
   wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
-  wp_enqueue_script('main-script', './js/main.js', ['jquery'], '1.0', true );
+  wp_enqueue_script('main-script', get_theme_file_uri().'/js/main.js', '', '1.0', true );
 }
 add_action('wp_enqueue_scripts', 'add_files');
+
+function register_my_menu() {
+  register_nav_menu('header-menu', ( 'ヘッダーメニュー' ));
+  register_nav_menu('sidebar-menu', ( 'サイドバーメニュー' ));
+  register_nav_menu('drawer-menu', ( 'ドロワーバーメニュー' ));
+  register_nav_menu('slide-menu', ( 'スライドメニュー' ));
+}
+add_action( 'init', 'register_my_menu' );
 
 // アクションフックの有効化
 function theme_setup() {
