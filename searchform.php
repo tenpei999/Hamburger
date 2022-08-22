@@ -7,8 +7,7 @@
   <input type="submit" name="検索ボタン" value="検索" class="c-btn--submit search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" >
 </form>
 
-
-<!-- 開発用予備
+  <!-- 開発用予備
 <form class="p-search" id="searchform" method="get" action="<?php echo home_url('/');?>">
   <div class="c-text-box--has-icon">
   <input type="text" name="s" id="s" placeholder="キーワード" class="c-text-box--has-icon__inner">
