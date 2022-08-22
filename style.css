@@ -439,11 +439,17 @@ input, button, textarea, select {
   color: #808080;
   text-align: center;
 }
+.c-btn--submit:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 @media screen and (min-width: 1220px) {
   .c-btn--submit {
     font-size: 0.5rem;
     border-radius: 5px;
     border: 0.8px solid #707070;
+  }
+  .c-btn--submit:hover {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
 
