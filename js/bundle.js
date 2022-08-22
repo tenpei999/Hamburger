@@ -8,8 +8,3 @@ jQuery(function( $ ) {
     $("aside").toggleClass("is-open");
   });  
 });
-
-// $(window).resize(function() {
-//   let windowWidth = window.innerWidth;
-//   let point = 1220;
-//   if (windowWidth >= point)  //画面サイズが1200px以上のときの処理
