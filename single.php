@@ -2,13 +2,18 @@
   
       <main class="l-main">
 
-        <div class="c-background-image p-main-visual single">
-          <h1 class="c-text--M-white">
-            h1 チーズバーガー
-          </h1>
-        </div>
-        <!-- main-visual-->
-
+        <?php
+          if(have_posts()):
+            while(have_posts()):
+              tha_post();?>
+              <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                 <div class="c-background-image p-main-visual single">
+                 <h1 class="c-text--M-white">
+                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                 </h1>
+               </div>
+               <!-- main-visual-->
+        
         <div class="l-contents_pages p-contents_pages c-background-color--base-white">
           <div class="p-single c-contents_pages">
             <h2 class="c-contents_pages__title">
