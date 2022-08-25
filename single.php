@@ -2,11 +2,6 @@
   
       <main class="l-main">
 
-        <?php
-          if(have_posts()):
-            while(have_posts()):
-              tha_post();?>
-              <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                  <div class="c-background-image p-main-visual single">
                  <h1 class="c-text--M-white">
                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

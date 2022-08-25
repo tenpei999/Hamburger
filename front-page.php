@@ -9,8 +9,8 @@
         </div>
         <!-- main-visual-->
 
+        <?php if ( is_home() || is_front_page() ) : ?>
         <div class="l-contents--wrapper">
-
           <div class="l-contents p-contents__take-out c-background-image">
             <h2 class="p-contents__section-title">
               <p class="c-text--roboto-white u-under-bar">
@@ -86,6 +86,7 @@
             </div>
           </div>
           <!-- about -->
+          <?php endif; ?>
       </main>
 
     </div>
