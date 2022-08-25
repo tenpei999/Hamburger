@@ -92,6 +92,7 @@ function custom_theme_support() {
     'caption',
   ));
   add_theme_support('post-thumbnails'); // 投稿画像の表示
+  set_post_thumbnail_size('100%', '100%', false);
   add_theme_support('menus'); // メニュー
   add_theme_support('title-tag'); // titleタグ
   register_nav_menus(array(
@@ -100,9 +101,11 @@ function custom_theme_support() {
   ));
   add_theme_support('editor-styles');
   add_editor_style();
-}
 
+}
 add_action('after_setup_theme', 'custom_theme_support');
+
+
 
 //カテゴリー説明文でHTMLタグを使う
 remove_filter('pre_term_description', 'wp_filter_kses');

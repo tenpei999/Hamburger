@@ -1283,6 +1283,7 @@ input, button, textarea, select {
   flex-direction: column;
   font-size: 1rem;
   margin-top: 1.5rem;
+  aspect-ratio: 8/3;
 }
 @media screen and (min-width: 820px) {
   .p-card {
@@ -1292,6 +1293,7 @@ input, button, textarea, select {
 @media screen and (min-width: 820px) {
   .p-card img {
     width: 50%;
+    height: 100%;
   }
 }
 .p-card .c-card__contents-area {
@@ -1308,7 +1310,6 @@ input, button, textarea, select {
   .p-card .c-card__contents-area {
     padding: 2.3rem 2.3rem 0 2.3rem;
     aspect-ratio: 4/3;
-    height: 58%;
   }
 }
 .p-card .c-card__title {
