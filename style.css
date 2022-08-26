@@ -544,47 +544,57 @@ input, button, textarea, select {
   }
 }
 
-.c-pagination {
-  display: flex;
-  justify-content: space-between;
-}
-.c-pagination--prev a, .c-pagination--next a, .c-pagination--no a {
+.wp-pagenavi {
   display: flex;
   flex-direction: row;
 }
-.c-pagination--prev a:hover, .c-pagination--next a:hover, .c-pagination--no a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.c-pagination--prev a p, .c-pagination--next a p, .c-pagination--no a p {
-  padding-left: 1rem;
-  font-weight: 10;
-  color: #707070;
-}
 @media screen and (min-width: 820px) {
-  .c-pagination--prev a p, .c-pagination--next a p, .c-pagination--no a p {
-    display: none;
-  }
-}
-@media screen and (min-width: 820px) {
-  .c-pagination--prev a img, .c-pagination--next a img, .c-pagination--no a img {
-    height: 2rem;
+  .pages {
+    display: block;
+    font-size: 0.9rem;
     padding-top: 0.5rem;
   }
 }
-.c-pagination--next a {
-  flex-direction: row-reverse;
+.page:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
-.c-pagination--next p {
-  padding-right: 1rem;
-}
-.c-pagination--no {
-  display: none;
+.page.larger, .page.smaller  {
+  margin-left: 1rem;
+  display: block;
+  font-weight: 10;
+  color: #707070;
+  background-color: #ffffff;
+  display: inline-block;
+  border: 1px solid #707070;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0.2rem;
+  font-weight: 10;
+  
 }
 @media screen and (min-width: 820px) {
-  .c-pagination--no {
+  .wp-pagenavi a {
+ 
+  }
+}
+/* @media screen and (min-width: 820px) {
+  .wp-pagenavi--prev a img, .wp-pagenavi--next a img, .wp-pagenavi--no a img {
+    height: 2rem;
+    padding-top: 0.5rem;
+  }
+} */
+
+/* .wp-pagenavi--no {
+  display: none;
+} */
+/* @media screen and (min-width: 820px) {
+  .wp-pagenavi {
     display: block;
   }
-  .c-pagination--no a {
+  .wp-pagenavi a {
     font-weight: 10;
     color: #707070;
     background-color: #ffffff;
@@ -596,11 +606,36 @@ input, button, textarea, select {
     line-height: 35px;
     text-align: center;
   }
-}
-.c-pagination--no.this a {
+} */
+.current {
+  margin-left: 1rem;
+  display: block;
+  font-weight: 10;
+  display: inline-block;
+  border: 1px solid #707070;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0.2rem;
+  font-weight: 10;
   background-color: #3C2B1C;
   color: #ffffff;
 }
+
+.nextpostslink, .previouspostslink {
+  margin-left: 1rem;
+  background-color: unset;
+  border: unset;
+}
+@media screen and (min-width: 820px) {
+  .nextpostslink, .previouspostslink
+ {
+    height: 2rem;
+    padding-top: 0.5rem;
+  }
+} 
 
 .c-blockquote {
   background-color: #f5f5f5;
@@ -1285,6 +1320,9 @@ input, button, textarea, select {
   margin-top: 1.5rem;
   aspect-ratio: 8/3;
 }
+.p-card img {
+  min-height: 230px;
+}
 @media screen and (min-width: 820px) {
   .p-card {
     flex-direction: row;
@@ -1377,12 +1415,12 @@ input, button, textarea, select {
   }
 }
 
-.p-pagination .c-pagination {
+.wp-pagenavi {
   font-size: 1.2rem;
   padding: 3rem 1.8rem 1rem 1.8rem;
 }
 @media screen and (min-width: 820px) {
-  .p-pagination .c-pagination {
+  .wp-pagenavi {
     width: 574px;
     font-size: 0.8rem;
     margin: 3rem auto 0 auto;
@@ -1390,53 +1428,53 @@ input, button, textarea, select {
   }
 }
 @media screen and (min-width: 1220px) {
-  .p-pagination .c-pagination {
+  .wp-pagenavi {
     width: 470px;
     padding: 3rem 0 1rem 0;
     font-size: 0.65rem;
   }
 }
-.p-pagination .c-pagination li {
+.wp-pagenavi li {
   padding-right: 1rem;
 }
 @media screen and (min-width: 820px) {
-  .p-pagination .c-pagination li {
+  .wp-pagenavi li {
     padding-right: 0.5rem;
   }
 }
 @media screen and (min-width: 1220px) {
-  .p-pagination .c-pagination li {
+  .wp-pagenavi li {
     padding-right: 0.35rem;
   }
 }
-.p-pagination .c-pagination li:first-of-type {
+.wp-pagenavi li:first-of-type {
   display: none;
 }
 @media screen and (min-width: 820px) {
-  .p-pagination .c-pagination li:first-of-type {
+  .wp-pagenavi li:first-of-type {
     display: block;
     font-size: 0.9rem;
     padding-top: 0.5rem;
   }
 }
 @media screen and (min-width: 1220px) {
-  .p-pagination .c-pagination li:first-of-type {
+  .wp-pagenavi li:first-of-type {
     font-size: 0.5rem;
   }
 }
 @media screen and (min-width: 820px) {
-  .p-pagination .c-pagination--prev img, .p-pagination .c-pagination--next img {
+  .wp-pagenavi--prev img, .wp-pagenavi--next img {
     height: 1.5rem;
     padding-top: 0.5rem;
   }
 }
 @media screen and (min-width: 1220px) {
-  .p-pagination .c-pagination--prev img, .p-pagination .c-pagination--next img {
+  .wp-pagenavi--prev img, .wp-pagenavi--next img {
     height: 1.5rem;
   }
 }
 @media screen and (min-width: 1220px) {
-  .p-pagination .c-pagination--no a {
+  .wp-pagenavi--no a {
     width: 30px;
     height: 30px;
     line-height: 30px;

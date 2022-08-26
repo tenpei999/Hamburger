@@ -24,8 +24,22 @@
 
     <?php get_template_part("components/archive"); ?>
 
-    <nav class="p-pagination">
-      <ul class="c-pagination">
+    <?php wp_pagenavi(); ?>
+  </div>
+  <!-- pages -->
+
+</main>
+
+</div>
+<!-- container -->
+
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>
+
+
+
+<!-- <ul class="c-pagination">
         <li>
           <p>page 1/10</p>
         </li>
@@ -68,16 +82,4 @@
             <p>次へ</p>
           </a>
         </li>
-      </ul>
-    </nav>
-  </div>
-  <!-- pages -->
-
-</main>
-
-</div>
-<!-- container -->
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+      </ul> -->
