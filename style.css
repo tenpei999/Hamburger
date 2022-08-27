@@ -579,7 +579,6 @@ input, button, textarea, select {
 .current {
   margin-left: 1rem;
   display: block;
-  font-weight: 10;
   display: inline-block;
   border: 1px solid #707070;
   text-decoration: none;
@@ -1319,6 +1318,7 @@ input, button, textarea, select {
 }
 .p-card img {
   min-height: 230px;
+  width: 100%;
 }
 @media screen and (min-width: 820px) {
   .p-card {

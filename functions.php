@@ -193,3 +193,16 @@ if ( is_active_sidebar( 'category_widget' ) ) { dynamic_sidebar( 'category_widge
 
 // 画像サイズ
 add_image_size( $name, $width, $height, $crop ); 
+
+
+// searchは5件表示する
+function my_posts_control( $query ) {
+  if ( is_admin() || ! $query->is_main_query() ) {
+    return;
+  }
+  if ( $query->is_search() ) {
+    $query->set( 'posts_per_page', '5' );
+    return;
+  }
+}
+add_action( 'pre_get_posts', 'my_posts_control' );

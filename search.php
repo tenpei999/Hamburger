@@ -1,14 +1,13 @@
 <?php get_header(); ?>
-
 <main class="l-main">
   <div class="c-background-image--shadow p-main-visual">
     <div class="c-text--M-white">
       <h1>
-        Menu:
+        Search:
       </h1>
-      <P>
-        <?php single_cat_title(); ?>
-      </P>
+      <p>
+        <?php echo get_search_query (); ?>
+      </p>
     </div>
   </div>
   <!-- main-visual-->
@@ -19,7 +18,6 @@
         <?php echo category_description(); ?>
       <?php endif; ?>
     </div>
-
     <?php get_template_part("components/archive"); ?>
 
     <?php wp_pagenavi(); ?>
