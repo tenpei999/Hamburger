@@ -471,6 +471,14 @@ input, button, textarea, select {
   text-align: left;
   padding-bottom: 1.7rem;
 }
+.menu-item > a {
+  font-family: m-plus-1m, sans-serif;
+  font-weight: bold;
+  color: #707070;
+  text-align: left;
+  padding-bottom: 1.7rem;
+  }
+  
 .sub-menu {
   padding-left: 20px;
   padding-bottom: 1rem;

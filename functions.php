@@ -207,7 +207,6 @@ function my_posts_control( $query ) {
 }
 add_action( 'pre_get_posts', 'my_posts_control' );
 
-
 //サイト内検索のカスタマイズ
 function custom_search($search, $wp_query) {
 	global $wpdb;
