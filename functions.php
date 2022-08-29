@@ -56,7 +56,7 @@ remove_filter('pre_term_description', 'wp_filter_kses');
 
 
 //カテゴリー説明文から自動で付与されるpタグを除去
-remove_filter('term_description', 'wpautop');
+remove_filter('the_excerpt', 'wpautop');
 
 // ウィジェット作成
 function hamburger_widgets_init() {
@@ -130,3 +130,29 @@ function custom_search($search, $wp_query) {
 	return $search;
 }
 add_filter('posts_search','custom_search', 10, 2);
+
+// h2をsingle.phpからh2を取得しリスト
+function get_single() {
+  //グローバル変数を使う為の宣言
+  global $post;
+  //マッチングで<h>タグを取得する
+  preg_match_all('/<h[2]>.+<\/h[2]>/u', $post->post_content, $matches);
+  //取得した<h>タグの個数をカウント
+  $matches_count = count($matches[0]);
+  if(empty($matches)){
+      //<h>タグがない場合の出力
+      echo '<span>Sorry no index</span>';
+  }else{
+      //<h>タグが存在する場合に<h>タグを出力
+      for ($i = 0; $i < $matches_count; $i++){
+          echo  $matches[0][$i];
+      }
+  }     
+}
+
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+  global $post;
+return '<a class="moretag" href="'. get_permalink($post->ID) . '">,,,続きを読む</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

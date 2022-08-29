@@ -9,14 +9,8 @@
               <h3 class="c-card__title">
                 <?php the_title(); ?>
               </h3>
-              <h4 class="c-card__sub-title">
-                <p>小見出しが入ります</p>
-              </h4>
-              <div class="c-card__text">
-                <p>
-                  <?php the_content('続きを読む'); ?>
-                </p>
-              </div>
+              <?php get_single(); ?> <!-- preg_match_all から取得-->
+              <?php the_excerpt(); ?>
             </div>
             <div class="c-card__btn-area">
               <button class="c-card__btn">

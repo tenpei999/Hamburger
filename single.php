@@ -4,44 +4,14 @@
 
                  <div class="c-background-image p-main-visual single">
                  <h1 class="c-text--M-white">
-                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                   <?php the_title(); ?>
                  </h1>
                </div>
                <!-- main-visual-->
-        
+        <?php if (have_posts()): while(have_posts()): the_post(); ?>  
         <div class="l-contents_pages p-contents_pages c-background-color--base-white">
           <div class="p-single c-contents_pages">
-            <h2 class="c-contents_pages__title">
-              見出し h2
-            </h2>
-            <p class="c-contents_pages__text">
-              Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
-            </p>
-            <h3 class="c-contents_pages__title h3">
-              見出し h3
-            </h3>
-            <p class="c-contents_pages__text"></p>
-            <h4 class="c-contents_pages__title h4">
-              見出し h4
-            </h4>
-            <p class="c-contents_pages__text"></p>
-            <h5 class="c-contents_pages__title h5">
-              見出し h5
-            </h5>
-            <p class="c-contents_pages__text"></p>
-            <h6 class="c-contents_pages__title h6">
-              見出し h6
-            </h6>
-            <p class="c-contents_pages__text"></p>
-            <div class="c-blockquote p-blockquote">
-              <p class="c-blockquote__p">
-                Blockquote 引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
-              </p>
-              <div class="c-blockquote__q">
-                <p>出典元:</p>
-                <a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8">○○○○○○○○○○○○</a>
-              </div>
-            </div>
+            <?php the_content(); ?>
             <div class="p-flex-photos">
               <img src="img/flex-photo.svg" alt="ハンバーガーの写真" class="p-flex-photos__first">
               <div class="c-flex-item">
@@ -183,6 +153,9 @@
 
     </div>
     <!-- container -->
+    <?php endwhile; else : ?>
+      <p>記事はありません。</p>
+    <?php endif; ?>
 <?php get_sidebar();?>
 
     <?php get_footer();?>
