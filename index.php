@@ -4,7 +4,7 @@
 
   <div class="c-background-image p-main-visual">
     <h1 class="c-text--M-white">
-      <a href="<?php the_permalink(); ?>"><?php $title = the_title(); ?></a>
+     <p><?php bloginfo( 'name' ); ?></p>
     </h1>
   </div>
   <!-- main-visual-->

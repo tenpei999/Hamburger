@@ -893,6 +893,13 @@ input, button, textarea, select {
   top: 43.6%;
   left: 25px;
 }
+.p-main-visual .c-text--M-white a {
+  font-size: 36px;
+  font-weight: 600;
+  position: absolute;
+  top: 43.6%;
+  left: 25px;
+}
 .p-main-visual.c-background-image {
   height: 285px;
   background: url(./img/main-visual.svg);
