@@ -9,17 +9,17 @@
         </div>
         <!-- main-visual-->
 
-        <?php if ( is_home() || is_front_page() ) : ?>
+        <?php if (is_home() || is_front_page()) : ?>
         <div class="l-contents--wrapper">
           <div class="l-contents p-contents__take-out c-background-image">
             <h2 class="p-contents__section-title">
-              <p class="c-text--roboto-white u-under-bar">
-                Take out
-              </p>
-            </h2>       
+              <a href="/index.php?cat=13">
+                <p class="c-text--roboto-white u-under-bar">Take out</p>
+              </a>
+            </h2>
             <div class="l-contents__item p-contents__item c-background-color--white-opacity">
               <h3 class="p-contents__contents-title c-text--M-text-black">
-                Take Out
+                <a href="/index.php?cat=13">Take Out</a>
               </h3>
               <p class="c-hidden-text">
                 当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
@@ -28,7 +28,7 @@
             <!-- contents-item take out -->
             <div class="l-contents__item p-contents__item c-background-color--white-opacity">
               <h3 class="p-contents__contents-title c-text--M-text-black">
-                Take Out
+                <a href="/index.php?cat=13">Take Out</a>
               </h3>
               <p>
                 当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
@@ -40,13 +40,13 @@
 
           <div class="l-contents p-contents__eat-in c-background-image">
             <h2 class="p-contents__section-title">
-              <p class="c-text--roboto-white  u-under-bar">
-                Eat In
-              </p>
-            </h2>         
+              <a href="/index.php?cat=12">
+                <p class="c-text--roboto-white u-under-bar">Eat In</p>
+              </a>
+            </h2>
             <div class="l-contents__item p-contents__item c-background-color--white-opacity">
               <h3 class="p-contents__contents-title c-text--M-text-black">
-                Eat In
+                <a href="/index.php?cat=12">Eat In</a>
               </h3>
               <p>
                 店内でお食事いただけるメニューです。
@@ -58,7 +58,7 @@
             <!-- contents-item eat in -->
             <div class="l-contents__item p-contents__item c-background-color--white-opacity">
               <h3 class="p-contents__contents-title c-text--M-text-black">
-                Eat In
+               <a href="/index.php?cat=12">Eat In</a>
               </h3>
               <p>
                 店内でお食事いただけるメニューです。
@@ -92,6 +92,6 @@
     </div>
     <!-- container -->
   
-<?php get_sidebar();?>
+<?php get_sidebar(); ?>
 
     <?php get_footer();?>
