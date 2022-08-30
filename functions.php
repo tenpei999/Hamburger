@@ -156,3 +156,7 @@ function new_excerpt_more($more) {
 return '<a class="moretag" href="'. get_permalink($post->ID) . '">,,,続きを読む</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+//本体ギャラリーCSS停止
+add_filter( 'use_default_gallery_style', '__return_false' );
