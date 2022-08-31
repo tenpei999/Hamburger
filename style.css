@@ -446,6 +446,33 @@ input, button, textarea, select {
   color: #808080;
   text-align: center;
 }
+.c-btn--404 {
+  border-radius: 30px;
+  border: 1px solid #707070;
+  background-color: #815834;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 2rem auto;
+}
+.c-btn--404 a {
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+.c-btn--404:hover {
+  transition: 0.2s;
+  background-color: rgba(230, 148, 26, 0.1);
+}
+.c-btn--404 a:hover {
+  transition: 0.2s;
+  color: #808080;
+}
+
 .c-btn--submit:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -1618,6 +1645,20 @@ input, button, textarea, select {
   top: 0.5rem;
   border-right: solid 1px #ffffff;
 }
+
+.not-found-title p {
+  font-size: 1.5rem;
+}
+.not-found {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.not-found__inner {
+  text-align: center;
+}
+
 
 /* Foundation */
 /*# sourceMappingURL=style.css.map */

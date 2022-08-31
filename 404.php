@@ -3,22 +3,29 @@
 <main class="l-main">
 
   <div class="c-background-image p-main-visual">
-    <h1 class="c-text--M-white">
-      <p><?php bloginfo( 'name' ); ?></p>
+    <h1 class="c-text--M-white not-found-title">
+      404 Page Not found
+      <p>お探しのページは見つかりませんでした</p>
     </h1>
   </div>
   <!-- main-visual-->
 
-  <?php if (is_home() || is_front_page()) : ?>
-    <div class="l-contents--wrapper">
+
+
       <div class="not-found">
-        <h2>お探しのページは見つかり</h2>
-        <p>
-          Sorry,「<?php the_search_query(); ?>」is not found. 
-        </p>
-      </div>    
-    </div>
-    <!-- contents wrapper-->
+        <article class="not-found__inner">
+          <h2>お探しのページは移動または削除された可能性があります。
+          </h2>
+          <p>
+            The page you are looking for may have been moved or deleted. 
+          </p>
+          <button class="c-btn c-btn--404">
+            <a href="<?php echo esc_url(home_url()); ?>" >Hamburger Top</a>
+          </button>
+          
+        </article>
+     </div>    
+
 
     <div class="l-about p-about">
       <div class="l-about__inner p-about__inner">
@@ -33,7 +40,6 @@
       </div>
     </div>
     <!-- about -->
-  <?php endif; ?>
 </main>
 
 </div>
