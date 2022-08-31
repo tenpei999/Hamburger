@@ -17,7 +17,6 @@ function add_files() {
   wp_enqueue_script('bundle', get_theme_file_uri('/js/bundle.js'), 'jquery', '1.0.0', true );
 }
 add_action('wp_enqueue_scripts', 'add_files', 'readScript');
-// add_action('wp_enqueue_scripts', 'add_files');
 
 function register_my_menu() {
   register_nav_menu('header-menu', ( 'ヘッダーメニュー' ));
@@ -28,7 +27,6 @@ function register_my_menu() {
 add_action( 'init', 'register_my_menu' );
 
 // アクションフックの有効化
-// function theme_setup() {
 function custom_theme_support() {
   add_theme_support('html5',array(
     'search-form',
@@ -56,7 +54,7 @@ remove_filter('pre_term_description', 'wp_filter_kses');
 
 
 //カテゴリー説明文から自動で付与されるpタグを除去
-remove_filter('the_excerpt', 'wpautop');
+// remove_filter('the_excerpt', 'wpautop');
 
 // ウィジェット作成
 function hamburger_widgets_init() {

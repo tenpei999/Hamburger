@@ -10,6 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: Hamburger
 */
 
+
 #wpadminbar {
   min-width: 375px !important;
 }
@@ -18,6 +19,7 @@ Text Domain: Hamburger
     position: fixed;
   }
 }
+
 
 /* Foundation/base */
 html {
@@ -172,6 +174,8 @@ input, button, textarea, select {
     scroll-behavior: auto !important;
   }
 }
+
+
 .l-global-container {
   display: grid;
   grid-template-columns: 1fr 19%;
@@ -220,6 +224,8 @@ input, button, textarea, select {
   }
 }
 
+
+/* Layout */
 .l-contents {
   margin: 0.6rem auto;
 }
@@ -260,10 +266,12 @@ input, button, textarea, select {
     margin: 3%;
   }
 }
+
 .l-contents__item {
   margin: 0 1.2rem 1.2rem 1.2rem;
   padding: 1rem 1.25rem 1rem 1.25rem;
 }
+
 .l-contents_pages {
   padding: 1rem 1.2rem 1rem 1.2rem;
 }
@@ -321,7 +329,8 @@ input, button, textarea, select {
   width: 100%;
 }
 
-.l-grid-photo-wrapper .c-grid-photo {
+.l-grid-photo-wrapper 
+.c-grid-photo {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(9, 1fr);
@@ -330,31 +339,40 @@ input, button, textarea, select {
   row-gap: 1rem;
 }
 @media screen and (min-width: 820px) {
-  .l-grid-photo-wrapper .c-grid-photo {
+  .l-grid-photo-wrapper 
+  .c-grid-photo {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, 1fr);
   }
 }
 @media screen and (min-width: 1220px) {
-  .l-grid-photo-wrapper .c-grid-photo {
+  .l-grid-photo-wrapper 
+  .c-grid-photo {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 }
 
+/* text style */
 .c-text--roboto-white {
   font-family: "Roboto", sans-serif;
   color: #ffffff;
 }
+
 .c-text--M-white {
   font-family: m-plus-1m, sans-serif;
   color: #ffffff;
 }
+
 .c-text--M-text-black {
   font-family: m-plus-1m, sans-serif;
   color: #3c2a10;
 }
-.wp-block-button .wp-block-button__link {
+
+
+/* button */
+.wp-block-button 
+.wp-block-button__link {
   margin:  auto auto 2rem auto;
   padding: 2rem 5rem;
   border-width: 1px;
@@ -368,39 +386,51 @@ input, button, textarea, select {
  }
 }
 
+
+/* title */
 .c-title-block--roboto {
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   height: 40px;
 }
 
+/* background-color */
 .c-background-color--bisque {
   background-color: #fff7ef;
 }
+
 .c-background-color--white {
   background-color: #ffffff;
 }
+
 .c-background-color--blanchedalmond {
   background-color: #F2EDE9;
 }
+
 .c-background-color--white-opacity {
   background-color: #ffffff;
   opacity: 0.7;
 }
+
 .c-background-color--base-white {
   background-color: #FFFDFA;
 }
+
 .c-background-image {
   background: transparent center center/cover;
 }
+
 .c-background-image--shadow {
   background: transparent left center/cover;
 }
+
 .c-background-image.single,
 .c-background-image .page {
   background: transparent center center/cover;
 }
 
+
+/* search form */
 .c-text-box--has-icon {
   padding-right: 12px;
   position: relative;
@@ -434,9 +464,12 @@ input, button, textarea, select {
   }
 }
 
+
+/* c-button */
 .c-btn {
   display: block;
 }
+
 .c-btn--submit {
   border-radius: 10px;
   border: 1px solid #707070;
@@ -446,6 +479,7 @@ input, button, textarea, select {
   color: #808080;
   text-align: center;
 }
+
 .c-btn--404 {
   border-radius: 30px;
   border: 1px solid #707070;
@@ -455,6 +489,7 @@ input, button, textarea, select {
   color: #fff;
   margin: 2rem auto;
 }
+
 .c-btn--404 a {
   display: inline-block;
   border-radius: 10px;
@@ -464,10 +499,12 @@ input, button, textarea, select {
   color: #fff;
   text-align: center;
 }
+
 .c-btn--404:hover {
   transition: 0.2s;
   background-color: rgba(230, 148, 26, 0.1);
 }
+
 .c-btn--404 a:hover {
   transition: 0.2s;
   color: #808080;
@@ -487,6 +524,7 @@ input, button, textarea, select {
   }
 }
 
+/* gmenu */
 .menu-gmenu-container {
   display: flex;
   flex-direction: column;
@@ -494,10 +532,12 @@ input, button, textarea, select {
   padding-top: 2rem;
   padding-left: 28px;
 }
+
 .menu-gmenu-container li {
   display: flex;
   flex-direction: column;
 }
+
 .menu-gmenu-container p {
   font-family: m-plus-1m, sans-serif;
   font-weight: bold;
@@ -505,6 +545,7 @@ input, button, textarea, select {
   text-align: left;
   padding-bottom: 1.7rem;
 }
+
 .menu-item > a {
   font-family: m-plus-1m, sans-serif;
   font-weight: bold;
@@ -513,23 +554,28 @@ input, button, textarea, select {
   padding-bottom: 1.7rem;
   }
   
+
+/* sub-menu */  
 .sub-menu {
   padding-left: 20px;
   padding-bottom: 1rem;
   text-align: left;
 }
+
 .sub-menu ul {
   list-style: none;
   text-align: left;
   font-size: 20px;
   font-weight: 300;
 }
+
 .sub-menu a {
   font-family: m-plus-1m, sans-serif;
   font-size: 0.8rem;
   color: #707070;
   padding-bottom: 0.8rem;
 }
+
 .c-list--item:last-child {
   margin-bottom: 0;
 }
@@ -566,6 +612,7 @@ input, button, textarea, select {
 .c-card__text-area {
   color: #ffffff;
 }
+
 .c-card__title {
   font-weight: 550;
 }

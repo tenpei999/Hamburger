@@ -10,7 +10,18 @@
                 <?php the_title(); ?>
               </h3>
               <?php get_single(); ?> <!-- preg_match_all から取得-->
-              <?php the_excerpt(); ?>
+              <?php
+
+              //小見出しh2の文字数を除外して抜粋を開始
+              $start = 6;
+
+              //取得する長さ（文字数）
+              $length = 100;
+
+              //指定した文字数を出力
+              echo mb_substr(get_the_excerpt(), $start, $length);
+
+              ?>
             </div>
             <div class="c-card__btn-area">
               <button class="c-card__btn">
