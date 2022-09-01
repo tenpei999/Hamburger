@@ -6,5 +6,6 @@ jQuery(function( $ ) {
     $(".list").toggleClass("is-open");
     $("body").toggleClass("is-open");
     $("aside").toggleClass("is-open");
+    $("footer").toggleClass("is-open");
   });
 });
