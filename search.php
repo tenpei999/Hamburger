@@ -1,27 +1,23 @@
 <?php get_header(); ?>
 <main class="l-main">
-  <div class="c-background-image--shadow p-main-visual">
+  <section class="c-background-image--shadow p-main-visual">
     <div class="c-text--M-white">
-      <h1>
-        Search:
-      </h1>
-      <p>
-        <?php echo get_search_query (); ?>
-      </p>
+      <h1>Search:</h1>
+      <p><?php echo get_search_query (); ?></p>
     </div>
-  </div>
+  </section>
   <!-- main-visual-->
 
-  <div class="l-contents_pages p-contents_pages c-background-color--base-white">
-    <div class="c-contents_pages">
+  <article class="l-contents_pages p-contents_pages c-background-color--base-white">
+    <article class="c-contents_pages">
       <?php if (is_category()) : ?>
         <?php echo category_description(); ?>
       <?php endif; ?>
-    </div>
+    </article>
     <?php get_template_part("components/archive"); ?>
 
     <?php wp_pagenavi(); ?>
-  </div>
+  </article>
   <!-- pages -->
 
 </main>
