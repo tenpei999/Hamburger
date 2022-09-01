@@ -2,61 +2,49 @@
 
 <main class="l-main">
 
-  <div class="c-background-image p-main-visual">
+  <section class="c-background-image p-main-visual">
     <h1 class="c-text--M-white">
-     <p><?php bloginfo( 'name' ); ?></p>
+      <p><?php bloginfo('name'); ?></p>
     </h1>
-  </div>
+  </section>
   <!-- main-visual-->
 
   <?php if (is_home() || is_front_page()) : ?>
-    <div class="l-contents--wrapper">
-      <div class="l-contents p-contents__take-out c-background-image">
+    <article class="l-contents--wrapper">
+      <section class="l-contents p-contents__take-out c-background-image">
         <h2 class="p-contents__section-title">
           <a href="/index.php?cat=13">
             <p class="c-text--roboto-white u-under-bar">Take out</p>
           </a>
         </h2>
-        <div class="l-contents__item p-contents__item c-background-color--white-opacity">
+        <section class="l-contents__item p-contents__item c-background-color--white-opacity">
           <h3 class="p-contents__contents-title c-text--M-text-black">
             <a href="/index.php?cat=13">Take Out</a>
           </h3>
           <p class="c-hidden-text">
             当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
           </p>
-        </div>
+        </section>
         <!-- contents-item take out -->
-        <div class="l-contents__item p-contents__item c-background-color--white-opacity">
+        <section class="l-contents__item p-contents__item c-background-color--white-opacity">
           <h3 class="p-contents__contents-title c-text--M-text-black">
             <a href="/index.php?cat=13">Take Out</a>
           </h3>
           <p>
             当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています。当店のテイクアウトで利用できる商品を掲載しています。
           </p>
-        </div>
+        </section>
         <!--  contents-item take out -->
-      </div>
+      </section>
       <!-- contents take out -->
 
-      <div class="l-contents p-contents__eat-in c-background-image">
+      <section class="l-contents p-contents__eat-in c-background-image">
         <h2 class="p-contents__section-title">
           <a href="/index.php?cat=12">
             <p class="c-text--roboto-white u-under-bar">Eat In</p>
           </a>
         </h2>
-        <div class="l-contents__item p-contents__item c-background-color--white-opacity">
-          <h3 class="p-contents__contents-title c-text--M-text-black">
-          <a href="/index.php?cat=12">Eat In</a>
-          </h3>
-          <p>
-            店内でお食事いただけるメニューです。
-            店内でお食事いただけるメニューです。
-            店内でお食事いただけるメニューです。
-            店内でお食事いただけるメニューです。
-          </p>
-        </div>
-        <!-- contents-item eat in -->
-        <div class="l-contents__item p-contents__item c-background-color--white-opacity">
+        <section class="l-contents__item p-contents__item c-background-color--white-opacity">
           <h3 class="p-contents__contents-title c-text--M-text-black">
             <a href="/index.php?cat=12">Eat In</a>
           </h3>
@@ -66,14 +54,26 @@
             店内でお食事いただけるメニューです。
             店内でお食事いただけるメニューです。
           </p>
-        </div>
+        </section>
+        <!-- contents-item eat in -->
+        <section class="l-contents__item p-contents__item c-background-color--white-opacity">
+          <h3 class="p-contents__contents-title c-text--M-text-black">
+            <a href="/index.php?cat=12">Eat In</a>
+          </h3>
+          <p>
+            店内でお食事いただけるメニューです。
+            店内でお食事いただけるメニューです。
+            店内でお食事いただけるメニューです。
+            店内でお食事いただけるメニューです。
+          </p>
+        </section>
         <!--  contents-item eat in -->
-      </div>
+      </section>
       <!-- contents eat in -->
-    </div>
+    </article>
     <!-- contents wrapper-->
 
-    <div class="l-about p-about">
+    <section class="l-about p-about">
       <div class="l-about__inner p-about__inner">
         <h2 class="p-about__section-title">
           <p class="c-text--roboto-white  u-under-bar">
@@ -84,7 +84,7 @@
           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りす。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りす。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
         </p>
       </div>
-    </div>
+    </section>
     <!-- about -->
   <?php endif; ?>
 </main>
