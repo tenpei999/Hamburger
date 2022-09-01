@@ -22,7 +22,7 @@
     <div class="l-container">
       <header class="l-header p-header c-background-color--bisque">
 
-        <div class="l-header__wrapper">
+        <section class="l-header__wrapper">
           <button class="p-hamburger p-gmenu--btn js-hamburger">
            <p class="c-menu-icon">Menu</p>
           </button>
@@ -31,7 +31,7 @@
             <!-- <p class="site-description"><?php bloginfo('description'); ?></p>            -->
             <!-- サイトのキャッチフレーズ -->
           </div>
-        </div>
+        </section>
 
         <?php get_search_form(); ?>
 

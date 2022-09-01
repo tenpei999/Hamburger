@@ -5,9 +5,9 @@
             dynamic_sidebar( 'category_widget' );
         else:
     ?>
-    <div class="widget">
+    <section class="widget">
         <h2>No Widget</h2>
         <p>ウィジットは設定されていません。</p>
-    </div>
+    </section>
     <?php endif; ?>
 </aside>
