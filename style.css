@@ -477,6 +477,9 @@ input, button, textarea, select {
     font-size: 15px;
   }
 }
+.form-hidden {
+  display: none;
+}
 
 /* button */
 .c-btn {
@@ -1051,7 +1054,7 @@ td:nth-of-type(2) {
   }
   .p-main-visual.c-background-image--shadow 
   .c-text--M-white p {
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     padding-left: 1rem;
   }
 }
@@ -1066,7 +1069,7 @@ td:nth-of-type(2) {
   }
   .p-main-visual.c-background-image--shadow 
   .c-text--M-white p {
-    padding-top: 1.4rem;
+    padding-top: 1rem;
   }
 }
 

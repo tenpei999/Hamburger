@@ -91,6 +91,15 @@ function my_posts_control($query)
 }
 add_action('pre_get_posts', 'my_posts_control');
 
+
+//検索結果から固定ページを除外
+function SearchFilter($query) {
+  if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
+  $query->set( 'post_type', 'post' );
+  }
+  }
+  add_action( 'pre_get_posts','SearchFilter' );
+
 //サイト内検索のカスタマイズ
 function custom_search($search, $wp_query)
 {
@@ -99,7 +108,6 @@ function custom_search($search, $wp_query)
   //検索ページ以外だったら終了
   if (!$wp_query->is_search)
     return $search;
-
   if (!isset($wp_query->query_vars))
     return $search;
 
@@ -112,7 +120,10 @@ function custom_search($search, $wp_query)
         $search_word = $wpdb->_escape("%{$word}%");
         $search .= " AND (
 						{$wpdb->posts}.post_title LIKE '{$search_word}'
-						OR {$wpdb->posts}.post_content LIKE '{$search_word}'
+           
+						-- OR {$wpdb->posts}.post_content LIKE '{$search_word}'
+            -- // 検索結果に投稿内容を含めたい場合はコメントアウトを解除
+
 						OR {$wpdb->posts}.ID IN (
 							SELECT distinct r.object_id
 							FROM {$wpdb->term_relationships} AS r

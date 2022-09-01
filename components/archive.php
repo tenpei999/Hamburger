@@ -20,7 +20,7 @@
               $length = 100;
 
               //指定した文字数を出力
-              echo mb_substr(get_the_excerpt(), $start, $length), '[,,,続きを読む';
+              echo mb_substr(get_the_excerpt(), $start, $length), ',,,続きを読む';
 
               ?>
             </section>
