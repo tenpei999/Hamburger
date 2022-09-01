@@ -1217,7 +1217,7 @@ h3, h5, h6 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.35) 50%), url(./img/bg-map.svg);
   }
 }
-@media (min-width: 375px) and (max-width: 820px) {
+@media (min-width: 376px) and (max-width: 820px) {
   .p-about {
     background-image: linear-gradient(rgba(0, 0, 0, 0.55) 100%, rgba(0, 0, 0, 0.35) 0%), url(./img/bg-map.svg);
   }
