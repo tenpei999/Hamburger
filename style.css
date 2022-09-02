@@ -1184,6 +1184,11 @@ td:nth-of-type(2) {
   line-height: 1.5rem;
 }
 .p-contents_pages 
+.c-contents_pages p {
+  padding: 1rem 1rem 1.8rem 0;
+  line-height: 1.5rem;
+}
+.p-contents_pages 
 .c-contents_pages
 h3, h5, h6 {
   font-weight: 550;
@@ -1475,9 +1480,11 @@ h3, h5, h6 {
 .wp-block-media-text.alignwide {
    padding-bottom: 2rem;
 }
-.wp-block-media-text.alignwide:first-of-type 
-.wp-block-media-text__content {
-   padding-right: 0;
+@media screen and (max-width: 600px) {
+  .wp-block-media-text.alignwide:nth-of-type(2).has-media-on-the-right 
+  .wp-block-media-text__content {
+    padding-left: 1rem;
+  }
 }
 .wp-block-media-text.alignwide:nth-of-type(2) 
 .wp-block-media-text__content {

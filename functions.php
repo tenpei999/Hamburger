@@ -147,6 +147,7 @@ function custom_search($search, $wp_query)
 }
 add_filter('posts_search', 'custom_search', 10, 2);
 
+
 // h2をsingle.phpからh2を取得しリスト
 function get_single()
 {

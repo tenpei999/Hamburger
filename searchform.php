@@ -5,7 +5,5 @@
     <i class="fa-solid fa-magnifying-glass c-text-box--has-icon__icon"></i>
   </label>
   <input type="submit" name="検索ボタン" value="検索" class="c-btn--submit search-submit" value="<?php echo esc_attr_x('Search', 'submit button') ?>">
-  
-  <input type="text" name="target" value="title" class="form-hidden"/> 
-	<input type="text" name="target" value="all" class="form-hidden"/> 
+
 </form>
