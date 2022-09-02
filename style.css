@@ -1,5 +1,5 @@
 /*
-Theme Name: Hamburger
+Theme Name: hamburger
 Description: WordPress副業コース最終課題
 Version: 1.0.0
 Theme URI: http:///Users/tsuruokatenpei/LocalSites/hamburger/app/public/wp-content/themes/Hamburger/
@@ -7,7 +7,7 @@ Author: Tenpei
 Author URI: https://github.com/tenpei999/hallou_git.git
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: Hamburger
+Text Domain: hamburger
 Requires PHP: 7.4.1
 Tested up to: 6.0.2
 */
@@ -16,24 +16,17 @@ Tested up to: 6.0.2
 /*  reset-css/wp-default 
 ------------------------------------------*/
 
-#wpadminbar {
-  min-width: 375px !important;
-}
-@media screen and (max-width: 782px) {
-  #wpadminbar {
-    position: fixed;
-  }
-}
 
 /* Foundation/base */
 html {
   cursor: default; /* 1 */
 }
 
+
 body {
   font-size: 0.625rem;
   font-size: 62.5%;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: 'm-plus-1m', sans-serif;
   margin: auto;
   display: block;
   width: 100vw;
@@ -379,7 +372,7 @@ input, button, textarea, select {
 ------------------------------------------ */
 /* text */
 .c-text--roboto-white {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
 }
 .c-text--M-white {
@@ -411,7 +404,7 @@ input, button, textarea, select {
 
 /* title */
 .c-title-block--roboto {
-  font-family: "Roboto";
+  font-family:   'Roboto', sans-serif;
   font-size: 40px;
   height: 40px;
 }
@@ -1033,7 +1026,7 @@ td:nth-of-type(2) {
 .c-text--M-white {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
   position: absolute;
@@ -1312,7 +1305,7 @@ h3, h5, h6 {
 }
 .widgettitle {
   font-size: 1.4rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto-Regular", sans-serif;
   color: #707070;
   font-size: 1.3rem;
   padding: 3.4rem 0 0 28px;
@@ -1571,6 +1564,34 @@ figure.wp-block-image.wp-block-image:not(#individual-image).size-large {
 }
 .not-found__inner {
   text-align: center;
+}
+
+/* Gutenbergの幅広全幅に対応 */
+.entry .entry-content &gt; *.alignwide,
+.entry .entry-summary &gt; *.alignwide {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+.entry .entry-content &gt; *.alignfull,
+.entry .entry-summary &gt; *.alignfull {
+  padding-left: calc(10% + 58px + (2 * 1rem));
+  padding-right: calc(10% + 58px + (2 * 1rem));
+  margin-top: calc(2 * 1rem);
+  margin-bottom: calc(2 * 1rem);
+  left: calc( -12.5% - 75px);
+  width: calc( 125% + 150px);
+  max-width: calc( 125% + 150px);
+}
+ 
+.entry .entry-content .wp-block-image.alignfull img {
+  max-width: calc( 125% + 150px);
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Foundation */

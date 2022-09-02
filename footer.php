@@ -6,6 +6,7 @@
   <p class="c-copyright">Copy right: RaiseTech</p>
 </footer>
 </div>
+<?php echo get_avatar('tenpei999@gmail.com'); ?>
 <?php wp_footer(); ?>
 </body>
 
