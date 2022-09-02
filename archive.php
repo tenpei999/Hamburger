@@ -18,6 +18,7 @@
 
     <?php get_template_part("components/archive"); ?>
 
+    <?php wp_link_pages(); ?>
     <?php wp_pagenavi(); ?>
   </article>
   <!-- pages -->

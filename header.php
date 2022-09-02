@@ -18,6 +18,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class();?>>
+<?php wp_body_open(); ?>
   <div class="l-global-container">
     <div class="l-container">
       <header class="l-header p-header c-background-color--bisque">
@@ -39,10 +40,3 @@
       <span class="p-gmenu--fead"></span>
 
       </header>
-
-                 <!-- <?php wp_nav_menu(); ?> -->
-           <!-- <?php 
-            wp_nav_menu( array( 
-              'theme_location' => 'header-menu' 
-               ) ); 
-              ?> -->

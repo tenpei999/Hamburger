@@ -3,21 +3,18 @@ function add_files()
 {
   //外部読み込みファイル
 
-  //font-awesome
-  wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
   //リセットcss
-  wp_enqueue_style('reset-style', '//cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css', array(), '1.0.0');
-  //preconnect デフォルト
-  wp_enqueue_style('google-fonts-pre', 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
-  //Google Fonts
-  wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Roboto:wght@400;700&display=swap', array(), '');
+  wp_enqueue_style('reset-css', get_theme_file_uri('/css/modern-css-reset-master/src/reset.css'), array(), '1.4.0');
+  //google-fonts
+  wp_enqueue_script('roboto', 'fonts/Roboto', array(), '2.0');
+  wp_enqueue_script('Mplus', 'fonts/M_PLUS', array(), '1.1');
   //メインのcssファイル
   wp_enqueue_style('main', get_stylesheet_uri(), array(), '1.0.0');
   // main.js
-  wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', '', '', true);
   wp_enqueue_script('bundle', get_theme_file_uri('/js/bundle.js'), 'jquery', '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'add_files', 'readScript');
+
 
 function register_my_menu()
 {
@@ -40,7 +37,7 @@ function custom_theme_support()
   ));
   add_theme_support('post-thumbnails'); // 投稿画像の表示
   set_post_thumbnail_size('100%', '100%', false);
-  add_theme_support('menus'); // メニュー
+  add_theme_support( 'automatic-feed-links' ); //RSSフィードリンク
   add_theme_support('title-tag'); // titleタグ
   register_nav_menus(array(
     'footer_nav' => esc_html__('footer navigation', 'rtbread'),
