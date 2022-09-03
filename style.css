@@ -192,7 +192,8 @@ body {
 
 a:not([class]) {
   -webkit-text-decoration-skip: link;
-          text-decoration-skip-ink: auto;
+          -webkit-text-decoration-skip: ink;
+                  text-decoration-skip-ink: auto;
 }
 
 img, picture {
@@ -1208,9 +1209,12 @@ td:nth-of-type(2) {
   font-size: 1rem;
 }
 .p-contents_pages img {
-  filter: contrast(120%);
-  filter: brightness(110%);
-  filter: saturate(120%);
+  -webkit-filter: contrast(120%);
+          filter: contrast(120%);
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-filter: saturate(120%);
+          filter: saturate(120%);
 }
 .p-contents_pages 
 .c-contents_pages {
@@ -1620,4 +1624,3 @@ figure.wp-block-image.wp-block-image:not(#individual-image).size-large {
 }
 
 /* Foundation */
-/*# sourceMappingURL=style.css.map */
