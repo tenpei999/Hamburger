@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Tsuruのデモサイトです。飲食店の事業者様の参考になるサイトに仕上がっております。">
-  <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('img/favicon.png')); ?>">
   <?php wp_head(); ?>
 </head>
 <body <?php body_class();?>>

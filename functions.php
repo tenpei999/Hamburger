@@ -23,6 +23,7 @@ function register_my_menu()
   register_nav_menu('sidebar-menu', ('サイドバーメニュー'));
   register_nav_menu('drawer-menu', ('ドロワーバーメニュー'));
   register_nav_menu('slide-menu', ('スライドメニュー'));
+  register_nav_menu('footer-menu', ('フッターメニュー'));
 }
 add_action('init', 'register_my_menu');
 
@@ -44,6 +45,7 @@ function custom_theme_support()
   add_theme_support( 'automatic-feed-links' ); //RSSフィードリンク
   add_theme_support('title-tag'); // titleタグ
   add_theme_support( 'responsive-embeds' );
+  add_theme_support( 'custom-background' );
   register_nav_menus(array(
     'footer_nav' => esc_html__('footer navigation', 'hamburger'),
     'category_nav' => esc_html__('category navigation', 'hamburger'),
