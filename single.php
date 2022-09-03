@@ -3,6 +3,7 @@
 <main class="l-main">
 
   <section class="c-background-image p-main-visual single">
+    <div class="p-main-visual__inner single" ></div>
     <h1 class="c-text--M-white"><?php the_title(); ?></h1>
   </section>
   <!-- main-visual-->

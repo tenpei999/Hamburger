@@ -15,6 +15,9 @@ Tested up to: 6.0
 
 /*  reset-css/wp-default 
 ------------------------------------------*/
+#wpadminbar {
+  min-width: 375px !important;
+}
 
 /* Gutenbergの幅広全幅に対応 */
 .entry .entry-content &gt; *.alignwide,
@@ -59,22 +62,12 @@ Tested up to: 6.0
   margin-right: 20px;
   margin-bottom: 20px;
 }
-/* .wp-caption,
-[class*='wp-image'] {
-  display: block;
-  max-width: 100%;
-  margin-top: 1.5em;
-  text-align: center;
-} */
-/* .wp-caption-text {
-  margin-top: 0;
-} */
+
 
 /* Foundation/base */
 html {
   cursor: default; /* 1 */
 }
-
 
 body {
   font-size: 0.625rem;
@@ -316,7 +309,6 @@ input, button, textarea, select {
   .l-header__wrapper {
     margin: 0;
   }
-
 }
 .l-header__wrapper > 
 .p-gmenu--btn {
@@ -327,14 +319,12 @@ input, button, textarea, select {
 .l-contents {
   margin: 0.6rem auto;
 }
-
 .l-contents--wrapper {
   display: flex;
   flex-direction: column;
   margin: 1rem 1rem 2.3rem;
   transition: 200ms;
 }
-
 .l-contents__item {
   margin: 0 1.2rem 1.2rem 1.2rem;
   padding: 1rem 1.25rem 1rem 1.25rem;
@@ -345,7 +335,6 @@ input, button, textarea, select {
     margin: 1.2rem;
   }
 }
-
 @media screen and (min-width: 820px) {
   .l-contents {
     width: 50%;
@@ -355,13 +344,11 @@ input, button, textarea, select {
     margin: 1.1rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .l-contents--wrapper {
     margin: 2.5% 1.5% 3% 1.5%;
   }
 }
-
 @media screen and (min-width: 1220px) {
   .l-contents {
     margin: 3%;
@@ -1126,7 +1113,14 @@ td:nth-of-type(2) {
 /* main-visual single */
 .p-main-visual.c-background-image.single {
   height: 285px;
+  width: 100%;
+}
+.p-main-visual.single,
+.p-main-visual__inner
+ {
   background: url(./img/main-visual2.png) center;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1167,13 +1161,7 @@ td:nth-of-type(2) {
 }
 @media screen and (min-width: 1220px) {
   .p-main-visual.c-background-image.single {
-    background: url(./img/mv-pc2.png);
-    height: 350px;
-    transition: 200ms;
-    width: 100%;
-  }
-  .p-main-visual.c-background-image.page {
-    background: url(./img/mv-pc3.png);
+    background: url(./img/mv-pc2.png) ;
     height: 350px;
     transition: 200ms;
     width: 100%;
