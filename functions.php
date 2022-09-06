@@ -5,14 +5,14 @@ function add_files()
   wp_enqueue_style('google-fonts-pre', 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
   //Google Fonts
   wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Roboto:wght@400;700&display=swap', array(), '');
-  //メインのcssファイル
 
+  // main.js
+  wp_enqueue_script('jq', get_theme_file_uri('/js/jquery-3.6.1.min.js'), array('jquery'));
+  wp_enqueue_script('bundle', get_theme_file_uri('/js/bundle.js'), 'jquery', '1.0.0', true);
   //リセットcss
   wp_enqueue_style('reset-css', get_theme_file_uri('/css/modern-css-reset-master/src/reset.css'), array(), '1.4.0');
   //メインのcssファイル
   wp_enqueue_style('main', get_stylesheet_uri(), array(), '1.0.0');
-  // main.js
-  wp_enqueue_script('bundle', get_theme_file_uri('/js/bundle.js'), 'jquery', '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'add_files', 'readScript');
 
@@ -67,9 +67,6 @@ $args = array(
 add_theme_support( 'custom-header', $args );
 
 
-//カテゴリー説明文から自動で付与されるpタグを除去
-// remove_filter('the_excerpt', 'wpautop');
-
 // ウィジェット作成
 function hamburger_widgets_init()
 {
@@ -90,7 +87,7 @@ if (is_active_sidebar('category_widget')) {
   dynamic_sidebar('category_widget');
 }
 
-// searchは5件表示する
+// searchは5件表示する.archiveは3件表示する
 function my_posts_control($query)
 {
   if (is_admin() || !$query->is_main_query()) {
@@ -98,6 +95,10 @@ function my_posts_control($query)
   }
   if ($query->is_search()) {
     $query->set('posts_per_page', '5');
+    return;
+  }
+  if ($query->is_archive()) {
+    $query->set('posts_per_page', '3');
     return;
   }
 }
