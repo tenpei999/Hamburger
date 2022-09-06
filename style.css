@@ -779,10 +779,13 @@ h2 {
 /* 個別投稿のパーツ Parts for Individual post page
 -----------------------------------------------------*/
 /* 引用部 */
-.wp-block-quote {
+.-quote {
   background-color: #f5f5f5;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
+}
+.wp-block-quote {
+  gap: unset;
 }
 .wp-block-quote p {
   padding: 2rem 2rem 0 2rem;
@@ -1549,26 +1552,29 @@ a::after {
   padding-top: 0.5rem;
 }
 
+.wp-block-image 
+.aligncenter {
+  padding-bottom: 1rem;
+}
+
 /* ギャラリー */
 .wp-block-gallery.has-nested-images {
-  gap: 1rem;
   padding-bottom: 3rem;
 }
 .wp-block-gallery.has-nested-images
-figure.wp-block-image.wp-block-image:not(#individual-image).size-large {
+figure.wp-block-image.wp-block-image:not(#individual-image).size-full {
 	flex-grow:1;
   width: calc(100% - 1rem/2);
 }
 @media screen and (min-width: 600px) {
   .wp-block-gallery.has-nested-images
-  figure.wp-block-image.wp-block-image:not(#individual-image).size-large {
+  figure.wp-block-image.wp-block-image:not(#individual-image).size-full {
     flex-grow:0;
     width: calc(50% - 1rem/2);
   } 
-}
 @media screen and (min-width: 820px) {
   .wp-block-gallery.has-nested-images
-  figure.wp-block-image.wp-block-image:not(#individual-image).size-large {
+  figure.wp-block-image.wp-block-image:not(#individual-image).size-full {
     flex-grow:1;
     width: calc(33.33333% - 1rem *0.66667);
   } 
