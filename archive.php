@@ -26,7 +26,6 @@
 </main>
 
 </div>
-
 <!-- container -->
 
 <?php get_sidebar(); ?>

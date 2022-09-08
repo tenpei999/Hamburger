@@ -76,7 +76,11 @@ body {
   margin: auto;
   display: block;
   width: 100vw;
+<<<<<<< HEAD
   max-width: 	100vw;
+=======
+  max-width: 1900px;
+>>>>>>> origin/main
   overflow-x: hidden;
 }
 body.is-open {
@@ -260,6 +264,7 @@ input, button, textarea, select {
   display: grid;
   grid-template-columns: 1fr 19%;
   grid-template-rows: 1fr 10%;
+
 }
 
 .l-footer {

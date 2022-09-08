@@ -22,6 +22,7 @@
   <!-- pages -->
 
 </main>
+
 </div>
 
 <!-- container -->
