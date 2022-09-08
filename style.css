@@ -76,7 +76,7 @@ body {
   margin: auto;
   display: block;
   width: 100vw;
-  max-width: 1900px;
+  max-width: 	100vw;
   overflow-x: hidden;
 }
 body.is-open {
@@ -259,8 +259,7 @@ input, button, textarea, select {
 .l-global-container {
   display: grid;
   grid-template-columns: 1fr 19%;
-  grid-template-rows: 1fr 150px;
-  height: 100vh;
+  grid-template-rows: 1fr 10%;
 }
 
 .l-footer {
