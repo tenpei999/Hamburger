@@ -14,7 +14,7 @@
 
         <div class="l-header__wrapper">
           <button class="p-hamburger p-gmenu--btn js-hamburger">
-           <p class="c-menu-icon">Menu</p>
+            <p class="c-menu-icon">Menu</p>
           </button>
           <div class="p-header__site-title">
             <a href="<?php echo esc_url(home_url('/'));?>"class="c-title-block--roboto"><?php bloginfo('name');?></a>

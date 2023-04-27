@@ -8,7 +8,7 @@ function add_files()
 
   // main.js
   wp_enqueue_script('jq', get_theme_file_uri('/js/jquery-3.6.1.min.js'), array('jquery'));
-  wp_enqueue_script('bundle', get_theme_file_uri('/js/bundle.js'), 'jquery', '1.0.0', true);
+  wp_enqueue_script('bundle', get_theme_file_uri().'/js/bundle.js' , array('jquery'), '1.0.0', true);
   //リセットcss
   wp_enqueue_style('reset-css', get_theme_file_uri('/css/modern-css-reset-master/src/reset.css'), array(), '1.4.0');
   //メインのcssファイル
@@ -133,7 +133,6 @@ function custom_search($search, $wp_query)
         $search_word = $wpdb->_escape("%{$word}%");
         $search .= " AND (
 						{$wpdb->posts}.post_title LIKE '{$search_word}'
-           
 						-- OR {$wpdb->posts}.post_content LIKE '{$search_word}'
             -- // 検索結果に投稿内容を含めたい場合はコメントアウトを解除
 
