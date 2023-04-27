@@ -1,0 +1,46 @@
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variable" as v;
+
+label {
+  width: 100%;
+}
+
+.search-form {
+  width: 100%;
+  margin: 0 0 1rem;
+  position: relative;
+  display: flex;
+  border-radius: 50px;
+  @include m.mq (screen012) {
+    margin: auto;
+    width: 20rem;
+  }
+}
+.search-field {
+  width: 100%; /*入力部分の長さ*/
+  background: #fff; /*入力部分の背景色*/
+  padding: 3px 10px;
+  border: none; /*ボーダーを消す*/
+  border-radius: 50px 0 0 50px; /*左上、左下のみ角丸*/
+  font-size: 16px;
+}
+.search-submit {
+  display: block;
+  width: 20%;
+  background: #444d53;
+  color: #fff;
+  position: static;
+  right: auto;
+  top: auto;
+  /* font-size: 20px; */
+  cursor: pointer;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  padding: 0;
+}
+.search-box input::placeholder {
+  color: #bbb; /*プレースホルダーの色*/
+}
+.search-box input:focus, .search-box button:focus {
+  outline: 0; /*フォーカス時の枠線を消す*/
+}

@@ -1,0 +1,56 @@
+@use "./variable" as v;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: v.$Horizontal;
+  font-size: 1rem;
+}
+
+.error404 {
+  background-color: rgb(42, 117, 180);
+}
+
+.container {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: unset;
+  font-weight: unset;
+  font-size: unset;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: unset;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: unset;
+  background-color: unset;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+p {
+  margin: 0;
+}

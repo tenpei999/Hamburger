@@ -1,0 +1,27 @@
+@use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
+
+.c-card {
+  display: flex;
+
+  img {
+    box-sizing: border-box;
+  }
+
+  &__contents-area {
+    padding: 1rem;
+  }
+
+  &__text {
+    line-height: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    border-radius: 2rem;
+
+    @include m.mq (screen03) {
+      border-radius: 3rem;
+    }
+  }
+}
