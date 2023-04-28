@@ -1,0 +1,19 @@
+@use "../Foundation/mixin" as m;
+
+.l-grid-photo-wrapper {
+  .c-grid-photo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    @include m.mq (screen02) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, 1fr);
+    }
+    @include m.mq (screen03) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+}

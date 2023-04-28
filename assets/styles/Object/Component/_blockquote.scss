@@ -1,0 +1,29 @@
+.c-blockquote {
+  background-color: #f5f5f5;
+  &__q {
+    padding: 2rem 0;
+    display: flex;
+    a {
+      padding-left: 1rem;
+    }
+    a:link {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #4A6C9B;
+      text-decoration: underline;
+     }
+     
+     a:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+
+     }
+     
+     a:active {
+      color: #FF0000;
+      text-decoration: underline;
+     }
+     
+  }
+}

@@ -1,56 +1,26 @@
-@use "./variable" as v;
+/* Foundation/base */
 
 html {
-  scroll-behavior: smooth;
+  cursor: default; /* 1 */
 }
 
 body {
+  font-size: 0.625rem;
+  font-size: 62.5%;
+  font-family: 'M PLUS Rounded 1c',sans-serif;
+  margin: auto;
+  display: block;
   width: 100vw;
-  height: 100vh;
-  font-family: v.$Horizontal;
-  font-size: 1rem;
-}
-
-.error404 {
-  background-color: rgb(42, 117, 180);
-}
-
-.container {
+  max-width: 1900px;
   overflow-x: hidden;
-  height: 100%;
+  &.is-open {
+    position: fixed;
+  }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: unset;
-  font-weight: unset;
-  font-size: unset;
-}
-
-ul {
-  list-style: none;
-  padding-inline-start: 0;
-  margin-block-start: unset;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  border: unset;
-  background-color: unset;
-}
-
 a {
   text-decoration: none;
-  color: unset;
+  color: #000000;
 }
-
-p {
-  margin: 0;
+li {
+  list-style: none;
 }

@@ -1,0 +1,59 @@
+@use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
+
+.p-wp-pagenavi {
+  .wp-pagenavi {
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    @include m.mq (screen02) {
+      padding: 3rem 0 1rem 0;
+      font-size: 0.65rem;
+      justify-content: center;
+    } 
+  }
+  .pages {
+    @include m.mq (screen02) {
+      display: block;
+      font-size: 0.9rem;
+      padding-top: 0.5rem;
+    }
+  }
+  .page {
+    &.larger,
+    &.smaller {
+      width: 35px;
+      height: 35px;
+      padding: 0.2rem;
+    }
+  }
+  .current {
+    width: 35px;
+    height: 35px; 
+  }
+  .nextpostslink, .previouspostslink {
+    font-size: 1.2rem;
+    @include m.mq (screen02) {
+      height: 2rem;
+      padding-top: 0.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 820px) {
+    .wp-pagenavi {
+      justify-content: space-between;
+    }
+    .pages {
+      display: none;
+    }
+    .page.larger, .page.smaller, .current {
+      display: none;
+    }
+    .previouspostslink {
+      flex-direction: column-reverse;
+    }
+    .nextpostslink {
+      flex-direction: column;
+    }
+  }
+}

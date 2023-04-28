@@ -1,0 +1,122 @@
+{
+  "assets/images/bg-grain.svg": {
+    "file": "assets/images/bg-grain.svg",
+    "src": "assets/images/bg-grain.svg"
+  },
+  "assets/images/bg-map.svg": {
+    "file": "assets/images/bg-map.svg",
+    "src": "assets/images/bg-map.svg"
+  },
+  "assets/images/card2.png": {
+    "file": "assets/images/card2.png",
+    "src": "assets/images/card2.png"
+  },
+  "assets/images/eat-in.svg": {
+    "file": "assets/images/eat-in.svg",
+    "src": "assets/images/eat-in.svg"
+  },
+  "assets/images/favicon.png": {
+    "file": "assets/images/favicon.png",
+    "src": "assets/images/favicon.png"
+  },
+  "assets/images/flex-item-large.png": {
+    "file": "assets/images/flex-item-large.png",
+    "src": "assets/images/flex-item-large.png"
+  },
+  "assets/images/flex-item-middole.png": {
+    "file": "assets/images/flex-item-middole.png",
+    "src": "assets/images/flex-item-middole.png"
+  },
+  "assets/images/flex-item.png": {
+    "file": "assets/images/flexitem.png",
+    "src": "assets/images/flexitem.png"
+  },
+  "assets/images/flex-item.svg": {
+    "file": "assets/images/flex-item.svg",
+    "src": "assets/images/flex-item.svg"
+  },
+  "assets/images/flex-photo.png": {
+    "file": "assets/images/flex-photo.png",
+    "src": "assets/images/flex-photo.png"
+  },
+  "assets/images/flex-photo.svg": {
+    "file": "assets/images/flex-photo.svg",
+    "src": "assets/images/flex-photo.svg"
+  },
+  "assets/images/flexitem.png": {
+    "file": "assets/images/flexitem.png",
+    "src": "assets/images/flexitem.png"
+  },
+  "assets/images/grid-item.png": {
+    "file": "assets/images/grid-item.png",
+    "src": "assets/images/grid-item.png"
+  },
+  "assets/images/main-visual.svg": {
+    "file": "assets/images/main-visual.svg",
+    "src": "assets/images/main-visual.svg"
+  },
+  "assets/images/main-visual2.png": {
+    "file": "assets/images/main-visual2.png",
+    "src": "assets/images/main-visual2.png"
+  },
+  "assets/images/main-visual3.png": {
+    "file": "assets/images/main-visual3.png",
+    "src": "assets/images/main-visual3.png"
+  },
+  "assets/images/mb-shadow.svg": {
+    "file": "assets/images/mb-shadow.svg",
+    "src": "assets/images/mb-shadow.svg"
+  },
+  "assets/images/mv-pc.svg": {
+    "file": "assets/images/mv-pc.svg",
+    "src": "assets/images/mv-pc.svg"
+  },
+  "assets/images/mv-pc2.png": {
+    "file": "assets/images/mv-pc2.png",
+    "src": "assets/images/mv-pc2.png"
+  },
+  "assets/images/mv-pc3.png": {
+    "file": "assets/images/mv-pc3.png",
+    "src": "assets/images/mv-pc3.png"
+  },
+  "assets/images/mv-tab3.png": {
+    "file": "assets/images/mv-tab3.png",
+    "src": "assets/images/mv-tab3.png"
+  },
+  "assets/images/mv-tav.svg": {
+    "file": "assets/images/mv-tav.svg",
+    "src": "assets/images/mv-tav.svg"
+  },
+  "assets/images/mv-tav2.png": {
+    "file": "assets/images/mv-tav2.png",
+    "src": "assets/images/mv-tav2.png"
+  },
+  "assets/images/next.png": {
+    "file": "assets/images/next.png",
+    "src": "assets/images/next.png"
+  },
+  "assets/images/pc_logo.svg": {
+    "file": "assets/images/pc_logo.svg",
+    "src": "assets/images/pc_logo.svg"
+  },
+  "assets/images/prev.png": {
+    "file": "assets/images/prev.png",
+    "src": "assets/images/prev.png"
+  },
+  "assets/images/takeout.svg": {
+    "file": "assets/images/takeout.svg",
+    "src": "assets/images/takeout.svg"
+  },
+  "main.css": {
+    "file": "assets/css/main.css",
+    "src": "main.css"
+  },
+  "main.js": {
+    "css": [
+      "assets/css/main.css"
+    ],
+    "file": "assets/js/main.js",
+    "isEntry": true,
+    "src": "main.js"
+  }
+}

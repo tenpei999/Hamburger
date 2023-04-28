@@ -1,0 +1,12 @@
+@use "../../Foundation/variable" as v;
+
+.c-contents_pages {
+  color: v.$text-black;
+  &__title {
+    &.h5,
+    &.h6 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

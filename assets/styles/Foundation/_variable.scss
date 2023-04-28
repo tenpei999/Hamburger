@@ -1,33 +1,25 @@
 /* font-family */
-$Horizontal: 'Noto Sans JP', sans-serif;
-$Vertical:  'Noto Serif JP', serif;
-$Table: 'Zen Maru Gothic', sans-serif;
-$TitleFont: 'M PLUS 1', sans-serif;
-$Widget:  'Shippori Antique', sans-serif;
+$roboto: 'Roboto', sans-serif;
+$M: m-plus-1m,sans-serif;
 
 /* Color */
-$BackgroundWhite: #FFF;
-$BackgroundWhiteOpacity: rgba(255, 255, 255, 0.8);
-$BackgroundBlack: #000;
-$TextWhite: #fff;
-$TextBlack: #000;
-$MenuBlack: #707070;
-$TitleBlown: #817878;
-$FooterBlack: #0A132E;
+$logo-gray: #707070;
+$pale-gray: #eaeaea; 
+$gray: #808080;
+$white: #ffffff;
+$text-black: #3c2a10;
+$bg-brown: #3C2B1C;
+$base-white: #FFFDFA;
+$this-page-black: #3C2B1C; 
 
 /* font-weight */
-
-$SansThin: 100;
-$SerifExLight:200;
-$Light:300;
-$Regular: 400;
-$Medium: 500;
-$SerifSemiBold: 600;
-$Bold: 700;
-$SansBlack: 900;
-
-/* size */
-
-
+  $thin: 10;
+  $Lbold: 300;/* light */
+  $MLbold: 400;/* light */
+  $Mbold: 500;/* medium */
+  $MMbold: 550;/* medium */
+  $bold: 600;/* Bold */
+  $Hbold: 700;/* Bold */
+  $Xbold: 900;/* Heavy */
 
 
