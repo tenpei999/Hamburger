@@ -8,15 +8,15 @@
  */
 
 //develop mode config
-define( "IS_VITE_DEVELOPMENT", true );
+define("IS_VITE_DEVELOPMENT", true);
 
 //define
-define( 'DIST_DEF', 'dist' );
-define( 'DIST_URI',  get_template_directory_uri() . '/' . DIST_DEF );
-define( 'DIST_PATH', get_template_directory()     . '/' . DIST_DEF );
+define('DIST_DEF', 'dist');
+define('DIST_URI',  get_template_directory_uri() . '/' . DIST_DEF);
+define('DIST_PATH', get_template_directory()     . '/' . DIST_DEF);
 
-define( 'JS_DEPENDENCY', array() ) ; // array( 'jquery' ) as example
-define( 'JS_LOAD_IN_FOOTER', true ) ; // load scripts in footer?
+define('JS_DEPENDENCY', array()); // array( 'jquery' ) as example
+define('JS_LOAD_IN_FOOTER', true); // load scripts in footer?
 
 define('VITE_SERVER', 'http://localhost:3000');
 define('VITE_ENTRY_POINT', '/main.js');
@@ -24,36 +24,38 @@ define('VITE_ENTRY_POINT', '/main.js');
 /*
  * init theme support
  */
-function themrishvite_theme_support() {
-	add_theme_support( 'html5', array (
-		'comment-form',
-		'comment-list',
-		'search-form',
-		'gallery',
-		'caption',
-		'style',
-		'script'
-	) );
-	add_theme_support( "post-thumbnails" );
-	add_theme_support( 'title-tag' );
-	add_theme_support( 'editor-styles' );
-	add_theme_support( 'custom-logo' );
-	add_theme_support( 'automatic-feed-links' );
+function themrishvite_theme_support()
+{
+  add_theme_support('html5', array(
+    'comment-form',
+    'comment-list',
+    'search-form',
+    'gallery',
+    'caption',
+    'style',
+    'script'
+  ));
+  add_theme_support("post-thumbnails");
+  add_theme_support('title-tag');
+  add_theme_support('editor-styles');
+  add_theme_support('custom-logo');
+  add_theme_support('automatic-feed-links');
   set_post_thumbnail_size('100%', '100%', false);
-  add_theme_support( 'responsive-embeds' );
-  add_theme_support( 'custom-background' );
-	register_nav_menus( array (
+  add_theme_support('responsive-embeds');
+  add_theme_support('custom-background');
+  register_nav_menus(array(
     'footer_nav' => esc_html__('footer navigation', 'hamburger'),
     'category_nav' => esc_html__('category navigation', 'hamburger'),
-	) );
+  ));
   add_editor_style();
 }
-add_action( 'after_setup_theme', 'themrishvite_theme_support' );
+add_action('after_setup_theme', 'themrishvite_theme_support');
 
-function cors_http_header() {
-	header( "Access-Control-Allow-Origin: *" );
+function cors_http_header()
+{
+  header("Access-Control-Allow-Origin: *");
 }
-add_action( 'send_headers', 'cors_http_header' );
+add_action('send_headers', 'cors_http_header');
 function add_files()
 {
   //外部読み込みファイル
@@ -74,49 +76,50 @@ function register_my_menu()
 }
 add_action('init', 'register_my_menu');
 
-add_action( 'wp_enqueue_scripts', function() {
-	if ( defined( 'IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true ) {
-		//develop mode
-		function vite_head_module_hook() {
-			echo '<script type="module" crossorigin src="' . VITE_SERVER . VITE_ENTRY_POINT . '"></script>';
-		}
-		add_action( 'wp_footer', 'vite_head_module_hook' );
-	} else {
-		// production mode, 'npm run build' must be executed in order to generate assets
+add_action('wp_enqueue_scripts', function () {
+  if (defined('IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true) {
+    //develop mode
+    function vite_head_module_hook()
+    {
+      echo '<script type="module" crossorigin src="' . VITE_SERVER . VITE_ENTRY_POINT . '"></script>';
+    }
+    add_action('wp_footer', 'vite_head_module_hook');
+  } else {
+    // production mode, 'npm run build' must be executed in order to generate assets
 
-		// read manifest.json to figure out what to enqueue
-		$manifest = json_decode( file_get_contents( DIST_PATH . '/manifest.json'), true );
-		
-		// is ok
-		if ( is_array( $manifest ) ) {
-			
-			// get first key, by default is 'main.js'
-			$manifest_key = array_keys( $manifest );
-			if ( isset( $manifest_key[0] ) ) {
-				// enqueue CSS files
-				foreach( @$manifest["main.css"] as $css_file ) {
-					wp_enqueue_style( 'main', DIST_URI . '/' . $css_file );
-				}
-				// enqueue main JS file
-				$js_file = @$manifest["main.js"]['file'];
-				if ( ! empty( $js_file ) ) {
-					wp_enqueue_script( 'main', DIST_URI . '/' . $js_file, JS_DEPENDENCY, '', JS_LOAD_IN_FOOTER );
-				}
-			}
-		}
-	}
-} );
+    // read manifest.json to figure out what to enqueue
+    $manifest = json_decode(file_get_contents(DIST_PATH . '/manifest.json'), true);
+
+    // is ok
+    if (is_array($manifest)) {
+
+      // get first key, by default is 'main.js'
+      $manifest_key = array_keys($manifest);
+      if (isset($manifest_key[0])) {
+        // enqueue CSS files
+        foreach (@$manifest["main.css"] as $css_file) {
+          wp_enqueue_style('main', DIST_URI . '/' . $css_file);
+        }
+        // enqueue main JS file
+        $js_file = @$manifest["main.js"]['file'];
+        if (!empty($js_file)) {
+          wp_enqueue_script('main', DIST_URI . '/' . $js_file, JS_DEPENDENCY, '', JS_LOAD_IN_FOOTER);
+        }
+      }
+    }
+  }
+});
 
 //カテゴリー説明文でHTMLタグを使う
 remove_filter('pre_term_description', 'wp_filter_kses');
 
 $args = array(
-	'width'         => 980,
-	'height'        => 60,
-	'default-image' => get_template_directory_uri() . 'assets/images/main-visual.svg',
-	'uploads'       => true,
+  'width'         => 980,
+  'height'        => 60,
+  'default-image' => get_template_directory_uri() . 'assets/images/main-visual.svg',
+  'uploads'       => true,
 );
-add_theme_support( 'custom-header', $args );
+add_theme_support('custom-header', $args);
 
 
 // ウィジェット作成
@@ -157,12 +160,13 @@ function my_posts_control($query)
 add_action('pre_get_posts', 'my_posts_control');
 
 //検索結果から固定ページを除外
-function SearchFilter($query) {
-  if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
-  $query->set( 'post_type', 'post' );
+function SearchFilter($query)
+{
+  if (!is_admin() && $query->is_main_query() && $query->is_search()) {
+    $query->set('post_type', 'post');
   }
-  }
-  add_action( 'pre_get_posts','SearchFilter' );
+}
+add_action('pre_get_posts', 'SearchFilter');
 
 //サイト内検索のカスタマイズ
 function custom_search($search, $wp_query)
@@ -234,33 +238,112 @@ function get_single()
 //本体ギャラリーCSS停止
 add_filter('use_default_gallery_style', '__return_false');
 
-function gutenberg_support_setup() {
+function gutenberg_support_setup()
+{
 
   //Gutenberg用スタイルの読み込み
-  add_theme_support( 'wp-block-styles' );
+  add_theme_support('wp-block-styles');
 
   //「幅広」と「全幅」に対応
-  add_theme_support( 'align-wide' );
-
+  add_theme_support('align-wide');
 }
-add_action( 'after_setup_theme', 'gutenberg_support_setup' );
+add_action('after_setup_theme', 'gutenberg_support_setup');
 
 
 /**
-* <head>〜</head>内にAdobe Fonts Scriptを挿入する
-**/
+ * <head>〜</head>内にAdobe Fonts Scriptを挿入する
+ **/
 add_action(
-	'wp_head',
-	function() { ?>
-		<script>
-(function(d) {
-var config = {
-kitId: 'vap4wrz',
-scriptTimeout: 3000,
-async: true
-},
-h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-})(document);
-</script>
-	<?php }
+  'wp_head',
+  function () { ?>
+  <script>
+    (function(d) {
+      var config = {
+          kitId: 'vap4wrz',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function() {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function() {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+
+<?php }
 );
+
+/*
+* カスタムフィールド
+*/
+function add_bookdetail_fields()
+{
+  add_meta_box(
+    'book_setting', //カスタムフィールドブロックに割り当てるID名
+    '本の情報', //カスタムフィールドのタイトル
+    'insert_bookdetail_fields', //入力エリアの HTML
+    'post', //投稿タイプ。サンプルでは カスタムタクソノミー名。他に post 等が指定可能
+    'normal' //カスタムフィールドが表示される部分
+  );
+}
+add_action('admin_menu', 'add_bookdetail_fields');
+
+//入力エリア
+function insert_bookdetail_fields() {
+	global $post;
+	echo '著者： <input type="text" name="book_author" value="'.get_post_meta( $post->ID, 'book_author', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
+	echo '価格： <input type="text" name="book_price" value="'.get_post_meta( $post->ID, 'book_price', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
+	echo 'ISBN： <input type="text" name="book_isbn" value="'.get_post_meta( $post->ID, 'book_isbn', true ).'" size="50" style="margin: 10px 0;" /><br>';
+	if( get_post_meta( $post->ID, 'book_label', true ) ) {
+		$book_label_check = "checked";
+	} else {
+		$book_label_check = "";
+	} //チェックされていたらチェックボックスの$book_label_checkの場所にcheckedを挿入
+	echo 'ベストセラーラベル： <input type="checkbox" name="book_label" value="fa-check" '.$book_label_check.' ><br>';
+}
+
+//カスタムフィールドの値を保存
+function save_custom_fields( $post_id ) {
+
+	if( !empty( $_POST['book_author'] ) ){
+		update_post_meta( $post_id, 'book_author', $_POST['book_author'] );
+	} else {
+		delete_post_meta( $post_id, 'book_author' );
+	}
+
+	if( !empty( $_POST['book_price'] ) ){
+		update_post_meta( $post_id, 'book_price', $_POST['book_price'] );
+	} else {
+		delete_post_meta( $post_id, 'book_price' );
+	}
+
+	if( !empty( $_POST['book_isbn'] ) ){
+		update_post_meta( $post_id, 'book_isbn', $_POST['book_isbn'] );
+	} else {
+		delete_post_meta( $post_id, 'book_isbn' );
+	}
+
+	if( !empty( $_POST['book_label'] ) ){
+		update_post_meta( $post_id, 'book_label', $_POST['book_label'] );
+	} else {
+		delete_post_meta( $post_id, 'book_label' );
+	}
+}
+add_action( 'save_post', 'save_custom_fields' );
