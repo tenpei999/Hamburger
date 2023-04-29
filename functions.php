@@ -293,24 +293,22 @@ add_action(
 /*
 * カスタムフィールド
 */
-function add_bookdetail_fields()
+function add_news_fields()
 {
   add_meta_box(
-    'book_setting', //カスタムフィールドブロックに割り当てるID名
-    '本の情報', //カスタムフィールドのタイトル
-    'insert_bookdetail_fields', //入力エリアの HTML
+    'news_setting', //カスタムフィールドブロックに割り当てるID名
+    'おすすめ情報', //カスタムフィールドのタイトル
+    'insert_news_fields', //入力エリアの HTML
     'post', //投稿タイプ。サンプルでは カスタムタクソノミー名。他に post 等が指定可能
     'normal' //カスタムフィールドが表示される部分
   );
 }
-add_action('admin_menu', 'add_bookdetail_fields');
+add_action('admin_menu', 'add_news_fields');
 
 //入力エリア
-function insert_bookdetail_fields() {
+function insert_news_fields() {
 	global $post;
-	echo '著者： <input type="text" name="book_author" value="'.get_post_meta( $post->ID, 'book_author', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
-	echo '価格： <input type="text" name="book_price" value="'.get_post_meta( $post->ID, 'book_price', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
-	echo 'ISBN： <input type="text" name="book_isbn" value="'.get_post_meta( $post->ID, 'book_isbn', true ).'" size="50" style="margin: 10px 0;" /><br>';
+	echo 'リンク： <input type="text" name="book_author" value="'.get_post_meta( $post->ID, 'book_author', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
 	if( get_post_meta( $post->ID, 'book_label', true ) ) {
 		$book_label_check = "checked";
 	} else {
