@@ -308,24 +308,17 @@ add_action('admin_menu', 'add_recommendation_fields');
 //入力エリア
 function insert_recommendation_fields() {
 	global $post;
-	echo 'リンクタイトル： <input type="text" name="recommendation_link" value="'.get_post_meta( $post->ID, 'recommendation_link_title', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
-	if( get_post_meta( $post->ID, 'book_label', true ) ) {
-		$book_label_check = "checked";
-	} else {
-		$book_label_check = "";
-	} //チェックされていたらチェックボックスの$book_label_checkの場所にcheckedを挿入
-	echo 'ベストセラーラベル： <input type="checkbox" name="book_label" value="fa-check" '.$book_label_check.' ><br>';
+	echo 'リンクタイトル： <input type="text" name="recommendation_link_title" value="'.get_post_meta( $post->ID, 'recommendation_link_title', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
 }
 
-//フィールドの値を保存する
-function save_recommendation_fields( $post_id ) {
-  if( isset( $_POST['recommendation_link'] ) ) {
-    update_post_meta( $post_id, 'recommendation_link', $_POST['recommendation_link'] );
-  }
-  if( isset( $_POST['book_label'] ) ) {
-    update_post_meta( $post_id, 'book_label', $_POST['book_label'] );
-  } else {
-    delete_post_meta( $post_id, 'book_label' );
-  }
+//カスタムフィールドの値を保存
+function save_custom_fields( $post_id ) {
+
+	if( !empty( $_POST['recommendation_link_title'] ) ){
+		update_post_meta( $post_id, 'recommendation_link_title', $_POST['recommendation_link_title'] );
+	} else {
+		delete_post_meta( $post_id, 'recommendation_link_title' );
+	}
+
 }
-add_action( 'save_post', 'save_recommendation_fields' );
+add_action( 'save_post', 'save_custom_fields' );
