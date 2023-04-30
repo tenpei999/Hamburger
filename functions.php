@@ -309,6 +309,7 @@ add_action('admin_menu', 'add_recommendation_fields');
 function insert_recommendation_fields() {
 	global $post;
 	echo 'リンクタイトル： <input type="text" name="recommendation_link_title" value="'.get_post_meta( $post->ID, 'recommendation_link_title', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
+	echo 'リンク： <input type="text" name="recommendation_link" value="'.get_post_meta( $post->ID, 'recommendation_link', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
 }
 
 //カスタムフィールドの値を保存
@@ -318,6 +319,11 @@ function save_custom_fields( $post_id ) {
 		update_post_meta( $post_id, 'recommendation_link_title', $_POST['recommendation_link_title'] );
 	} else {
 		delete_post_meta( $post_id, 'recommendation_link_title' );
+	}
+	if( !empty( $_POST['recommendation_link'] ) ){
+		update_post_meta( $post_id, 'recommendation_link', $_POST['recommendation_link'] );
+	} else {
+		delete_post_meta( $post_id, 'recommendation_link' );
 	}
 
 }
