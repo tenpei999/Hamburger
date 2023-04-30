@@ -13,11 +13,16 @@
           <?php the_content(); ?>
           <!-- 個別投稿を反映 -->
         </section>
-        <div class="p-bookdetail-field--wrap">
-          <ul class="p-bookdetail-field">
-            <li class="p-bookdetail-field__price">金額：<?php echo esc_html(get_post_meta($post->ID, 'book_price', true)); ?>円</li>
-            <li class="p-bookdetail-field__isbn">ISBN：<?php echo get_post_meta($post->ID, 'book_isbn', true); ?></li>
-            <li class="p-bookdetail-field__best">ベストセラー：<i class="fa <?php echo get_post_meta($post->ID, 'book_label', true); ?>"></i></li>
+        <div class="p-recommendation-field--wrap">
+            <?php if (get_post_meta($post->ID, 'recommendation_link_title', true)) : ?>
+              <h2>★おすすめ情報タイトル</h2>
+            <?php else : ?>
+              <h2>
+                <a href="<?php echo esc_url(home_url('/'));?>">ブログのトップページへ</a>
+              </h2>
+            <?php endif; ?>         
+          <ul class="p-recommendation-field">
+            <li class="p-recommendation-field__price"><a href=""></a><?php echo esc_html(get_post_meta($post->ID, 'recommendation_link_title', true)); ?></li>
           </ul>
         </div>
       </article>
