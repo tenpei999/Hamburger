@@ -29,7 +29,7 @@
   },
   "assets/images/flex-item.png": {
     "file": "assets/images/flexitem.png",
-    "src": "assets/images/flexitem.png"
+    "src": "assets/images/flex-item.png"
   },
   "assets/images/flex-item.svg": {
     "file": "assets/images/flex-item.svg",
@@ -45,7 +45,11 @@
   },
   "assets/images/flexitem.png": {
     "file": "assets/images/flexitem.png",
-    "src": "assets/images/flexitem.png"
+    "src": "assets/images/flex-item.png"
+  },
+  "assets/images/fonts/search-icon/magnifying-glass-solid.svg": {
+    "file": "assets/images/magnifying-glass-solid.svg",
+    "src": "assets/images/fonts/search-icon/magnifying-glass-solid.svg"
   },
   "assets/images/grid-item.png": {
     "file": "assets/images/grid-item.png",
