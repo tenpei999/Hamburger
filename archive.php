@@ -4,7 +4,13 @@
   <section class="c-background-image--shadow p-main-visual">
     <div class="c-text--M-white">
       <h1>Menu:</h1>
-      <P><?php single_cat_title(); ?></P>
+      <P><?php single_cat_title(); ?>
+        <?php
+        $term = get_queried_object();
+        $total_posts = $term->count;
+        echo '(' . $total_posts . ')';
+        ?>
+      </P>
     </div>
   </section>
   <!-- main-visual-->

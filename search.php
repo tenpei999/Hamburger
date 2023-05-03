@@ -3,7 +3,12 @@
   <section class="c-background-image--shadow p-main-visual">
     <div class="c-text--M-white">
       <h1>Search:</h1>
-      <p><?php echo get_search_query (); ?></p>
+      <p><?php echo get_search_query(); ?>
+        <?php
+        $total_posts = $wp_query->found_posts;
+        echo '(' . $total_posts . ')';
+        ?>
+      </p>
     </div>
   </section>
   <!-- main-visual-->
@@ -15,7 +20,7 @@
       <?php endif; ?>
     </article>
     <?php get_template_part("components/archive"); ?>
-    
+
     <?php wp_link_pages(); ?>
     <?php wp_pagenavi(); ?>
   </article>
