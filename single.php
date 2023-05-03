@@ -21,8 +21,8 @@
               <a href="<?php echo esc_url(home_url('/')); ?>">ブログのトップページへ</a>
             </h2>
           <?php endif; ?>
-          <ul class="p-bookdetail-field">
-            <li class="p-bookdetail-field__price">
+          <section class="p-bookdetail-field">
+            <div class="p-bookdetail-field__price">
               <?php if (get_post_meta($post->ID, 'recommendation_link', true)) : ?>
                 <a href="<?php echo esc_html(get_post_meta($post->ID, 'recommendation_link', true)); ?>">
                   <p>
@@ -34,8 +34,13 @@
                   <?php echo esc_html(get_post_meta($post->ID, 'recommendation_link_title', true)); ?>
                 </p>
               <?php endif; ?>
-            </li>
-          </ul>
+            </div>
+          </section>
+          <?php
+          if (function_exists('yarpp_related')) {
+            yarpp_related();
+          }
+          ?>
         </div>
       </article>
 

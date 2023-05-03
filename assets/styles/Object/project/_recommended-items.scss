@@ -1,0 +1,33 @@
+@use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
+
+.p-recommended {
+  &-items {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    @include m.mq (screen011) {
+      gap: 1rem;
+    }
+    .c-card {
+      &__contents-area {
+        background-color: #F9F0E2;
+        ;
+      }
+      &__text-area {
+        color: v.$bg-brown;
+        ;
+      }
+    }
+  }
+  &-item {
+    width: 100%;
+    @include m.mq (screen011) {
+      width: calc(50% - 1rem);
+    }
+    @include m.mq (screen03) {
+      width: calc(calc(100% / 3) - 1rem);
+    }
+  }
+}
