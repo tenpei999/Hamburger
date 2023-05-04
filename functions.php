@@ -306,25 +306,119 @@ function add_recommendation_fields()
 add_action('admin_menu', 'add_recommendation_fields');
 
 //入力エリア
-function insert_recommendation_fields() {
-	global $post;
-	echo 'リンクタイトル： <input type="text" name="recommendation_link_title" value="'.get_post_meta( $post->ID, 'recommendation_link_title', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
-	echo 'リンク： <input type="text" name="recommendation_link" value="'.get_post_meta( $post->ID, 'recommendation_link', true ).'" size="50" style="margin-bottom: 10px;" />　<br>';
+function insert_recommendation_fields()
+{
+  global $post;
+  echo 'リンクタイトル： <input type="text" name="recommendation_link_title" value="' . get_post_meta($post->ID, 'recommendation_link_title', true) . '" size="50" style="margin-bottom: 10px;" />　<br>';
+  echo 'リンク： <input type="text" name="recommendation_link" value="' . get_post_meta($post->ID, 'recommendation_link', true) . '" size="50" style="margin-bottom: 10px;" />　<br>';
 }
 
 //カスタムフィールドの値を保存
-function save_custom_fields( $post_id ) {
+function save_custom_fields($post_id)
+{
 
-	if( !empty( $_POST['recommendation_link_title'] ) ){
-		update_post_meta( $post_id, 'recommendation_link_title', $_POST['recommendation_link_title'] );
-	} else {
-		delete_post_meta( $post_id, 'recommendation_link_title' );
-	}
-	if( !empty( $_POST['recommendation_link'] ) ){
-		update_post_meta( $post_id, 'recommendation_link', $_POST['recommendation_link'] );
-	} else {
-		delete_post_meta( $post_id, 'recommendation_link' );
-	}
-
+  if (!empty($_POST['recommendation_link_title'])) {
+    update_post_meta($post_id, 'recommendation_link_title', $_POST['recommendation_link_title']);
+  } else {
+    delete_post_meta($post_id, 'recommendation_link_title');
+  }
+  if (!empty($_POST['recommendation_link'])) {
+    update_post_meta($post_id, 'recommendation_link', $_POST['recommendation_link']);
+  } else {
+    delete_post_meta($post_id, 'recommendation_link');
+  }
 }
-add_action( 'save_post', 'save_custom_fields' );
+add_action('save_post', 'save_custom_fields');
+
+/*
+カスタム投稿
+*/
+
+function custom_post_type()
+{
+
+  $labels = array(
+    'name'               => __('news'),
+    'singular_name'      => __('news'),
+    'add_new'            => __('新規追加'),
+    'add_new_item'       => __('新しいカスタム投稿を追加'),
+    'edit_item'          => __('カスタム投稿を編集'),
+    'new_item'           => __('新しいカスタム投稿'),
+    'view_item'          => __('カスタム投稿を表示'),
+    'search_items'       => __('カスタム投稿を検索'),
+    'not_found'          => __('カスタム投稿が見つかりません'),
+    'not_found_in_trash' => __('ゴミ箱にカスタム投稿が見つかりません'),
+  );
+
+  $args = array(
+    'labels'              => $labels,
+    'public'              => true,
+    'menu_position'       => 5,
+    'menu_icon'           => 'dashicons-format-aside',
+    'supports'            => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    'has_archive'         => true,
+    'taxonomies'          => array('news-category', 'news-post_tag'),
+  );
+
+  register_post_type('custom_post_type', $args);
+}
+add_action('init', 'custom_post_type');
+
+function custom_taxonomy()
+{
+
+  // タクソノミー1
+  $labels1 = array(
+    'name'              => __('news-category'),
+    'singular_name'     => __('カテゴリー'),
+    'search_items'      => __('カテゴリーを検索'),
+    'all_items'         => __('すべてのカテゴリー'),
+    'parent_item'       => __('カテゴリー'),
+    'parent_item_colon' => __('カテゴリー:'),
+    'edit_item'         => __('カテゴリーを編集'),
+    'update_item'       => __('カテゴリーを更新'),
+    'add_new_item'      => __('新しいカテゴリーを追加'),
+    'new_item_name'     => __('新しいカテゴリー名'),
+    'menu_name'         => __('カテゴリー'),
+  );
+
+  $args1 = array(
+    'hierarchical'      => true,
+    'labels'            => $labels1,
+    'public'            => true,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'show_in_nav_menus' => true,
+    'show_tagcloud'     => true,
+  );
+
+  register_taxonomy('news-category', array('custom_post_type'), $args1);
+
+  // タクソノミー2
+  // （タグのような）階層のないカスタム分類を新たに追加
+  $labels = array(
+    'name'                       => _x('news-tags', 'taxonomy general name'),
+    'singular_name'              => _x('タグ', 'taxonomy singular name'),
+    'search_items'               => __('タグを更新'),
+    'all_items'                  => __('All タグ'),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __('タグを編集'),
+    'update_item'                => __('タグを更新'),
+    'add_new_item'               => __('新しいタグを追加'),
+    'new_item_name'              => __('新しいタグ名'),
+    'not_found'                  => __('タグが見つかりません'),
+    'menu_name'                  => __('タグ'),
+  );
+
+  $args2 = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+  );
+  register_taxonomy('news-tags', array('custom_post_type'), $args2);
+}
+add_action('init', 'custom_taxonomy');
