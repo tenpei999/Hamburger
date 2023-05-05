@@ -3,7 +3,7 @@
 <main class="l-main">
   <section class="c-background-image--shadow p-main-visual">
     <div class="c-text--M-white">
-      <h1>Menu:</h1>
+      <h1>News:</h1>
       <P><?php single_cat_title(); ?>
         <?php
         $term = get_queried_object();

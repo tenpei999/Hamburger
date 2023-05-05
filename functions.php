@@ -163,7 +163,7 @@ add_action('pre_get_posts', 'my_posts_control');
 function SearchFilter($query)
 {
   if (!is_admin() && $query->is_main_query() && $query->is_search()) {
-    $query->set('post_type', 'post');
+    $query->set('post_type', array('post', 'news'));
   }
 }
 add_action('pre_get_posts', 'SearchFilter');
@@ -338,29 +338,39 @@ function custom_post_type()
 {
 
   $labels = array(
-    'name'               => __('news'),
-    'singular_name'      => __('news'),
-    'add_new'            => __('新規追加'),
-    'add_new_item'       => __('新しいカスタム投稿を追加'),
-    'edit_item'          => __('カスタム投稿を編集'),
-    'new_item'           => __('新しいカスタム投稿'),
-    'view_item'          => __('カスタム投稿を表示'),
-    'search_items'       => __('カスタム投稿を検索'),
-    'not_found'          => __('カスタム投稿が見つかりません'),
-    'not_found_in_trash' => __('ゴミ箱にカスタム投稿が見つかりません'),
+    'name'               => __('news', 'Hamburger'),
+    'singular_name'      => __('news', 'Hamburger'),
+    'menu_name'          => __('news', 'admin menu', 'Hamburger'),
+    'name_admin_bar'     => __('news', 'add new on admin bar', 'Hamburger'),
+    'add_new'            => __('新規追加', 'Hamburger'),
+    'add_new_item'       => __('新しいお知らせを追加'),
+    'new_item'           => __('新しいお知らせ', 'Hamburger'),
+    'edit_item'          => __('お知らせを編集', 'Hamburger'),
+    'view_item'          => __('お知らせを表示', 'Hamburger'),
+    'all_items'          => __('全てのお知らせ', 'Hamburger'),
+    'search_items'       => __('お知らせを検索', 'Hamburger'),
+    'not_found'          => __('お知らせが見つかりません', 'Hamburger'),
+    'not_found_in_trash' => __('ゴミ箱にお知らせが見つかりません', 'Hamburger'),
   );
 
   $args = array(
-    'labels'              => $labels,
-    'public'              => true,
-    'menu_position'       => 5,
-    'menu_icon'           => 'dashicons-format-aside',
-    'supports'            => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
-    'has_archive'         => true,
+    'labels'             => $labels,
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => array('slug' => 'product'),
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'show_in_rest'       => true,
+    'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
     'taxonomies'          => array('news-category', 'news-post_tag'),
   );
 
-  register_post_type('custom_post_type', $args);
+  register_post_type('news', $args);
 }
 add_action('init', 'custom_post_type');
 
@@ -392,7 +402,7 @@ function custom_taxonomy()
     'show_tagcloud'     => true,
   );
 
-  register_taxonomy('news-category', array('custom_post_type'), $args1);
+  register_taxonomy('news-category', array('news'), $args1);
 
   // タクソノミー2
   // （タグのような）階層のないカスタム分類を新たに追加
@@ -419,6 +429,6 @@ function custom_taxonomy()
     'update_count_callback' => '_update_post_term_count',
     'query_var'             => true,
   );
-  register_taxonomy('news-tags', array('custom_post_type'), $args2);
+  register_taxonomy('news-tags', array('news'), $args2);
 }
 add_action('init', 'custom_taxonomy');
