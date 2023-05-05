@@ -16,9 +16,6 @@ Description: テスト用テンプレートです。
 
             <section class="c-card__contents-area">
               <section class="c-card__text-area">
-                <h3 class="c-card__title">
-                  <?php the_title(); ?>
-                </h3>
                 <?php get_single(); ?>
                 <!-- preg_match_all から取得-->
                 <?php

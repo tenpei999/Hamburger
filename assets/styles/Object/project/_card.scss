@@ -7,9 +7,27 @@
   margin-top: 1.5rem;
   &--yarpp {
     height: 536.45px;
+    max-height: 536.45px;
     img {
       width: 100%;
       height: 50%;
+    }
+    @include m.mq (screen011) {
+      flex-direction: row;
+    }
+    @include m.mq (screen02) {
+      flex-direction: row;
+    }
+    .c-card {
+      &__text-area {
+        h2 {
+          font-size: 2rem;
+          padding: 1rem 0 2rem 0;
+        }
+      }
+      &__detail {
+        padding: 0 5px 4px 0;
+      }
     }
   }
   @include m.mq (screen02) {

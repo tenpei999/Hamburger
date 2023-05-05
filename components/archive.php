@@ -5,6 +5,13 @@
           <?php the_post_thumbnail(); ?>
 
           <section class=" c-card__contents-area">
+            <?php
+            $post_date = get_the_date('Y-m-d');
+            $now = date('Y-m-d');
+            $new_date = date('Y-m-d', strtotime('-7 days', strtotime($now)));
+            if ($post_date > $new_date) {
+              echo '<span class="c-card__new">NEW</span>';
+            }; ?>
             <section class="c-card__text-area">
               <h3 class="c-card__title">
                 <?php the_title(); ?>

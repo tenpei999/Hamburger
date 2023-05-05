@@ -7,8 +7,12 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 60px;
     @include m.mq (screen011) {
-      gap: 1rem;
+      gap: 0;
+    }
+    @include m.mq (screen02) {
+      gap: 60px;
     }
     .c-card {
       &__contents-area {
@@ -23,11 +27,12 @@
   }
   &-item {
     width: 100%;
+    overflow: hidden;
     @include m.mq (screen011) {
-      width: calc(50% - 1rem);
+      width: calc(50% - 30px);
     }
     @include m.mq (screen03) {
-      width: calc(calc(100% / 3) - 1rem);
+      width: calc(calc(100% / 3) - 40px);
     }
   }
 }
