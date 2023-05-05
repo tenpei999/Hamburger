@@ -24,7 +24,7 @@ Description: テスト用テンプレートです。
                 $start = 6;
 
                 //取得する長さ（文字数）
-                $length = 100;
+                $length = 50;
 
                 //指定した文字数を出力
                 echo mb_substr(get_the_excerpt(), $start, $length), ',,,続きを読む';

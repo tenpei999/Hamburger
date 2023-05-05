@@ -8,12 +8,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
-    @include m.mq (screen011) {
-      gap: 0;
-    }
-    @include m.mq (screen02) {
-      gap: 60px;
-    }
     .c-card {
       &__contents-area {
         background-color: #F9F0E2;
