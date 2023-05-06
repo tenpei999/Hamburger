@@ -36,6 +36,9 @@
     text-align: right;
   }
   &__new {
+    background-color: v.$new;
     color: white;
+    position: absolute;
+    right: 0;
   }
 }

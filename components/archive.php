@@ -1,5 +1,10 @@
 <div class="l-card__inner">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php
+      $categories = get_the_terms($post->ID, 'custom_taxonomy_name');
+      $tags = get_the_terms($post->ID, 'custom_taxonomy_name2');
+      ?>
+      
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="p-card c-card">
           <?php the_post_thumbnail(); ?>

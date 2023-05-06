@@ -1,3 +1,5 @@
+<?php /* Template Name: カスタム投稿*/ ?>
+
 <?php get_header(); ?>
 
 <main class="l-main">
@@ -14,7 +16,6 @@
           <!-- 個別投稿を反映 -->
         </section>
       </article>
-
 </main>
 
 </div>

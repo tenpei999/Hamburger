@@ -22,7 +22,7 @@
       <?php endif; ?>
     </article>
 
-    <?php get_template_part("components/archive"); ?>
+    <?php get_template_part("components/archive-news"); ?>
 
     <?php wp_link_pages(); ?>
     <?php wp_pagenavi(); ?>

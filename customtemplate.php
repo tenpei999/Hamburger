@@ -1,4 +1,4 @@
-<?php /* Template Name: カスタムテンプレートhoge */ ?>
+<?php /* Template Name: カスタムテンプレート*/ ?>
 
 <?php get_header(); ?>
 

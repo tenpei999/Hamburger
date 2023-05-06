@@ -1,0 +1,20 @@
+@use "../../Foundation/variable" as v;
+@use "../../Foundation/mixin" as m;
+
+.c-news-archive {
+  &-category {
+    margin-left: 1rem;
+  }
+  &-categories {
+    display: flex;
+  }
+  &-tags {
+    display: flex;
+  }
+  &-tag {
+    padding: 0.5rem;
+    border-radius: 20px ;
+    background-color: v.$gray-tag;
+    margin-left: 1rem;
+  }
+}

@@ -360,27 +360,28 @@ function custom_post_type()
     'show_ui'            => true,
     'show_in_menu'       => true,
     'query_var'          => true,
-    'rewrite'            => array('slug' => 'product'),
+    'rewrite'            => array('slug' => 'news'),
     'capability_type'    => 'post',
     'has_archive'        => true,
     'hierarchical'       => false,
     'menu_position'      => null,
     'show_in_rest'       => true,
-    'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
-    'taxonomies'          => array('news-category', 'news-post_tag'),
+    'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'tags'),
+    'taxonomies'         => array('news-category', 'news-post_tag'),
   );
 
   register_post_type('news', $args);
 }
 add_action('init', 'custom_post_type');
 
+
 function custom_taxonomy()
 {
 
   // タクソノミー1
   $labels1 = array(
-    'name'              => __('news-category'),
-    'singular_name'     => __('カテゴリー'),
+    'name'              => __('カテゴリー'),
+    'singular_name'     => __('news-category'),
     'search_items'      => __('カテゴリーを検索'),
     'all_items'         => __('すべてのカテゴリー'),
     'parent_item'       => __('カテゴリー'),
@@ -407,8 +408,8 @@ function custom_taxonomy()
   // タクソノミー2
   // （タグのような）階層のないカスタム分類を新たに追加
   $labels = array(
-    'name'                       => _x('news-tags', 'taxonomy general name'),
-    'singular_name'              => _x('タグ', 'taxonomy singular name'),
+    'name'                       => _x('タグ', 'taxonomy general name'),
+    'singular_name'              => _x('news-tags', 'taxonomy singular name'),
     'search_items'               => __('タグを更新'),
     'all_items'                  => __('All タグ'),
     'parent_item'                => null,
@@ -432,3 +433,11 @@ function custom_taxonomy()
   register_taxonomy('news-tags', array('news'), $args2);
 }
 add_action('init', 'custom_taxonomy');
+
+function load_custom_post_type_archive_template() {
+  if ( is_post_type_archive( 'news' ) ) {
+      include( get_stylesheet_directory() . '/archive-news.php' );
+      exit;
+  }
+}
+add_action( 'template_redirect', 'load_custom_post_type_archive_template' );
