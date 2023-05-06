@@ -5,7 +5,7 @@ Author: tsuru
 Description: テスト用テンプレートです。
 */
 ?>
-<h2>★おすすめ商品</h2>
+<h2 class="p-recommended-title">★おすすめ商品</h2>
 <ul class="p-recommended-items">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>

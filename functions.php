@@ -163,7 +163,7 @@ add_action('pre_get_posts', 'my_posts_control');
 function SearchFilter($query)
 {
   if (!is_admin() && $query->is_main_query() && $query->is_search()) {
-    $query->set('post_type', array('post', 'news'));
+    $query->set('post_type', array('post', 'customtemplate', 'news'));
   }
 }
 add_action('pre_get_posts', 'SearchFilter');

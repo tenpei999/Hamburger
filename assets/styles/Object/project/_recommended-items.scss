@@ -2,6 +2,9 @@
 @use "../../Foundation/mixin" as m;
 
 .p-recommended {
+  &-field {
+    padding-bottom: 5rem;
+  }
   &-items {
     padding: 0;
     width: 100%;

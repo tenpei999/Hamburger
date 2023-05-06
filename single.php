@@ -21,8 +21,8 @@
               <a href="<?php echo esc_url(home_url('/')); ?>">ブログのトップページへ</a>
             </h2>
           <?php endif; ?>
-          <section class="p-bookdetail-field">
-            <div class="p-bookdetail-field__price">
+          <section class="p-recommended-field">
+            <div class="p-recommended-field__price">
               <?php if (get_post_meta($post->ID, 'recommendation_link', true)) : ?>
                 <a href="<?php echo esc_html(get_post_meta($post->ID, 'recommendation_link', true)); ?>">
                   <p>
