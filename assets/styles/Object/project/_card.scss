@@ -41,16 +41,28 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    padding-bottom: 20px;
 
     @include m.mq (screen02) {
       flex-direction: row;
     }
 
     img {
-      width: 320px;
-
+      width: 100%;
+      height: auto;
+      aspect-ratio: 5 / 4;
       @include m.mq (screen02) {
-        width: 210px;
+        width: min(50%, 210px);
+      }
+      @include m.mq (screen03) {
+        width: min(32%, 320px);
+      }
+    }
+    .c-card {
+      &--news {
+        &__contents-area {
+          padding-left: 40px;
+        }
       }
     }
   }
@@ -87,6 +99,11 @@
       padding-top: 1.5rem;
       padding-bottom: 1rem;
       font-size: 1.5rem;
+
+      p {
+        display: flex;
+        align-items: center;
+      }
 
       @include m.mq (screen02) {
         font-size: 1rem;

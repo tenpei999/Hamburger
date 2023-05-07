@@ -4,17 +4,41 @@
 .c-news-archive {
   &-category {
     margin-left: 1rem;
+    &.is-top {
+      margin-left: 0;
+    }
   }
   &-categories {
     display: flex;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-bottom: 0.5rem;
+    &.is-top {
+      font-size: 1rem;
+      a {
+        color: v.$white;
+      }
+    }
   }
   &-tags {
     display: flex;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-bottom: 1rem;
+    &.is-top {
+      font-size: 1rem;
+    }
   }
   &-tag {
     padding: 0.5rem;
     border-radius: 20px ;
     background-color: v.$gray-tag;
     margin-left: 1rem;
+    &.is-top {
+      margin-left: 0;
+      padding: 0.05rem 0.5rem;
+    }
   }
 }

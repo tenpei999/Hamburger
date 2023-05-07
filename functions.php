@@ -8,7 +8,7 @@
  */
 
 //develop mode config
-define("IS_VITE_DEVELOPMENT", true);
+define("IS_VITE_DEVELOPMENT", false);
 
 //define
 define('DIST_DEF', 'dist');
@@ -149,12 +149,13 @@ function my_posts_control($query)
     return;
   }
   if ($query->is_search()) {
-    $query->set('posts_per_page', '5');
-    return;
-  }
-  if ($query->is_archive()) {
-    $query->set('posts_per_page', '3');
-    return;
+    $query->set('posts_per_page', '5'); // search.phpで投稿数を5件に指定
+  } elseif ($query->is_archive()) {
+    if ($query->query['post_type'] === 'news') { // archive-news.phpでnews投稿タイプのみ対象とする
+      $query->set('posts_per_page', '6'); // archive-news.phpで投稿数を6件に指定
+    } else {
+      $query->set('posts_per_page', '3'); // archive.phpで投稿数を3件に指定
+    }
   }
 }
 add_action('pre_get_posts', 'my_posts_control');
@@ -434,10 +435,19 @@ function custom_taxonomy()
 }
 add_action('init', 'custom_taxonomy');
 
-function load_custom_post_type_archive_template() {
-  if ( is_post_type_archive( 'news' ) ) {
-      include( get_stylesheet_directory() . '/archive-news.php' );
-      exit;
+function load_custom_post_type_archive_template()
+{
+  if (is_post_type_archive('news')) {
+    include(get_stylesheet_directory() . '/archive-news.php');
+    exit;
+  }
+  if (is_tax('news-category')) {
+    include(get_stylesheet_directory() . '/archive-news.php');
+    exit;
+  }
+  if (is_tax('news-tags')) {
+    include(get_stylesheet_directory() . '/archive-news.php');
+    exit;
   }
 }
-add_action( 'template_redirect', 'load_custom_post_type_archive_template' );
+add_action('template_redirect', 'load_custom_post_type_archive_template');

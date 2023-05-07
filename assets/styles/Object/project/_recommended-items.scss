@@ -4,30 +4,40 @@
 .p-recommended {
   &-field {
     padding-bottom: 5rem;
+
+    &__price {
+      padding-top: 1rem;
+    }
   }
+
   &-items {
     padding: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
+
     .c-card {
       &__contents-area {
         background-color: #F9F0E2;
         ;
       }
+
       &__text-area {
         color: v.$bg-brown;
         ;
       }
     }
   }
+
   &-item {
     width: 100%;
     overflow: hidden;
+
     @include m.mq (screen011) {
       width: calc(50% - 30px);
     }
+
     @include m.mq (screen03) {
       width: calc(calc(100% / 3) - 40px);
     }

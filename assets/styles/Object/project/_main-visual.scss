@@ -148,5 +148,10 @@
         }
       }
     }
+    &.is-news {
+      background: url($base-dir + 'images/three-burgers-on-brown-wooden-tray-between-white-ceramic.png') center;
+      background-size: cover;
+      filter: brightness(0.5);
+    }
   }
 }

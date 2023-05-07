@@ -2,18 +2,22 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="p-card--news c-card--news">
-          <?php the_post_thumbnail(); ?>
+          <div class="c-card--news__img">
+            <?php the_post_thumbnail(); ?>
+          </div>
           <section class="c-card--news__contents-area">
-            <?php
-            $post_date = get_the_date('Y-m-d');
-            $now = date('Y-m-d');
-            $new_date = date('Y-m-d', strtotime('-7 days', strtotime($now)));
-            if ($post_date > $new_date) {
-              echo '<span class="c-card__new">NEW</span>';
-            }; ?>
             <section class="c-card--news__text-area">
               <h3 class="c-card--news__title">
-                <?php the_title(); ?>
+                <p>
+                  <?php the_title(); ?>
+                </p>
+                <?php
+                $post_date = get_the_date('Y-m-d');
+                $now = date('Y-m-d');
+                $new_date = date('Y-m-d', strtotime('-14 days', strtotime($now)));
+                if ($post_date > $new_date) {
+                  echo '<span class="c-card__new">NEW</span>';
+                }; ?>
               </h3>
               <?php
               $taxonomy = 'news-category'; // カスタムタクソノミーのスラッグを指定する
@@ -63,11 +67,11 @@
 
               ?>
             </section>
-            <section class="c-card--news__btn-area">
-              <button class="c-card--news__btn">
+
+              <div class="c-card--news__next">
                 <a href="<?php echo get_permalink(); ?>">詳しく見る</a>
-              </button>
-            </section>
+              </div>
+
           </section>
         </div>
       <?php endwhile;

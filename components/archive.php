@@ -13,7 +13,7 @@
             <?php
             $post_date = get_the_date('Y-m-d');
             $now = date('Y-m-d');
-            $new_date = date('Y-m-d', strtotime('-7 days', strtotime($now)));
+            $new_date = date('Y-m-d', strtotime('-14 days', strtotime($now)));
             if ($post_date > $new_date) {
               echo '<span class="c-card__new">NEW</span>';
             }; ?>

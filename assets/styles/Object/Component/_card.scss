@@ -4,41 +4,107 @@
 .c-card {
   display: flex;
   font-family: v.$M;
+
   img {
     object-fit: cover;
     box-sizing: border-box;
+    aspect-ratio: 4/3;
+    height: 58%;
   }
+
   &__contents-area {
     background-color: v.$bg-brown;
     padding: 1rem;
   }
+
   &__text-area {
     color: v.$white;
   }
+
   &__title {
     font-weight: v.$MMbold;
   }
+
   &__sub-title {
     font-weight: v.$bold;
   }
+
   &__text {
     line-height: 1.5rem;
     flex-wrap: wrap;
   }
+
   &__btn {
     background-color: v.$white;
     border-radius: 2rem;
+
     @include m.mq (screen03) {
       border-radius: 3rem;
     }
   }
+
   &__detail {
     text-align: right;
   }
+
   &__new {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: v.$new;
     color: white;
     position: absolute;
     right: 0;
+    top: 0;
+  }
+
+  &--news {
+    &__title {
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__btn {
+      background-color: unset;
+      border: unset;
+      margin-bottom: 2rem;
+
+      a {
+        border-bottom: 1px;
+      }
+    }
+
+    &__next {
+      display: flex;
+      flex-direction: row-reverse;
+
+      a {
+        display: inline-block;
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+        border-bottom: solid 0.5px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__img {
+      width: 100%;
+
+      @include m.mq(screen03) {
+        width: min(70%, 500px);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
   }
 }

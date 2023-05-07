@@ -29,7 +29,7 @@
   },
   "assets/images/flex-item.png": {
     "file": "assets/images/flexitem.png",
-    "src": "assets/images/flex-item.png"
+    "src": "assets/images/flexitem.png"
   },
   "assets/images/flex-item.svg": {
     "file": "assets/images/flex-item.svg",
@@ -45,7 +45,7 @@
   },
   "assets/images/flexitem.png": {
     "file": "assets/images/flexitem.png",
-    "src": "assets/images/flex-item.png"
+    "src": "assets/images/flexitem.png"
   },
   "assets/images/fonts/search-icon/magnifying-glass-solid.svg": {
     "file": "assets/images/magnifying-glass-solid.svg",
@@ -66,6 +66,10 @@
   "assets/images/main-visual3.png": {
     "file": "assets/images/main-visual3.png",
     "src": "assets/images/main-visual3.png"
+  },
+  "assets/images/mattias-diesel.png": {
+    "file": "assets/images/mattias-diesel.png",
+    "src": "assets/images/mattias-diesel.png"
   },
   "assets/images/mb-shadow.svg": {
     "file": "assets/images/mb-shadow.svg",
@@ -110,6 +114,10 @@
   "assets/images/takeout.svg": {
     "file": "assets/images/takeout.svg",
     "src": "assets/images/takeout.svg"
+  },
+  "assets/images/three-burgers-on-brown-wooden-tray-between-white-ceramic.png": {
+    "file": "assets/images/three-burgers-on-brown-wooden-tray-between-white-ceramic.png",
+    "src": "assets/images/three-burgers-on-brown-wooden-tray-between-white-ceramic.png"
   },
   "main.css": {
     "file": "assets/css/main.css",
