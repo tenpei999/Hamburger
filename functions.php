@@ -149,17 +149,16 @@ function my_posts_control($query)
     return;
   }
   if ($query->is_search()) {
-    $query->set('posts_per_page', '5'); // search.phpで投稿数を5件に指定
+    $query->set('posts_per_page', '5');
+  } elseif ($query->is_post_type_archive('news')) {
+    $query->set('posts_per_page', '6');
+    echo '<script>console.log("ほげ");</script>';
   } elseif ($query->is_archive()) {
-    if ($query->query['post_type'] === 'news') { // archive-news.phpでnews投稿タイプのみ対象とする
-      $query->set('posts_per_page', '6'); // archive-news.phpで投稿数を6件に指定
-    } else {
-      $query->set('posts_per_page', '3'); // archive.phpで投稿数を3件に指定
-    }
+    $query->set('posts_per_page', '3');
+    echo '<script>console.log("ふが");</script>';
   }
 }
 add_action('pre_get_posts', 'my_posts_control');
-
 //検索結果から固定ページを除外
 function SearchFilter($query)
 {

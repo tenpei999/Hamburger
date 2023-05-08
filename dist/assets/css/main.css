@@ -1287,9 +1287,9 @@ select {
   }
 }
 .p-main-visual.c-background-image.is-news {
-  background: url("../images/three-burgers-on-brown-wooden-tray-between-white-ceramic.png") center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.55) 50%), url("../images/mattias-diesel-3M2.png");
   background-size: cover;
-  filter: brightness(0.5);
+  background-position: center;
 }
 /* mixin */
 .p-nav {
