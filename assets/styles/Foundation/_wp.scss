@@ -1,0 +1,30 @@
+@use "variable" as v;
+@use "mixin" as m;
+
+.widgettitle {
+  font-size: 34px;
+  padding: 84px 0 0 46px;
+  color: v.$logo-gray;
+}
+
+.menu {
+  li {
+    padding-top: 48px;
+    font-size: 24px;
+    a{
+      color: v.$logo-gray;
+      font-weight: v.$Hbold;
+    }
+  }
+}
+
+.sub-menu {
+  li {
+    padding-top: 20px;
+    font-size: 20px;
+    color: v.$logo-gray;
+    a {
+      font-weight: v.$Lbold;
+    }
+  }
+}

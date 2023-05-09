@@ -150,12 +150,8 @@ function my_posts_control($query)
   }
   if ($query->is_search()) {
     $query->set('posts_per_page', '5');
-  } elseif ($query->is_post_type_archive('news')) {
-    $query->set('posts_per_page', '6');
-    echo '<script>console.log("ほげ");</script>';
   } elseif ($query->is_archive()) {
     $query->set('posts_per_page', '3');
-    echo '<script>console.log("ふが");</script>';
   }
 }
 add_action('pre_get_posts', 'my_posts_control');
@@ -337,7 +333,7 @@ add_action('save_post', 'save_custom_fields');
 function custom_post_type()
 {
 
-  $labels = array(
+  $labels0 = array(
     'name'               => __('news', 'Hamburger'),
     'singular_name'      => __('news', 'Hamburger'),
     'menu_name'          => __('news', 'admin menu', 'Hamburger'),
@@ -354,7 +350,7 @@ function custom_post_type()
   );
 
   $args = array(
-    'labels'             => $labels,
+    'labels'             => $labels0,
     'public'             => true,
     'publicly_queryable' => true,
     'show_ui'            => true,
@@ -436,10 +432,6 @@ add_action('init', 'custom_taxonomy');
 
 function load_custom_post_type_archive_template()
 {
-  if (is_post_type_archive('news')) {
-    include(get_stylesheet_directory() . '/archive-news.php');
-    exit;
-  }
   if (is_tax('news-category')) {
     include(get_stylesheet_directory() . '/archive-news.php');
     exit;

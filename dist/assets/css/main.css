@@ -200,6 +200,38 @@ select {
 /* Bold */
 /* Bold */
 /* Heavy */
+/* font-family */
+/* Color */
+/* font-weight */
+/* light */
+/* light */
+/* medium */
+/* medium */
+/* Bold */
+/* Bold */
+/* Heavy */
+/* mixin */
+.widgettitle {
+  font-size: 34px;
+  padding: 84px 0 0 46px;
+  color: #707070;
+}
+.menu li {
+  padding-top: 48px;
+  font-size: 24px;
+}
+.menu li a {
+  color: #707070;
+  font-weight: 700;
+}
+.sub-menu li {
+  padding-top: 20px;
+  font-size: 20px;
+  color: #707070;
+}
+.sub-menu li a {
+  font-weight: 300;
+}
 .l-about {
   width: 100%;
 }
