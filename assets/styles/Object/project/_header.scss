@@ -2,7 +2,7 @@
 @use "../../Foundation/mixin" as m;
 
 .p-header {
-  .c-background-color--bisque {
+  &.c-background-color--bisque {
     width: 100%;
   }
  &__site-title {

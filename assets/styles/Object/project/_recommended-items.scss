@@ -16,6 +16,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
+    @include m.mq (screen03) {
+      gap: 37.5px;
+    }
 
     .c-card {
       &__contents-area {
@@ -35,11 +38,15 @@
     overflow: hidden;
 
     @include m.mq (screen011) {
-      width: calc(50% - 30px);
+      width: 334px;
+    }
+
+    @include m.mq (screen02) {
+      width: 326.8px;
     }
 
     @include m.mq (screen03) {
-      width: calc(calc(100% / 3) - 40px);
+      width: 426px;
     }
   }
 }
