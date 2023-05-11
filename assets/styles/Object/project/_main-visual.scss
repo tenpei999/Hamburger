@@ -95,6 +95,8 @@
         height: 350px;
         transition: 200ms;
         width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       .c-text--M-white {
         font-size: 36px;
@@ -109,6 +111,19 @@
         @include m.mq (screen03) {
           font-size: 40px;
           left: 70px;
+        }
+      }
+      &.is-news {
+        background-image: linear-gradient(rgba(0,0,0, 0.55) 50%,rgba(0,0,0, 0.55) 50%), url($base-dir + 'images/mattias-diesel-3M2.png');
+        background-size: cover;
+        background-position: center;
+        h1 {
+          top: 15%;
+          left: 45px;
+          @include m.mq (screen02) {
+            top: 25%;
+            left: 86px;
+          }
         }
       }
     }
@@ -147,11 +162,6 @@
           left: 70px;
         }
       }
-    }
-    &.is-news {
-      background-image: linear-gradient(rgba(0,0,0, 0.55) 50%,rgba(0,0,0, 0.55) 50%), url($base-dir + 'images/mattias-diesel-3M2.png');
-      background-size: cover;
-      background-position: center;
     }
   }
 }

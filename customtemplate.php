@@ -21,7 +21,7 @@
             echo '<li class="c-news-archive-category is-top"><a href="' . esc_url(get_term_link($term)) . '">' . $term->name . '(' . $total_posts . ')' . '</a>
           </li>';
           } else {
-            echo '<li class="c-news-archive-category is-top"><a href="' . esc_url(get_term_link($term)) . '">' . $term->name . ' (' . $total_posts . ')' . ',</a></li>';
+            echo '<li class="c-news-archive-category is-top"><a href="' . esc_url(get_term_link($term)) . '">' . $term->name . ' (' . $total_posts . ')' . '</a><p>,</P></li>';
           }
         }
         echo '</ul>';
