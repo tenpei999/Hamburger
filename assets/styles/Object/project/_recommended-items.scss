@@ -8,6 +8,10 @@
     &__price {
       padding-top: 1rem;
     }
+    &__title {
+      display: inline-block;
+      border-bottom: solid 1px;
+    }
   }
 
   &-items {

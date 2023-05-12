@@ -25,7 +25,7 @@
             <div class="p-recommended-field__price">
               <?php if (get_post_meta($post->ID, 'recommendation_link', true)) : ?>
                 <a href="<?php echo esc_html(get_post_meta($post->ID, 'recommendation_link', true)); ?>">
-                  <p>
+                  <p class="p-recommended-field__title">
                     <?php echo esc_html(get_post_meta($post->ID, 'recommendation_link_title', true)); ?>
                   </p>
                 </a>
