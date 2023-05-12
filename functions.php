@@ -143,18 +143,30 @@ if (is_active_sidebar('category_widget')) {
 }
 
 // searchは5件表示する.archiveは3件表示する
-function my_posts_control($query)
+
+function custom_post_limits($query)
 {
-  if (is_admin() || !$query->is_main_query()) {
-    return;
-  }
-  if ($query->is_search()) {
-    $query->set('posts_per_page', '5');
-  } elseif ($query->is_archive()) {
-    $query->set('posts_per_page', '3');
+  if (!is_admin() && $query->is_main_query()) {
+    if ($query->is_search) { // 検索ページの表示件数を設定
+      $query->set('posts_per_page', 5);
+    } elseif ($query->is_archive) { // アーカイブページの表示件数を設定
+      $taxonomies = get_taxonomies(); // 全てのタクソノミーを取得
+      $custom_taxonomies = array('news-category', 'news-tags'); // カスタムタクソノミーのスラッグを指定
+
+      $matched_taxonomy = array_intersect($custom_taxonomies, $taxonomies);
+      if (!empty($matched_taxonomy)) { // カスタムタクソノミーが存在する場合
+        foreach ($matched_taxonomy as $taxonomy) {
+          if (is_tax($taxonomy)) { // カスタムタクソノミーのアーカイブページの表示件数を設定
+            $query->set('posts_per_page', 6);
+          }
+        }
+      } else { // タクソノミーが存在しない場合
+        $query->set('posts_per_page', 3); // デフォルトの表示件数を設定
+      }
+    }
   }
 }
-add_action('pre_get_posts', 'my_posts_control');
+add_action('pre_get_posts', 'custom_post_limits');
 //検索結果から固定ページを除外
 function SearchFilter($query)
 {

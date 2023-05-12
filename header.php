@@ -21,6 +21,7 @@
             <!-- <p class="site-description"><?php bloginfo('description'); ?></p>            -->
             <!-- サイトのキャッチフレーズ -->
           </div>
+          
         </div>
 
         <?php get_search_form(); ?>

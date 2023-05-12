@@ -26,9 +26,8 @@
     $wp_query = new WP_Query($args);
     ?>
     <ul>
-      <?php
-      if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-          <?php get_template_part("components/archive-news"); ?>
+      <?php if ($wp_query->have_posts()) : while (have_posts()) : the_post();?>
+          <?php get_template_part("components/archive-news");?>
       <?php endwhile;
       endif;
       wp_reset_postdata(); ?>
