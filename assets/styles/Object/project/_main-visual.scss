@@ -125,6 +125,11 @@
             left: 86px;
           }
         }
+        &-top {
+          background-image: linear-gradient(rgba(0,0,0, 0.55) 50%,rgba(0,0,0, 0.55) 50%), url($base-dir + 'images/mattias-diesel-3M2.png');
+          background-size: cover;
+          background-position: center;
+        }
       }
     }
     &.page {

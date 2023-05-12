@@ -7,8 +7,11 @@
     flex-direction: row;
     margin-left: 1rem;
     font-size: 14px;
-    &.is-top {
+    &.is-mv {
       margin-left: 0;
+      a {
+        color: v.$white;
+      }
     }
   }
   &-categories {
@@ -27,7 +30,7 @@
       width: 531px;
       padding: 5px 0 16px 0;
     }
-    &.is-top {
+    &.is-mv {
       font-size: 1rem;
       a {
         color: v.$white;
@@ -43,8 +46,8 @@
     margin-block-start: 0;
     margin-block-end: 0;
     padding-bottom: 1rem;
-    &.is-top {
-      width: 210px;
+    &.is-mv {
+      width: 220px;
       font-size: 12px;
       @include m.mq (screen02) {
         width: 368px;
@@ -61,7 +64,7 @@
     background-color: v.$gray-tag;
     margin-left: 1rem;
     line-height: 17.15px;
-    &.is-top {
+    &.is-mv {
       margin-left: 0;
       padding: 2px 17px;
     }
