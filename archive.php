@@ -19,10 +19,10 @@
     <article class="c-contents_pages">
       <?php if (is_category()) : ?>
         <?php echo category_description(); ?>
+
+        <?php get_template_part("components/archive"); ?>
       <?php endif; ?>
     </article>
-
-    <?php get_template_part("components/archive"); ?>
 
     <?php wp_link_pages(); ?>
     <?php wp_pagenavi(); ?>

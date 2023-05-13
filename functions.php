@@ -138,18 +138,12 @@ function hamburger_widgets_init()
 }
 add_action('widgets_init', 'hamburger_widgets_init');
 
-if (is_active_sidebar('category_widget')) {
-  dynamic_sidebar('category_widget');
-}
-
 // searchは5件表示する.archiveは3件表示する
 
 function custom_post_limits($query)
 {
   if (!is_admin() && $query->is_main_query()) {
     if ($query->is_search) { // 検索ページの表示件数を設定
-      $query->set('posts_per_page', 5);
-    } elseif($query->is_page()) {
       $query->set('posts_per_page', 5);
     } elseif ($query->is_archive) { // アーカイブページの表示件数を設定
       $taxonomies = get_taxonomies(); // 全てのタクソノミーを取得
