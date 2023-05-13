@@ -67,11 +67,11 @@
           text-align: center;
           font-weight: normal;
           @include m.mq (screen02) {
-            padding-top: 2.5rem;
+            padding-top: 2rem;
             padding-left: 1rem;
           }
           @include m.mq (screen03) {
-            padding-top: 1.4rem;
+            padding-top: 1rem;
           }
         }
       }

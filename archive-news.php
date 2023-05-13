@@ -8,7 +8,7 @@
         <?php
         $term = get_queried_object();
         $total_posts = $term->count;
-        echo '(' . $total_posts . ')';
+        echo '(' . $total_posts . '件)';
         ?>
       </P>
     </div>
@@ -26,8 +26,8 @@
     $wp_query = new WP_Query($args);
     ?>
     <ul>
-      <?php if ($wp_query->have_posts()) : while (have_posts()) : the_post();?>
-          <?php get_template_part("components/archive-news");?>
+      <?php if ($wp_query->have_posts()) : while (have_posts()) : the_post(); ?>
+          <?php get_template_part("components/archive-news"); ?>
       <?php endwhile;
       endif;
       wp_reset_postdata(); ?>

@@ -149,6 +149,8 @@ function custom_post_limits($query)
   if (!is_admin() && $query->is_main_query()) {
     if ($query->is_search) { // 検索ページの表示件数を設定
       $query->set('posts_per_page', 5);
+    } elseif($query->is_page()) {
+      $query->set('posts_per_page', 5);
     } elseif ($query->is_archive) { // アーカイブページの表示件数を設定
       $taxonomies = get_taxonomies(); // 全てのタクソノミーを取得
       $custom_taxonomies = array('news-category', 'news-tags'); // カスタムタクソノミーのスラッグを指定
@@ -157,7 +159,7 @@ function custom_post_limits($query)
       if (!empty($matched_taxonomy)) { // カスタムタクソノミーが存在する場合
         foreach ($matched_taxonomy as $taxonomy) {
           if (is_tax($taxonomy)) { // カスタムタクソノミーのアーカイブページの表示件数を設定
-            $query->set('posts_per_page', 6);
+            $query->set('posts_per_page', 7);
           }
         }
       } else { // タクソノミーが存在しない場合
