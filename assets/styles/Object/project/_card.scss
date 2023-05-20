@@ -74,6 +74,7 @@
   }
 
   img {
+    width: 100%;
     @include m.mq (screen02) {
       width: 50%;
     }
@@ -84,12 +85,12 @@
       display: block;
       padding: 1rem;
       position: relative;
+      aspect-ratio: 4/3;
 
       @include m.mq (screen02) {
         width: 50%;
-        padding: 2rem;
       }
-
+      
       @include m.mq (screen03) {
         padding: 2.3rem 2.3rem 0 2.3rem;
         aspect-ratio: 4 / 3;
