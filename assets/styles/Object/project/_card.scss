@@ -42,6 +42,8 @@
     flex-direction: column;
     position: relative;
     padding-bottom: 20px;
+    font-size: 1rem;
+    margin-top: 1.5rem;
 
     @include m.mq (screen02) {
       flex-direction: row;

@@ -334,6 +334,44 @@ function save_custom_fields($post_id)
 }
 add_action('save_post', 'save_custom_fields');
 
+//blogtopのカスタムフィールド
+function add_blogtop_fields() {
+  add_meta_box(
+      'recommendation_setting_second', //カスタムフィールドブロックに割り当てるID名
+      'タイトル', //カスタムフィールドのタイトル
+      'insert_recommendation_fields_second', //入力エリアの HTML
+      'page', //投稿タイプ。サンプルでは カスタムタクソノミー名。他に post 等が指定可能
+      'normal' //カスタムフィールドが表示される部分
+  );
+}
+add_action('add_meta_boxes', 'add_blogtop_fields');
+
+//入力エリア
+function insert_recommendation_fields_second($post) {
+  $post_slug = $post->post_name;
+  if ($post_slug === 'blogtop') {
+      echo 'タイトル： <input type="text" name="blogtop_title" value="' . get_post_meta($post->ID, 'blogtop_title', true) . '" size="50" style="margin-bottom: 10px;" />　<br>';
+      echo 'テキスト： <textarea name="blogtop_text" rows="5" cols="50" style="margin-bottom: 10px;">' . get_post_meta($post->ID, 'blogtop_second', true) . '</textarea>　<br>';
+  }
+}
+
+//カスタムフィールドの値を保存
+function save_custom_fields_second($post_id) {
+  $post_slug = get_post_field('post_name', $post_id);
+  if ($post_slug === 'blogtop') {
+      if (!empty($_POST['blogtop_title'])) {
+          update_post_meta($post_id, 'blogtop_title', $_POST['blogtop_title']);
+      } else {
+          delete_post_meta($post_id, 'blogtop_title');
+      }
+      if (!empty($_POST['blogtop_text'])) {
+          update_post_meta($post_id, 'blogtop_text', $_POST['blogtop_text']);
+      } else {
+          delete_post_meta($post_id, 'blogtop_text');
+      }
+  }
+}
+add_action('save_post', 'save_custom_fields_second');
 /*
 カスタム投稿
 */

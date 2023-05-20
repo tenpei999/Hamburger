@@ -19,6 +19,10 @@
 
 </div>
 <!-- container -->
+<?php endwhile;
+  else : ?>
+<p>記事はありません。</p>
+<?php endif; ?>
 *
 <?php get_sidebar(); ?>
 

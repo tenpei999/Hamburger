@@ -147,7 +147,7 @@
       height: 33rem;
       }
       @include m.mq (screen03) {
-        background: url($base-dir + 'imagges/mv-pc3.png');
+        background: url($base-dir + 'images/mv-pc3.png');
         height: 350px;
         transition: 200ms;
         width: 100%;

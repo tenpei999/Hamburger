@@ -17,21 +17,33 @@
 
   <article class="l-contents_pages p-contents_pages c-background-color--base-white">
     <article class="c-contents_pages">
-      <?php if (is_category()) : ?>
-        <?php echo category_description(); ?>
-      <?php endif; ?>
+      <?php
+      if (is_tax('news-category')) {
+        $term = get_queried_object();
+        $description = $term->description;
+        if (!empty($description)) {
+          echo $description;
+        }
+      } elseif (is_tax('news-tags')) {
+        $term = get_queried_object();
+        $description = $term->description;
+        if (!empty($description)) {
+          echo $description;
+        }
+      }
+      ?>
+      <?php
+      $args = array('post_type' => 'news', 'no_found_rows'  => true);
+      $wp_query = new WP_Query($args);
+      ?>
+      <ul>
+        <?php if ($wp_query->have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php get_template_part("components/archive-news"); ?>
+        <?php endwhile;
+        endif;
+        wp_reset_postdata(); ?>
+      </ul>
     </article>
-    <?php
-    $args = array('post_type' => 'news', 'no_found_rows'  => true);
-    $wp_query = new WP_Query($args);
-    ?>
-    <ul>
-      <?php if ($wp_query->have_posts()) : while (have_posts()) : the_post(); ?>
-          <?php get_template_part("components/archive-news"); ?>
-      <?php endwhile;
-      endif;
-      wp_reset_postdata(); ?>
-    </ul>
     <?php wp_link_pages(); ?>
     <?php wp_pagenavi(); ?>
   </article>
