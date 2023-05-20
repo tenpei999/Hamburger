@@ -4,29 +4,36 @@
 .c-background {
   &-color {
     &--bisque {
-      background-color:  #fff7ef;
+      background-color: #fff7ef;
     }
+
     &--white {
-      background-color:  #ffffff;
+      background-color: #ffffff;
     }
+
     &--blanchedalmond {
       background-color: #F2EDE9;
     }
+
     &--white-opacity {
       background-color: #ffffff;
       opacity: 0.7;
     }
+
     &--base-white {
       background-color: v.$base-white;
     }
   }
+
   &-image {
     background: transparent center center / cover;
+
     &--shadow {
       background: transparent left center / cover;
     }
+
     &.single,
-     .page {
+    .page {
       background: transparent center center / cover;
     }
   }
