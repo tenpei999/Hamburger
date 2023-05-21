@@ -2372,6 +2372,9 @@ select {
   line-height: 30px;
   text-align: center;
 }
+.pagenavi-blogtop .page-numbers:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
 @media screen and (min-width: 820px) {
   .pagenavi-blogtop .page-numbers {
     display: inline-block;

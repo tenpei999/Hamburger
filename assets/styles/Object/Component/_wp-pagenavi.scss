@@ -184,6 +184,10 @@
       line-height: 30px;
       text-align: center;
 
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
       @include m.mq (screen02) {
         display: inline-block;
       }
